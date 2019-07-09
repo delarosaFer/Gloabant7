@@ -1,0 +1,20 @@
+/* 
+  Localized.strings
+  CV App
+
+  Created by Jordy Xavier Pazaran Reyes on 6/18/19.
+  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
+*/
+"About Me" = "About Me";
+"My Career" = "My Career";
+"Achivements" = "Achivements";
+"Error in the test" = "Error in the test";
+"There was an error loading the information" = "There was an error loading the information";
+"Error request" = "Error request";
+"Error" = "Error";
+"Request success" = "Request success";
+"Theres was an error showing user info data" = "Theres was an error showing user info data";
+"Request success" = "Request success";
+"Fetch success" = "Fetch success";
+"Fetch failed" ="Fetch failed";
+"Module Created" = "Module Created";
