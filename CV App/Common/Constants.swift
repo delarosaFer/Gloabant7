@@ -22,7 +22,7 @@ class Constants{
     }
     //Endpoints names 
     struct Endpoints {
-        static let userInfo = "1aq9fr"
+        static let userInfo = "120xcf"
         static let myCareer = "e5unb"
     }
 }

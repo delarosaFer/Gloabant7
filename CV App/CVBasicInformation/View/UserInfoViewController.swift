@@ -71,11 +71,10 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         presenter?.getImage(imageURL: imageURL ?? "nil")
         DispatchQueue.main.async  { [weak self] in
             self?.userNameLabel.text = userName
-            self?.ageLabel.text = age
+            self?.ageLabel.text = "\(age)"
             self?.cellphoneLabel.text = cellphone
             self?.emailLabel.text = email
         }
-
     }
     
     //Create the image by a data

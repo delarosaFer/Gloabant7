@@ -11,7 +11,7 @@ import Foundation
 //MARK: - UserInfo
 struct UserInfo: Codable {
     let userName: String
-    let age: String
+    let age: Int
     let cellphone: String
     let email: String
     let imageURL: String?
