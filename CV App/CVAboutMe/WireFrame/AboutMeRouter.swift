@@ -17,7 +17,7 @@ class AboutMeRouter: AboutMeRouterProtocol{
         let router = AboutMeRouter()
         let interactor = AboutMeInteractor()
         let presenter = AboutMePresenter()
-        let view = UIStoryboard(name: "CVAboutMe", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryboardNames.cvAboutMe) as! CVAboutTableViewController
+        guard let view = UIStoryboard(name: Storyboard.cvAboutMe.rawValue, bundle: nil).instantiateViewController(withIdentifier: Controller.cvAboutMe.rawValue) as? CVAboutTableViewController else { return UIViewController() }
         let navigation = UINavigationController(rootViewController: view)
         
         //Connect layers

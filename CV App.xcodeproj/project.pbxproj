@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC011EDB22B92B000062C0BD /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC011EDD22B92B000062C0BD /* Localized.strings */; };
-		FC1427EC22AAD1EA00E180FD /* AboutMeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1427EB22AAD1EA00E180FD /* AboutMeInteractor.swift */; };
+		36A8C49622D50E4C00A421AF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C49522D50E4C00A421AF /* Keys.swift */; };
+		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
+		36A8C4A822D53A4700A421AF /* AboutMeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */; };
 		FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1427ED22AAD4D300E180FD /* Constants.swift */; };
 		FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */; };
 		FC25DE8F22AED8620058DE47 /* CVAchivements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */; };
@@ -86,9 +87,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC011EDC22B92B000062C0BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
-		FC011EDE22B92B080062C0BD /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localized.strings"; sourceTree = "<group>"; };
-		FC1427EB22AAD1EA00E180FD /* AboutMeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutMeInteractor.swift; path = "CV App/CVAboutMe/Presenter/AboutMeInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		36A8C49422D50C6B00A421AF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		36A8C49522D50E4C00A421AF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeInteractor.swift; sourceTree = "<group>"; };
 		FC1427ED22AAD4D300E180FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVMyCareer.storyboard; sourceTree = "<group>"; };
 		FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVAchivements.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36A8C49D22D5245200A421AF /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				36A8C4A422D5248300A421AF /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		FC25DE7E22AED7020058DE47 /* CVMyCareer */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +352,9 @@
 			isa = PBXGroup;
 			children = (
 				FC1427ED22AAD4D300E180FD /* Constants.swift */,
+				36A8C49522D50E4C00A421AF /* Keys.swift */,
+				36A8C49422D50C6B00A421AF /* Config.xcconfig */,
+				36A8C49D22D5245200A421AF /* en.lproj */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -401,7 +414,6 @@
 				FC9432D422A6E749007D427E /* WireFrame */,
 				FC9432D322A6E73B007D427E /* Entity */,
 				FC9432D222A6E735007D427E /* Presenter */,
-				FC9432D122A6E72D007D427E /* Interactor */,
 				FC9432D022A6E71D007D427E /* View */,
 			);
 			path = CVAboutMe;
@@ -415,18 +427,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FC9432D122A6E72D007D427E /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				FC1427EB22AAD1EA00E180FD /* AboutMeInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		FC9432D222A6E735007D427E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				FC29BE1622A9A8C600D1B760 /* AboutMePresenter.swift */,
+				36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -565,7 +570,6 @@
 				FCECA4CD22A1B2DB00B0C8DC /* CV_AppTests.swift */,
 				FCAD5C9E22B8224B006C1C15 /* AlertViewTests.swift */,
 				FCECA4CF22A1B2DB00B0C8DC /* Info.plist */,
-				FC011EDD22B92B000062C0BD /* Localized.strings */,
 			);
 			path = "CV AppTests";
 			sourceTree = "<group>";
@@ -665,9 +669,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
-				"es-419",
+				en,
 			);
 			mainGroup = FCECA4AC22A1B2DA00B0C8DC;
 			productRefGroup = FCECA4B622A1B2DA00B0C8DC /* Products */;
@@ -686,12 +689,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC011EDB22B92B000062C0BD /* Localized.strings in Resources */,
 				FC64911222B16610008C191F /* AlertView.xib in Resources */,
 				FC263F2A22A58A7800E073F4 /* LaunchScreen.storyboard in Resources */,
 				FC9432D922A713A5007D427E /* CVAboutMe.storyboard in Resources */,
 				FCECA4C022A1B2DB00B0C8DC /* Assets.xcassets in Resources */,
 				FC25DE8F22AED8620058DE47 /* CVAchivements.storyboard in Resources */,
+				36A8C4A222D5248300A421AF /* Localizable.strings in Resources */,
 				FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */,
 				FC263F2822A58A5400E073F4 /* UserInfo.storyboard in Resources */,
 			);
@@ -718,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A8C4A822D53A4700A421AF /* AboutMeInteractor.swift in Sources */,
 				FC9432DB22A717C3007D427E /* CVAboutTableViewController.swift in Sources */,
 				FC25DE9322AF03C80058DE47 /* MyCareer.swift in Sources */,
 				FC6490FE22B006BB008C191F /* AchivementsPresenter.swift in Sources */,
@@ -725,12 +729,12 @@
 				FC64910022B00793008C191F /* AchivementsInteractor.swift in Sources */,
 				FCECA4BB22A1B2DA00B0C8DC /* UserInfoViewController.swift in Sources */,
 				FCECA4B922A1B2DA00B0C8DC /* AppDelegate.swift in Sources */,
-				FC1427EC22AAD1EA00E180FD /* AboutMeInteractor.swift in Sources */,
 				FC6490FC22B005F9008C191F /* AchivementsRouter.swift in Sources */,
 				FC25DE9B22AF08040058DE47 /* MyCareerIntercator.swift in Sources */,
 				FC29BE1122A96D5200D1B760 /* RootRouter.swift in Sources */,
 				FC25DE9122AF01410058DE47 /* MyCareerTableViewController.swift in Sources */,
 				FC6490F822AFFDF4008C191F /* Achivements.swift in Sources */,
+				36A8C49622D50E4C00A421AF /* Keys.swift in Sources */,
 				FC263F1122A5795400E073F4 /* User.swift in Sources */,
 				FCAD5C9922B7F2B2006C1C15 /* Result.swift in Sources */,
 				FC64911422B1666E008C191F /* AlertView.swift in Sources */,
@@ -802,13 +806,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC011EDD22B92B000062C0BD /* Localized.strings */ = {
+		36A8C4A422D5248300A421AF /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FC011EDC22B92B000062C0BD /* en */,
-				FC011EDE22B92B080062C0BD /* es-419 */,
+				36A8C4A322D5248300A421AF /* en */,
 			);
-			name = Localized.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -816,6 +819,7 @@
 /* Begin XCBuildConfiguration section */
 		FCECA4DB22A1B2DB00B0C8DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -880,6 +884,7 @@
 		};
 		FCECA4DC22A1B2DB00B0C8DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -938,9 +943,11 @@
 		};
 		FCECA4DE22A1B2DB00B0C8DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CVApp_URLRequest = "";
 				INFOPLIST_FILE = "CV App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -949,15 +956,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FCECA4DF22A1B2DB00B0C8DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CVApp_URLRequest = "";
 				INFOPLIST_FILE = "CV App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -966,12 +975,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		FCECA4E122A1B2DB00B0C8DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -992,6 +1002,7 @@
 		};
 		FCECA4E222A1B2DB00B0C8DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1012,6 +1023,7 @@
 		};
 		FCECA4E422A1B2DB00B0C8DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1034,6 +1046,7 @@
 		};
 		FCECA4E522A1B2DB00B0C8DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A8C49422D50C6B00A421AF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;

@@ -22,7 +22,7 @@ class AboutMePresenter: AboutMePresenterProtocol{
     }
     
     func updateView() {
-//        interactor?.fetchAboutMe(endpoint: Constants.Endpoints.aboutMe)
+        interactor?.fetchAboutMe(endpoint: EndPoint.aboutMe.rawValue)
     }
     
 }

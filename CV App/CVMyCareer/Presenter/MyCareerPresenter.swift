@@ -22,7 +22,7 @@ class MyCareerPresenter: MyCareerPresenterProtocol{
     }
     
     func updateView() {
-        interactor?.fetchMyCareer(endpoint: Constants.Endpoints.myCareer)
+        interactor?.fetchMyCareer(endpoint: EndPoint.myCareer.rawValue)
     }
 }
 

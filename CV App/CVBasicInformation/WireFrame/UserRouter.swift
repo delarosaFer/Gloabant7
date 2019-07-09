@@ -19,7 +19,7 @@ class UserRouter: MainRouterProtocol {
         let presenter = MainPresenter()
         let interactor = MainInteractor()
         
-        let view = UIStoryboard(name: "UserInfo", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryboardNames.cvInformation) as! UserInfoViewController
+        guard let view = UIStoryboard(name: Storyboard.userInfo.rawValue, bundle: nil).instantiateViewController(withIdentifier: Controller.cvInformation.rawValue) as? UserInfoViewController else { return UINavigationController() }
         
         let navigation = UINavigationController(rootViewController: view)
         

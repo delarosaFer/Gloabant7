@@ -1,0 +1,7 @@
+//MARK: - Basic configurations
+AppName = Globant7
+AppVersion = 1.0
+AppBundleID = globant7.CV
+
+//MARK: - Base URL
+URLRequest = https:/gist.githubusercontent.com/JordyGlob/

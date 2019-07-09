@@ -12,7 +12,7 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
     //MARK: - Properties
     var aboutMeList: AboutMe?
     var presenter: AboutMePresenterProtocol?
-    let titleView = NSLocalizedString("About me", comment: "")
+    let titleView = NSLocalizedString(StringKey.aboutMe.rawValue, comment: Comment.aboutMe.rawValue)
     //MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,32 +30,32 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
     }
     //Method for display the generic alert
     func showNetworkingError() {
-        let alertTitle = NSLocalizedString("Error", comment: "")
-        let alertMessage = NSLocalizedString("There was an error loading the user information", comment: "")
+        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
+        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
         DispatchQueue.main.sync { [weak self] in
             AlertView.instance.showAlert(title: alertTitle, message: alertMessage)
-            self?.view.addSubview(AlertView.instance.parentView)
+            self?.view.addSubview(AlertView.instance.parentView ?? AlertView())
         }
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return aboutMeList?.sections ?? 0
+        return aboutMeList?.response.AboutMe.sections ?? NumberI.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return aboutMeList?.about.rowsInSection ?? 0
+            return aboutMeList?.response.AboutMe.about.rowsInSection ?? NumberI.empty.rawValue
             
         case 1:
-            return aboutMeList?.hobbies.rowsInSection ?? 0
+            return aboutMeList?.response.AboutMe.hobbies.rowsInSection ?? NumberI.empty.rawValue
             
         case 2:
-            return aboutMeList?.skills.rowsInSection ?? 0
+            return aboutMeList?.response.AboutMe.Skills.rowsInSection ?? NumberI.empty.rawValue
             
         default:
-            return 0
+            return NumberI.empty.rawValue
         }
     }
     
@@ -69,11 +69,11 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
         if section == 2{
             return aboutMeList?.skills.titleSection
         }
-        return "Nil"
+        return Default.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.cell.rawValue, for: indexPath)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
         if indexPath.section == 0{

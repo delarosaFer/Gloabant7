@@ -21,7 +21,7 @@ class AchivementsRouter: AchivementsRouterProtocol{
         let router = AchivementsRouter()
         let interactor = AchivementsInteractor()
         let presenter = AchivementsPresenter()
-        let view = UIStoryboard(name: "CVAchivements", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryboardNames.cvMyAchivements) as! AchivementsTableViewController
+        guard let view = UIStoryboard(name: Storyboard.cvAchivements.rawValue, bundle: nil).instantiateViewController(withIdentifier: Controller.cvMyAchivements.rawValue) as? AchivementsTableViewController else { return UIViewController() }
         
         let navigation = UINavigationController(rootViewController: view)
         

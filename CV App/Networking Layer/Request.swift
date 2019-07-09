@@ -17,7 +17,7 @@ extension URL{
     /// - Returns: returns the URL with the queries
     func withQueries(_ queries: [String:String]) -> URL?{
         
-        guard !queries.isEmpty else { return self }
+        guard queries.isEmpty == false else { return self }
         
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
         components?.queryItems = queries.map { URLQueryItem(name: $0.0, value: $0.1) }
@@ -27,9 +27,9 @@ extension URL{
 
 class Request {
     // MARK: - Properties
-    private let baseURL: URL
+    private var baseURL: URL?
     
-    public static let shared = Request(baseURL: Constants.url) //The base URL for all GET Request
+    public static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue) //The base URL for all GET Request
     
     // MARK: - Enums
     enum NetworkingErrors: Error{//Define the errors that we can find when the app fetch the URL
@@ -44,7 +44,8 @@ class Request {
     ///
     /// - Parameter baseURL: URL base for the appi's request
     private init(baseURL: String) {
-        self.baseURL = URL(string: baseURL)!
+        guard let url = URL(string: baseURL) else { return }
+        self.baseURL = url
     }
     
     // MARK: - Methods
@@ -56,9 +57,9 @@ class Request {
     ///   - entity: The entity need it for test de data fetech
     ///   - completionHandler: This completion handler recive a result compose by a data and a case of the NetworkinErrors enum and return a void
     func request<T:Codable>(_ endpoint: String, entity: T.Type, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void){
-        let url = baseURL.appendingPathComponent(endpoint) 
+        guard let url = baseURL?.appendingPathComponent(endpoint) else { return }
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        request.httpMethod = HTTP.get.rawValue
         URLSession.shared.dataTask(with: request) { data, reponse, error  in
             guard error == nil else{
                 completionHandler(.failure(.netWorkError)) // Network error case
@@ -84,7 +85,6 @@ class Request {
             return
         }
         let requestImage = URLRequest(url: url)
-        print(requestImage)
         URLSession.shared.dataTask(with: requestImage){ data, response, error in
             guard error == nil else{
                 completionHandler(.failure(.netWorkError)) // Network error case
@@ -107,8 +107,7 @@ class Request {
         do {
             return try jsonDecoder.decode(T.self, from: data)
         } catch {
-            print(error.localizedDescription)
-            
+            //MARK: - ToDo
         }
         return nil
     }

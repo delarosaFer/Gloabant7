@@ -13,7 +13,7 @@ class AchivementsTableViewController: UITableViewController, AchivementsViewCont
     //MARK: - Properties
     var achivementsList: AchivementsResult?
     var presenter: AchivementsPresenterProtocol?
-    let titleView = NSLocalizedString("Achivements", comment: "")
+    let titleView = NSLocalizedString(StringKey.achivements.rawValue, comment: Comment.achivements.rawValue)
     //MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,32 +32,32 @@ class AchivementsTableViewController: UITableViewController, AchivementsViewCont
     
     //Methods for display the generic alert
     func showNetworkingError() {
-        let alertTitle = NSLocalizedString("Error", comment: "")
-        let alertMessage = NSLocalizedString("There was an error loading", comment: "")
+        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
+        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
         DispatchQueue.main.sync { [weak self] in
             AlertView.instance.showAlert(title: alertTitle, message: alertMessage)
-            self?.view.addSubview(AlertView.instance.parentView)
+            self?.view.addSubview(AlertView.instance.parentView ?? AlertView())
         }
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return achivementsList?.achivementsResponse.Achivements.sections ?? 0
+        return achivementsList?.achivementsResponse.Achivements.sections ?? NumberI.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return achivementsList?.achivementsResponse.Achivements.Courses.rowsInSection ?? 0
+            return achivementsList?.achivementsResponse.Achivements.Courses.rowsInSection ?? NumberI.empty.rawValue
             
         case 1:
-            return achivementsList?.achivementsResponse.Achivements.Talks.rowsInSection ?? 0
+            return achivementsList?.achivementsResponse.Achivements.Talks.rowsInSection ?? NumberI.empty.rawValue
             
         case 2:
-            return achivementsList?.achivementsResponse.Achivements.Extras.rowsInSection ?? 0
+            return achivementsList?.achivementsResponse.Achivements.Extras.rowsInSection ?? NumberI.empty.rawValue
             
         default:
-            return 0
+            return NumberI.empty.rawValue
         }
         
     }
@@ -73,14 +73,14 @@ class AchivementsTableViewController: UITableViewController, AchivementsViewCont
             return achivementsList?.achivementsResponse.Achivements.Extras.titleSection
         }
         
-        return "Nil"
+        return Default.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.cell.rawValue, for: indexPath)
         cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.numberOfLines = NumberI.empty.rawValue
         if indexPath.section == 0 {
             cell.textLabel?.text = achivementsList?.achivementsResponse.Achivements.Courses.CiscoCCNA
         }
