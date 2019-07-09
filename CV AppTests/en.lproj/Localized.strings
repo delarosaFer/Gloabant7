@@ -7,7 +7,7 @@
 */
 "About Me" = "About Me";
 "My Career" = "My Career";
-"Achivements" = "Achivements";
+"Achivements" = "Achievements";
 "Error in the test" = "Error in the test";
 "There was an error loading the information" = "There was an error loading the information";
 "Error request" = "Error request";
@@ -18,3 +18,6 @@
 "Fetch success" = "Fetch success";
 "Fetch failed" ="Fetch failed";
 "Module Created" = "Module Created";
+"Title Age" = "Age:";
+"Title Phone" = "Phone:";
+"Title e-mail" = "E-mail:";

@@ -17,3 +17,6 @@
 "Fetch success" = "Fetch exitoso";
 "Fetch failed" ="Fetch fallido";
 "Module Created" = "Modulo Creado";
+"Title Age" = "Edad:";
+"Title Phone" = "Teléfono:";
+"Title e-mail" = "Correo electrónico:";

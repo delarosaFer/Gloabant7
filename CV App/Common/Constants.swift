@@ -9,6 +9,23 @@
 import Foundation
 import UIKit
 
+public enum UserInfoStrings {
+    case age
+    case phone
+    case email
+    
+    func getText() -> String {
+        switch self {
+        case .age:
+            return NSLocalizedString("Title Age", comment: "")
+        case .phone:
+            return NSLocalizedString("Title Phone", comment: "")
+        case .email:
+            return NSLocalizedString("Title e-mail", comment: "")
+        }
+    }
+}
+
 class Constants{
     //Base URL for the API request
     public static let url = Bundle.main.object(forInfoDictionaryKey: "URLRequest") as! String
