@@ -19,7 +19,7 @@ class AchivementsPresenter: AchivementsPresenterProtocol{
     }
     
     func updateView() {
-        interactor?.fetchAchivements(endpoint: EndPoint.achivements.rawValue)
+//        interactor?.fetchAchivements(endpoint: EndPoint.achivements.rawValue)
     }
 }
 

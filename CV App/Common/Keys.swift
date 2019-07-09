@@ -22,4 +22,9 @@ enum StringKey: String {
     case aboutMe = "aboutMe"
     case myCareer = "myCareer"
     case achivements = "achivements"
+    
+    //MARK: - Labels at user info view
+    case age = "labelAge"
+    case phone = "labelPhone"
+    case email = "labelEmail"
 }

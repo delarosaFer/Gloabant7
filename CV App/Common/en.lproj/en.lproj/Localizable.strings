@@ -8,6 +8,6 @@
 "achivements" = "Achivements";
 
 //MARK: - Strings for labels
-"Title Age" = "Age:";
-"Title Phone" = "Phone:";
-"Title e-mail" = "E-mail:";
+"labelAge" = "Age: ";
+"labelPhone" = "Phone: ";
+"labelEmail" = "E-mail: ";

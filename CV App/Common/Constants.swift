@@ -7,24 +7,6 @@
 //
 
 import Foundation
-import UIKit
-
-public enum UserInfoStrings {
-    case age
-    case phone
-    case email
-    
-    func getText() -> String {
-        switch self {
-        case .age:
-            return NSLocalizedString("Title Age", comment: "")
-        case .phone:
-            return NSLocalizedString("Title Phone", comment: "")
-        case .email:
-            return NSLocalizedString("Title e-mail", comment: "")
-        }
-    }
-}
 
 //MARK: - Storyboard name
 enum Storyboard: String {
@@ -47,16 +29,13 @@ enum Controller: String {
 enum Configuration {
     static func getUrl(for key: String) -> String? {
         return (Bundle.main.infoDictionary?[key] as? String)
->>>>>>> fix: statics strings, magic numbers, localizable, xcconfig, print, force unwarps, outlets optionals, just iphone device --> Todo: static strings and numbers in testing
     }
 }
 
 //MARK: - Endpoint URLs
 enum EndPoint: String {
     case userInfo = "120xcf"
-    case aboutMe = "b290f1f79adcbee0d716410e5862fa12/raw/f73751f9ab119f927317d0eaf8032884b40668b5/AboutMe"
     case myCareer = "e5unb"
-    case achivements = "2bf3e1ee16a4e751f5bbf8b7e86f303d/raw/2dded28a7edd3d01f826ecead20dcf53c253e8a6/Achivements"
 }
 
 //MARK: - Default values
@@ -76,11 +55,19 @@ enum Cell: String {
 
 //MARK: - Comments
 enum Comment: String {
+    //MARK: - Alert controller comments
     case titleError = "Title error!"
     case messageError = "Message error!"
+    
+    //MARK: - Viewcontroller comments
     case aboutMe = "About me view"
     case myCareer = "My Career view"
     case achivements = "Achivements view"
+    
+    //MARK: - Labels UserInfoView comments
+    case labelAge = "Label Age"
+    case labelPhone = "Label Phone"
+    case labelEmail = "Label Email"
 }
 
 //MARK: - Values number type

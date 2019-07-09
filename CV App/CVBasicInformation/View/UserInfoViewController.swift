@@ -67,9 +67,9 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         let userInfo = user
         let userName = userInfo.userName
         let imageURL = userInfo.imageURL
-        let age = String("\(UserInfoStrings.age.getText()) \(userInfo.age)")
-        let email = UserInfoStrings.email.getText() + " " + userInfo.email
-        let cellphone = UserInfoStrings.phone.getText() + " " + userInfo.cellphone
+        let age = NSLocalizedString(StringKey.age.rawValue, comment: Comment.labelAge.rawValue) + String(userInfo.age)
+        let email = NSLocalizedString(StringKey.phone.rawValue, comment: Comment.labelPhone.rawValue) + userInfo.email
+        let cellphone = NSLocalizedString(StringKey.email.rawValue, comment: Comment.labelEmail.rawValue) + userInfo.cellphone
         presenter?.getImage(imageURL: imageURL ?? Default.empty.rawValue)
         DispatchQueue.main.async  { [weak self] in
             self?.userNameLabel?.text = userName
