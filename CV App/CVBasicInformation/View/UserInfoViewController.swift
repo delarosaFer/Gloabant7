@@ -56,18 +56,9 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         let userInfo = user
         let userName = userInfo.userName
         let imageURL = userInfo.imageURL
-        var age = UserInfoStrings.age.getText()
-        if let userAge = userInfo.age {
-            age += " " + userAge
-        }
-        var email = UserInfoStrings.email.getText()
-        if let userEMail = userInfo.email {
-            email += " " + userEMail
-        }
-        var cellphone = UserInfoStrings.phone.getText()
-        if let userPhone = userInfo.cellphone {
-            cellphone += " " + userPhone
-        }
+        let age = String("\(UserInfoStrings.age.getText()) \(userInfo.age)")
+        let email = UserInfoStrings.email.getText() + " " + userInfo.email
+        let cellphone = UserInfoStrings.phone.getText() + " " + userInfo.cellphone
         presenter?.getImage(imageURL: imageURL ?? "nil")
         DispatchQueue.main.async  { [weak self] in
             self?.userNameLabel.text = userName
