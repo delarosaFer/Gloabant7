@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		367308FB22D54D620064E596 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 367308FA22D54D620064E596 /* README.md */; };
 		36A8C49622D50E4C00A421AF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C49522D50E4C00A421AF /* Keys.swift */; };
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
 		36A8C4A822D53A4700A421AF /* AboutMeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */; };
@@ -88,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		367308FA22D54D620064E596 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		36A8C49422D50C6B00A421AF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		36A8C49522D50E4C00A421AF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 		FCECA4AC22A1B2DA00B0C8DC = {
 			isa = PBXGroup;
 			children = (
+				367308FA22D54D620064E596 /* README.md */,
 				FCECA4B722A1B2DA00B0C8DC /* CV App */,
 				FCECA4CC22A1B2DB00B0C8DC /* CV AppTests */,
 				FCECA4D722A1B2DB00B0C8DC /* CV AppUITests */,
@@ -706,6 +709,7 @@
 				FCECA4C022A1B2DB00B0C8DC /* Assets.xcassets in Resources */,
 				FC25DE8F22AED8620058DE47 /* CVAchivements.storyboard in Resources */,
 				36A8C4A222D5248300A421AF /* Localizable.strings in Resources */,
+				367308FB22D54D620064E596 /* README.md in Resources */,
 				FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */,
 				FC263F2822A58A5400E073F4 /* UserInfo.storyboard in Resources */,
 			);
