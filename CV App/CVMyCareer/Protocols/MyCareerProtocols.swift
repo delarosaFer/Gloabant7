@@ -12,7 +12,7 @@ import UIKit
 //MARK: - Protocols
 protocol MyCareerViewControllerProtocol: class{
     //Presenter -> View
-    func showMyCareer (with myCareer:  MyCareerResult)
+    func showMyCareer (with myCareer:  MyCareer)
     func showNetworkingError()
 }
 
@@ -34,7 +34,7 @@ protocol MyCareerInputIntercatorProtocol{
 
 protocol MyCareerOutputIntercatorProtocol{
     //Interactor -> Presenter
-    func myCareerFeteched(myCareer: MyCareerResult)
+    func myCareerFeteched(myCareer: MyCareer)
     func userFetchFailed()
 }
 

@@ -15,11 +15,11 @@ class MyCareerInteractor: MyCareerInputIntercatorProtocol{
     
     //MARK: - Methods
     func fetchMyCareer(endpoint: String) {
-        Request.shared.request(endpoint, entity: MyCareerResult.self) { [weak self] fetchResult in
+        Request.shared.request(endpoint, entity: MyCareer.self) { [weak self] fetchResult in
             
             switch fetchResult{
             case .success(let data):
-                let myCareerFetch: MyCareerResult? = Request.shared.jsonDecode(data: data)
+                let myCareerFetch: MyCareer? = Request.shared.jsonDecode(data: data)
                 guard let _ = self?.presenter?.myCareerFeteched(myCareer: myCareerFetch!) else{
                     self?.presenter?.userFetchFailed()
                     return

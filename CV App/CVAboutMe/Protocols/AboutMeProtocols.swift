@@ -12,7 +12,7 @@ import UIKit
 //MARK: - Protocols
 protocol AboutMeViewControllerProtocol: class{
     //Presenter -> View
-    func showAboutMe (with aboutMe:  AboutMeResult)
+    func showAboutMe (with aboutMe:  AboutMe)
     func showNetworkingError()
 }
 
@@ -34,7 +34,7 @@ protocol AboutMeInputIntercatorProtocol{
 
 protocol AboutMeOutputIntercatorProtocol{
     //Interactor -> Presenter
-    func aboutMeFeteched(aboutMe: AboutMeResult)
+    func aboutMeFeteched(aboutMe: AboutMe)
     func aboutMeFetchFailed()
 }
 

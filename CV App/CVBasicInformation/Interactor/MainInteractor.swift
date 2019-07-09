@@ -16,10 +16,10 @@ class MainInteractor: MainInputIntercatorProtocol{
     
     //Method for create and fetch the request
     func fetchUserInfo(endpoint: String) {
-        Request.shared.request(endpoint, entity: UserResult.self ) { [weak self] fetchResult in
+        Request.shared.request(endpoint, entity: UserInfo.self ) { [weak self] fetchResult in
             switch fetchResult{
             case .success(let data):
-                let userFetch: UserResult? = Request.shared.jsonDecode(data: data)
+                let userFetch: UserInfo? = Request.shared.jsonDecode(data: data)
                 guard  let user = userFetch, let _ = self?.presenter?.userFeteched(user: user) else{
                     self?.presenter?.userFetchFailed()
                     return

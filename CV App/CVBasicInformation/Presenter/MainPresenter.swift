@@ -43,7 +43,7 @@ class MainPresenter: MainPresenterProtocol {
 
 //MARK: - Extension for MainOutputIntercator
 extension MainPresenter: MainOutputIntercatorProtocol{
-    func userFeteched(user: UserResult) {
+    func userFeteched(user: UserInfo) {
         view?.showUserInfo(with: user)
     }
     

@@ -14,7 +14,7 @@ class AboutMePresenter: AboutMePresenterProtocol{
     weak var view: AboutMeViewControllerProtocol?
     var interactor: AboutMeInputIntercatorProtocol?
     var router: AboutMeRouterProtocol?
-    var aboutMe: AboutMeResult?
+    var aboutMe: AboutMe?
     
     //MARK: - Methods
     func viewDidLoad() {
@@ -22,13 +22,13 @@ class AboutMePresenter: AboutMePresenterProtocol{
     }
     
     func updateView() {
-        interactor?.fetchAboutMe(endpoint: Constants.Endpoints.aboutMe)
+//        interactor?.fetchAboutMe(endpoint: Constants.Endpoints.aboutMe)
     }
     
 }
 //MARK: - Extension for AboutMeOutputIntercator
 extension AboutMePresenter: AboutMeOutputIntercatorProtocol{
-    func aboutMeFeteched(aboutMe: AboutMeResult) {
+    func aboutMeFeteched(aboutMe: AboutMe) {
         view?.showAboutMe(with: aboutMe)
     }
     
