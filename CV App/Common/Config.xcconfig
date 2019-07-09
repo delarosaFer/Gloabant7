@@ -4,4 +4,4 @@ AppVersion = 1.0
 AppBundleID = globant7.CV
 
 //MARK: - Base URL
-URLRequest = https:/gist.githubusercontent.com/JordyGlob/
+BaseURL = https:/api.myjson.com/bins/

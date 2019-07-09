@@ -19,7 +19,7 @@ class MyCareerInteractor: MyCareerInputIntercatorProtocol{
             
             switch fetchResult{
             case .success(let data):
-                guard let myCareerFetch: MyCareerResult = Request.shared.jsonDecode(data: data) else { return }
+                guard let myCareerFetch: MyCareer = Request.shared.jsonDecode(data: data) else { return }
                 guard let _ = self?.presenter?.myCareerFeteched(myCareer: myCareerFetch) else{
                     self?.presenter?.userFetchFailed()
                     return

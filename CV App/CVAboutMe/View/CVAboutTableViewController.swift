@@ -40,19 +40,19 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return aboutMeList?.response.AboutMe.sections ?? NumberI.empty.rawValue
+        return aboutMeList?.sections ?? NumberI.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return aboutMeList?.response.AboutMe.about.rowsInSection ?? NumberI.empty.rawValue
+            return aboutMeList?.about.rowsInSection ?? NumberI.empty.rawValue
             
         case 1:
-            return aboutMeList?.response.AboutMe.hobbies.rowsInSection ?? NumberI.empty.rawValue
+            return aboutMeList?.hobbies.rowsInSection ?? NumberI.empty.rawValue
             
         case 2:
-            return aboutMeList?.response.AboutMe.Skills.rowsInSection ?? NumberI.empty.rawValue
+            return aboutMeList?.skills.rowsInSection ?? NumberI.empty.rawValue
             
         default:
             return NumberI.empty.rawValue

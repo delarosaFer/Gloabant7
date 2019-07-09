@@ -2,7 +2,7 @@ import Foundation
 
 //MARK: - Keys to get a URL from xcconfig
 enum URLKey: String {
-    case request = "URLRequest"
+    case request = "BaseURL"
 }
 
 //MARK: - Animation keys
@@ -15,7 +15,7 @@ enum AnimationKey: String {
 //MARK: - Keys for localizable strings
 enum StringKey: String {
     //MARK: - Alert controller strings
-    case titleError = "titleError!"
+    case titleError = "titleError"
     case messageError = "messageError"
     
     //MARK: - Title view strings

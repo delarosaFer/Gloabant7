@@ -42,19 +42,19 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return myCareerMeList?.myCareerResponse.MyCareer.sections ?? NumberI.empty.rawValue
+        return myCareerMeList?.sections ?? NumberI.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return myCareerMeList?.myCareerResponse.MyCareer.Studies.rowsInSection ?? NumberI.empty.rawValue
+            return myCareerMeList?.studies.rowsInSection ?? NumberI.empty.rawValue
             
         case 1:
-            return myCareerMeList?.myCareerResponse.MyCareer.CurrentJob.rowsInSection ?? NumberI.empty.rawValue
+            return myCareerMeList?.currentJob.rowsInSection ?? NumberI.empty.rawValue
             
         case 2:
-            return myCareerMeList?.myCareerResponse.MyCareer.LastJob.rowsInSection ?? NumberI.empty.rawValue
+            return myCareerMeList?.lastJob.rowsInSection ?? NumberI.empty.rawValue
             
         default:
             return NumberI.empty.rawValue
