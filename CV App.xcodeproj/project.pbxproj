@@ -10,6 +10,7 @@
 		36A8C49622D50E4C00A421AF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C49522D50E4C00A421AF /* Keys.swift */; };
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
 		36A8C4A822D53A4700A421AF /* AboutMeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */; };
+		DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */; };
 		FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1427ED22AAD4D300E180FD /* Constants.swift */; };
 		FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */; };
 		FC25DE8F22AED8620058DE47 /* CVAchivements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */; };
@@ -91,6 +92,7 @@
 		36A8C49522D50E4C00A421AF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeInteractor.swift; sourceTree = "<group>"; };
+		DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
 		FC1427ED22AAD4D300E180FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVMyCareer.storyboard; sourceTree = "<group>"; };
 		FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVAchivements.storyboard; sourceTree = "<group>"; };
@@ -188,6 +190,14 @@
 				36A8C4A422D5248300A421AF /* Localizable.strings */,
 			);
 			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		DB01DF9022D54F820021E1DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FC25DE7E22AED7020058DE47 /* CVMyCareer */ = {
@@ -543,6 +553,7 @@
 		FCECA4B722A1B2DA00B0C8DC /* CV App */ = {
 			isa = PBXGroup;
 			children = (
+				DB01DF9022D54F820021E1DA /* Extensions */,
 				FC263F2B22A58B3400E073F4 /* Storyboard */,
 				FC263F1222A57C9100E073F4 /* Networking Layer */,
 				FC91FCC022A1B4D600862929 /* Common */,
@@ -725,6 +736,7 @@
 				FC9432DB22A717C3007D427E /* CVAboutTableViewController.swift in Sources */,
 				FC25DE9322AF03C80058DE47 /* MyCareer.swift in Sources */,
 				FC6490FE22B006BB008C191F /* AchivementsPresenter.swift in Sources */,
+				DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */,
 				FC29BE1322A9A61400D1B760 /* AboutMe.swift in Sources */,
 				FC64910022B00793008C191F /* AchivementsInteractor.swift in Sources */,
 				FCECA4BB22A1B2DA00B0C8DC /* UserInfoViewController.swift in Sources */,

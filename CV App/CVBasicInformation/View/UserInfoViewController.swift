@@ -16,6 +16,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     var linkedInUrl: String?
     var pulseLayers = [CAShapeLayer]()
     // MARK: - Outlets
+
     @IBOutlet weak var userNameLabel: UILabel?
     @IBOutlet weak var ageLabel: UILabel?
     @IBOutlet weak var emailLabel: UILabel?
@@ -28,27 +29,51 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     @IBOutlet weak var stackview: UIStackView?
     
     @IBOutlet weak var bottomContainer: UIView?
+    var moreInfoButton: UIButton?
+    var navigationDelegate: NavigationDelegate?
+
    
     //MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        profileUserImage?.layer.cornerRadius = profileUserImage?.frame.size.width ?? CGFloat(NumberF.zero.rawValue) / CGFloat(NumberF.half.rawValue)
+
         
-        //Constraints
-//        profileUserImage?.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//        let ageLabelConstraint = NSLayoutConstraint(item: ageLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
-//        let cellphoneLabelContraint = NSLayoutConstraint(item: cellphoneLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
-//        let emailLabelConstraint = NSLayoutConstraint(item: emailLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
-//
-//        //Add constraints
-//        self.view.addConstraints([ageLabelConstraint, emailLabelConstraint, cellphoneLabelContraint])
+        moreInfoButton = UIButton(frame: .zero)
+        moreInfoButton?.translatesAutoresizingMaskIntoConstraints = false
+        moreInfoButton?.setTitle("+", for: .normal)
+        moreInfoButton?.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        moreInfoButton?.backgroundColor = .red
+        
+        guard let moreInfoButton = moreInfoButton else {
+            return
+        }
+        
+        self.view.addSubview(moreInfoButton)
+        NSLayoutConstraint.activate([
+        moreInfoButton.heightAnchor.constraint(equalToConstant: 75),
+        moreInfoButton.heightAnchor.constraint(equalTo: moreInfoButton.widthAnchor, multiplier: 1),
+        moreInfoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -37.5),
+        moreInfoButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -37.5)
+            ])
+        
+        
+        moreInfoButton.addTarget(self, action: #selector(didTapMoreInfoButton), for: .touchUpInside)
+        if let navigationController = self.navigationController {
+            navigationDelegate = NavigationDelegate()
+            navigationController.delegate = navigationDelegate
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createPulse()
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        moreInfoButton?.circled()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -68,8 +93,8 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         let userName = userInfo.userName
         let imageURL = userInfo.imageURL
         let age = NSLocalizedString(StringKey.age.rawValue, comment: Comment.labelAge.rawValue) + String(userInfo.age)
-        let email = NSLocalizedString(StringKey.phone.rawValue, comment: Comment.labelPhone.rawValue) + userInfo.email
-        let cellphone = NSLocalizedString(StringKey.email.rawValue, comment: Comment.labelEmail.rawValue) + userInfo.cellphone
+        let email = NSLocalizedString(StringKey.email.rawValue, comment: Comment.labelEmail.rawValue) + userInfo.email
+        let cellphone = NSLocalizedString(StringKey.phone.rawValue, comment: Comment.labelPhone.rawValue) + userInfo.cellphone
         presenter?.getImage(imageURL: imageURL ?? Default.empty.rawValue)
         DispatchQueue.main.async  { [weak self] in
             self?.userNameLabel?.text = userName
@@ -84,6 +109,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         DispatchQueue.main.async { [weak self] in
             let image = UIImage(data: data)
             self?.profileUserImage?.image = image
+            self?.profileUserImage?.circled()
         }
     }
     
@@ -132,6 +158,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             profileUserImage?.layer.addSublayer(pulseLayer)
             pulseLayers.append(pulseLayer)
         }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.animatePulse(index: 0)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4){
@@ -161,6 +188,10 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     }
     @IBAction func linkedInButton(_ sender: Any) {
     }
+    
+    @objc func didTapMoreInfoButton() {
+        presenter?.myCareerPressed()
+    }
 }
 
 //MARK: - UIViewController Extension
@@ -170,5 +201,110 @@ extension UIViewController{
         view.removeFromSuperview()
         view = nil
         parent?.addSubview(view)
+    }
+}
+
+
+
+class MaterialShowAnimator: NSObject {
+}
+
+extension MaterialShowAnimator: UIViewControllerAnimatedTransitioning {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.5
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        guard let toViewController = transitionContext.viewController(forKey: .to),
+            let fromViewController = transitionContext.viewController(forKey: .from),
+            let overViewController = fromViewController as? UserInfoViewController,
+            let button = overViewController.moreInfoButton
+            else {
+                return
+        }
+        
+        let blackView = UIView(frame: overViewController.view.frame)
+        blackView.backgroundColor = UIColor.black
+        blackView.alpha = 0
+        overViewController.view.addSubview(blackView)
+        
+        let startFrame = button.frame
+        
+        toViewController.view.frame = startFrame
+        toViewController.view.layer.cornerRadius = startFrame.height / 2.0
+        transitionContext.containerView.addSubview(toViewController.view)
+        
+        let animationTiming = UICubicTimingParameters(animationCurve: .easeInOut)
+        
+        let animator = UIViewPropertyAnimator(duration: transitionDuration(using: transitionContext), timingParameters: animationTiming)
+        
+        animator.addAnimations {
+            toViewController.view.frame = transitionContext.finalFrame(for: toViewController)
+            toViewController.view.layer.cornerRadius = 0
+            blackView.alpha = 1
+        }
+        
+        animator.addCompletion { finished in
+            blackView.removeFromSuperview()
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+        
+        animator.startAnimation()
+    }
+}
+
+class NavigationDelegate: NSObject, UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .pop {
+            return MaterialHideAnimator()
+        } else {
+            return MaterialShowAnimator()
+        }
+    }
+}
+
+
+class MaterialHideAnimator: NSObject {
+}
+
+extension MaterialHideAnimator: UIViewControllerAnimatedTransitioning {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.5
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        guard let toViewController = transitionContext.viewController(forKey: .to),
+            let fromViewController = transitionContext.viewController(forKey: .from),
+            let overViewController = toViewController as? UserInfoViewController,
+            let button = overViewController.moreInfoButton
+            else {
+                return
+        }
+        
+        let blackView = UIView(frame: overViewController.view.frame)
+        blackView.backgroundColor = UIColor.black
+        overViewController.view.addSubview(blackView)
+        
+        
+        let transitionContainer = transitionContext.containerView
+        transitionContainer.addSubview(toViewController.view)
+        transitionContainer.addSubview(fromViewController.view)
+        
+        let animationTiming = UICubicTimingParameters(animationCurve: .easeInOut)
+        
+        let animator = UIViewPropertyAnimator(duration: transitionDuration(using: transitionContext), timingParameters: animationTiming)
+        
+        animator.addAnimations {
+            fromViewController.view.frame = button.frame
+            fromViewController.view.layer.cornerRadius = button.frame.height / 2
+            blackView.alpha = 0
+        }
+        
+        animator.addCompletion { finished in
+            blackView.removeFromSuperview()
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+        
+        animator.startAnimation()
     }
 }
