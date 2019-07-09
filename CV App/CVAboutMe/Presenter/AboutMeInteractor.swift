@@ -18,8 +18,8 @@ class AboutMeInteractor: AboutMeInputIntercatorProtocol{
             
             switch fetchResult{
             case .success(let data):
-                let aboutMeFetch: AboutMe? = Request.shared.jsonDecode(data: data)
-                guard let _ = self?.presenter?.aboutMeFeteched(aboutMe: aboutMeFetch!) else{
+                guard let aboutMeFetch: AboutMe = Request.shared.jsonDecode(data: data) else { return }
+                guard let _ = self?.presenter?.aboutMeFeteched(aboutMe: aboutMeFetch) else{
                     self?.presenter?.aboutMeFetchFailed()
                     return
                 }

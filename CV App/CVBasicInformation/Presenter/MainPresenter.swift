@@ -20,8 +20,7 @@ class MainPresenter: MainPresenterProtocol {
     }
     
     func updateView() {
-        interactor?.fetchUserInfo(endpoint: Constants.Endpoints.userInfo)
-        
+        interactor?.fetchUserInfo(endpoint: EndPoint.userInfo.rawValue)
     }
     
     func getImage(imageURL: String){

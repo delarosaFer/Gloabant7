@@ -7,39 +7,77 @@
 //
 
 import Foundation
-import UIKit
 
-public enum UserInfoStrings {
-    case age
-    case phone
-    case email
-    
-    func getText() -> String {
-        switch self {
-        case .age:
-            return NSLocalizedString("Title Age", comment: "")
-        case .phone:
-            return NSLocalizedString("Title Phone", comment: "")
-        case .email:
-            return NSLocalizedString("Title e-mail", comment: "")
-        }
+//MARK: - Storyboard name
+enum Storyboard: String {
+    case userInfo = "UserInfo"
+    case cvAboutMe = "CVAboutMe"
+    case cvMyCareer = "CVMyCareer"
+    case cvAchivements = "CVAchivements"
+}
+
+//MARK: - Controller name
+enum Controller: String {
+    case cvInformation = "UserInfoViewController"
+    case cvAboutMe = "CVAboutTableViewController"
+    case cvMyCareer = "MyCareerTableViewController"
+    case cvMyAchivements = "AchivementsTableViewController"
+    case alert = "AlertView"
+}
+
+//MARK: - Get URL base from xcconfig
+enum Configuration {
+    static func getUrl(for key: String) -> String? {
+        return (Bundle.main.infoDictionary?[key] as? String)
     }
 }
 
-class Constants{
-    //Base URL for the API request
-    public static let url = Bundle.main.object(forInfoDictionaryKey: "URLRequest") as! String
+//MARK: - Endpoint URLs
+enum EndPoint: String {
+    case userInfo = "120xcf"
+    case myCareer = "e5unb"
+}
+
+//MARK: - Default values
+enum Default: String {
+    case empty = ""
+}
+
+//MARK: - HTTP Methods
+enum HTTP: String {
+    case get = "GET"
+}
+
+//MARK: - Cell identifier
+enum Cell: String {
+    case cell = "UITableViewCell"
+}
+
+//MARK: - Comments
+enum Comment: String {
+    //MARK: - Alert controller comments
+    case titleError = "Title error!"
+    case messageError = "Message error!"
     
-    //Storyboars names
-    struct StoryboardNames {
-        static let cvInformation = "UserInfoViewController"
-        static let cvAboutMe = "CVAboutTableViewController"
-        static let cvMyCareer = "MyCareerTableViewController"
-        static let cvMyAchivements = "AchivementsTableViewController"
-    }
-    //Endpoints names 
-    struct Endpoints {
-        static let userInfo = "120xcf"
-        static let myCareer = "e5unb"
-    }
+    //MARK: - Viewcontroller comments
+    case aboutMe = "About me view"
+    case myCareer = "My Career view"
+    case achivements = "Achivements view"
+    
+    //MARK: - Labels UserInfoView comments
+    case labelAge = "Label Age"
+    case labelPhone = "Label Phone"
+    case labelEmail = "Label Email"
+}
+
+//MARK: - Values number type
+enum NumberF: Float {
+    case zero = 0.0
+    case half = 2.0
+    case duration = 6.6
+    case toValue = 1.4
+}
+
+enum NumberI: Int {
+    case empty = 0
 }

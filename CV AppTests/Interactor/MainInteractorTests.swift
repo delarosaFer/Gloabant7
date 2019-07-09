@@ -16,7 +16,7 @@ class MainInteractorTests: XCTestCase{
         let expectationText = NSLocalizedString("Fetch success", comment: "nil")
         let expectation = XCTestExpectation(description: expectationText )
         // when
-        Request.shared.request(Constants.Endpoints.userInfo, entity: UserResult.self, completionHandler: { fetchResult in
+        Request.shared.request(EndPoint.userInfo.rawValue, entity: UserResult.self, completionHandler: { fetchResult in
             switch fetchResult {
             // then
             case .success:

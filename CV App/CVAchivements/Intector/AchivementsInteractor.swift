@@ -21,8 +21,8 @@ class AchivementsInteractor: AchivementsInputIntercatorProtocol{
         Request.shared.request(endpoint, entity: AchivementsResult.self) { [weak self] fetchResult in
             switch fetchResult{
             case .success(let data):
-                let achivementsFetch: AchivementsResult? = Request.shared.jsonDecode(data: data)
-                guard let _ = self?.presenter?.achivementsFeteched(achivements: achivementsFetch!) else{
+                guard let achivementsFetch: AchivementsResult = Request.shared.jsonDecode(data: data) else { return }
+                guard let _ = self?.presenter?.achivementsFeteched(achivements: achivementsFetch) else{
                     self?.presenter?.userFetchFailed()
                     return
                 }

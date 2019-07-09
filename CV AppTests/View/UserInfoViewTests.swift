@@ -16,23 +16,23 @@ class UserInfoViewTest: XCTestCase{
     
     override func setUp() {
         
-        let storyboard = UIStoryboard(name: "UserInfo", bundle: nil)
+        let storyboard = UIStoryboard(name: Storyboard.userInfo.rawValue, bundle: nil)
         mockMainView = MockMainView()
-        view = storyboard.instantiateViewController(withIdentifier: "UserInfoViewController") as? UserInfoViewController
+        view = storyboard.instantiateViewController(withIdentifier: Controller.cvInformation.rawValue) as? UserInfoViewController
         
         self.view?.loadView()
         self.view?.viewDidLoad()
         
-        var _: UILabel! = UILabel()
-        var _: UILabel! = UILabel()
-        var _: UILabel! = UILabel()
-        var _: UILabel! = UILabel()
-        var _: UIImageView!
-        var _: UIView!
-        var _: UIButton!
-        var _: UIButton!
-        var _: UIButton!
-        var _: UIButton!
+        var _: UILabel? = UILabel()
+        var _: UILabel? = UILabel()
+        var _: UILabel? = UILabel()
+        var _: UILabel? = UILabel()
+        var _: UIImageView?
+        var _: UIView?
+        var _: UIButton?
+        var _: UIButton?
+        var _: UIButton?
+        var _: UIButton?
         
     }
     

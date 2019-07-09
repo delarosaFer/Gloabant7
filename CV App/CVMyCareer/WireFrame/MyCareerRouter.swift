@@ -18,7 +18,7 @@ class MyCareerRouter: MyCareerRouterProtocol{
         let router = MyCareerRouter()
         let interactor = MyCareerInteractor()
         let presenter = MyCareerPresenter()
-        let view = UIStoryboard(name: "CVMyCareer", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryboardNames.cvMyCareer) as! MyCareerTableViewController
+        guard let view = UIStoryboard(name: Storyboard.cvMyCareer.rawValue, bundle: nil).instantiateViewController(withIdentifier: Controller.cvMyCareer.rawValue) as? MyCareerTableViewController else { return UIViewController() }
         let navigation = UINavigationController(rootViewController: view)
         
         //Connect layers

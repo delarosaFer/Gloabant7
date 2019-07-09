@@ -16,22 +16,33 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     var linkedInUrl: String?
     var pulseLayers = [CAShapeLayer]()
     // MARK: - Outlets
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var cellphoneLabel: UILabel!
-    @IBOutlet weak var profileUserImage: UIImageView!
-    @IBOutlet weak var emptyStateView: UIView!
-    @IBOutlet weak var myCareerButton: UIButton!
-    @IBOutlet weak var aboutMeButton: UIButton!
-    @IBOutlet weak var achivementsButton: UIButton!
-    @IBOutlet weak var stackview: UIStackView!
+    @IBOutlet weak var userNameLabel: UILabel?
+    @IBOutlet weak var ageLabel: UILabel?
+    @IBOutlet weak var emailLabel: UILabel?
+    @IBOutlet weak var cellphoneLabel: UILabel?
+    @IBOutlet weak var profileUserImage: UIImageView?
+    @IBOutlet weak var emptyStateView: UIView?
+    @IBOutlet weak var myCareerButton: UIButton?
+    @IBOutlet weak var aboutMeButton: UIButton?
+    @IBOutlet weak var achivementsButton: UIButton?
+    @IBOutlet weak var stackview: UIStackView?
+    
+    @IBOutlet weak var bottomContainer: UIView?
    
     //MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        profileUserImage.layer.cornerRadius = profileUserImage.frame.size.width/2.0
+        profileUserImage?.layer.cornerRadius = profileUserImage?.frame.size.width ?? CGFloat(NumberF.zero.rawValue) / CGFloat(NumberF.half.rawValue)
+        
+        //Constraints
+//        profileUserImage?.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+//        let ageLabelConstraint = NSLayoutConstraint(item: ageLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
+//        let cellphoneLabelContraint = NSLayoutConstraint(item: cellphoneLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
+//        let emailLabelConstraint = NSLayoutConstraint(item: emailLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
+//
+//        //Add constraints
+//        self.view.addConstraints([ageLabelConstraint, emailLabelConstraint, cellphoneLabelContraint])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +58,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-      profileUserImage.layer.removeAllAnimations()
+        profileUserImage?.layer.removeAllAnimations()
     }
     // MARK: Methods for display information
     
@@ -56,15 +67,15 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         let userInfo = user
         let userName = userInfo.userName
         let imageURL = userInfo.imageURL
-        let age = String("\(UserInfoStrings.age.getText()) \(userInfo.age)")
-        let email = UserInfoStrings.email.getText() + " " + userInfo.email
-        let cellphone = UserInfoStrings.phone.getText() + " " + userInfo.cellphone
-        presenter?.getImage(imageURL: imageURL ?? "nil")
+        let age = NSLocalizedString(StringKey.age.rawValue, comment: Comment.labelAge.rawValue) + String(userInfo.age)
+        let email = NSLocalizedString(StringKey.phone.rawValue, comment: Comment.labelPhone.rawValue) + userInfo.email
+        let cellphone = NSLocalizedString(StringKey.email.rawValue, comment: Comment.labelEmail.rawValue) + userInfo.cellphone
+        presenter?.getImage(imageURL: imageURL ?? Default.empty.rawValue)
         DispatchQueue.main.async  { [weak self] in
-            self?.userNameLabel.text = userName
-            self?.ageLabel.text = "\(age)"
-            self?.cellphoneLabel.text = cellphone
-            self?.emailLabel.text = email
+            self?.userNameLabel?.text = userName
+            self?.ageLabel?.text = String(age)
+            self?.cellphoneLabel?.text = cellphone
+            self?.emailLabel?.text = email
         }
     }
     
@@ -72,17 +83,18 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     func imageWithData(data: Data){
         DispatchQueue.main.async { [weak self] in
             let image = UIImage(data: data)
-            self?.profileUserImage.image = image
+            self?.profileUserImage?.image = image
         }
     }
     
     // Create the aler for a error
     func showNetworkingError() {
-        let alertTitle = NSLocalizedString("Error", comment: "")
-        let alertMessage = NSLocalizedString("There was an error loading the information", comment: "")
+        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
+        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
         DispatchQueue.main.sync { [weak self] in
+            self?.emptyStateView?.isHidden = false
             AlertView.instance.showAlert(title: alertTitle, message: alertMessage)
-            self?.view.addSubview(AlertView.instance.parentView)
+            self?.view.addSubview(AlertView.instance.parentView ?? AlertView())
         }
     }
     //MARK: - Animation methods
@@ -90,34 +102,34 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     //Method for animated the pulse
     func animatePulse(index: Int){
         pulseLayers[index].strokeColor = UIColor.white.cgColor
-        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        let scaleAnimation = CABasicAnimation(keyPath: AnimationKey.transform.rawValue)
         
-        scaleAnimation.duration = 6.6
-        scaleAnimation.fromValue = 0.0
-        scaleAnimation.toValue = 1.4
+        scaleAnimation.duration = CFTimeInterval(NumberF.duration.rawValue)
+        scaleAnimation.fromValue = NumberF.zero.rawValue
+        scaleAnimation.toValue = NumberF.toValue.rawValue
         scaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         scaleAnimation.repeatCount = .greatestFiniteMagnitude
-        pulseLayers[index].add(scaleAnimation, forKey: "scale")
+        pulseLayers[index].add(scaleAnimation, forKey: AnimationKey.scale.rawValue)
         
         let opacityAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-        opacityAnimation.duration = 6.6
-        opacityAnimation.fromValue = 1.4
-        opacityAnimation.toValue = 0.0
+        opacityAnimation.duration = CFTimeInterval(NumberF.duration.rawValue)
+        opacityAnimation.fromValue = NumberF.toValue.rawValue
+        opacityAnimation.toValue = NumberF.zero.rawValue
         opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         opacityAnimation.repeatCount = .greatestFiniteMagnitude
-        pulseLayers[index].add(scaleAnimation, forKey: "opacity")
+        pulseLayers[index].add(scaleAnimation, forKey: AnimationKey.opacity.rawValue)
     }
     //Method for create a pulse
     func createPulse() {
         for _ in 0...2{
-            let circularPath = UIBezierPath(arcCenter: .zero, radius: UIScreen.main.bounds.size.width/2.0, startAngle: 0 , endAngle: 2 * .pi , clockwise: true)
+            let circularPath = UIBezierPath(arcCenter: .zero, radius: UIScreen.main.bounds.size.width / CGFloat(NumberF.half.rawValue), startAngle: CGFloat(NumberF.zero.rawValue) , endAngle: CGFloat(NumberF.half.rawValue * .pi) , clockwise: true)
             let pulseLayer = CAShapeLayer()
             pulseLayer.path = circularPath.cgPath
-            pulseLayer.lineWidth = 2.0
+            pulseLayer.lineWidth = CGFloat(NumberF.half.rawValue)
             pulseLayer.fillColor = UIColor.clear.cgColor
             pulseLayer.lineCap = CAShapeLayerLineCap.round
-            pulseLayer.position = CGPoint(x: profileUserImage.bounds.width, y: 0)
-            profileUserImage.layer.addSublayer(pulseLayer)
+            pulseLayer.position = CGPoint(x: profileUserImage?.bounds.width ?? CGFloat(NumberF.zero.rawValue), y: CGFloat(NumberF.zero.rawValue))
+            profileUserImage?.layer.addSublayer(pulseLayer)
             pulseLayers.append(pulseLayer)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {

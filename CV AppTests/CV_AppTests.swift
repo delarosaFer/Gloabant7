@@ -20,7 +20,7 @@ class CV_NetworkLayer: XCTestCase {
         let expectation = XCTestExpectation(description: NSLocalizedString("Request success", comment: "nil"))
         
         // when
-        Request.shared.request("75db75d855f4805cbdc4fcf9ee8670db/raw/cc7a939cc8082191ea93f4f1aa866de6021ee850/UserInfo", entity: UserResult.self, completionHandler: { fetchResult in
+        Request.shared.request(EndPoint.userInfo.rawValue, entity: UserResult.self, completionHandler: { fetchResult in
             switch fetchResult {
             // then
             case .success:

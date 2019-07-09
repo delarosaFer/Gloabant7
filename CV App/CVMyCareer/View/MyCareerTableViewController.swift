@@ -13,7 +13,7 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
     //MARK: - Properties
     var myCareerMeList: MyCareer?
     var presenter: MyCareerPresenterProtocol?
-    let titleView = NSLocalizedString("My Career", comment: "")
+    let titleView = NSLocalizedString(StringKey.myCareer.rawValue, comment: Comment.myCareer.rawValue)
     //MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,32 +32,32 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
     }
     
     func showNetworkingError() {
-        let alertTitle = NSLocalizedString("Error", comment: "")
-        let alertMessage = NSLocalizedString("There was an error loading", comment: "")
+        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
+        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
         DispatchQueue.main.sync { [weak self] in
             AlertView.instance.showAlert(title: alertTitle, message: alertMessage)
-            self?.view.addSubview(AlertView.instance.parentView)
+            self?.view.addSubview(AlertView.instance.parentView ?? AlertView())
         }
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return myCareerMeList?.sections ?? 0
+        return myCareerMeList?.sections ?? NumberI.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return myCareerMeList?.studies.rowsInSection ?? 0
+            return myCareerMeList?.studies.rowsInSection ?? NumberI.empty.rawValue
             
         case 1:
-            return myCareerMeList?.currentJob.rowsInSection ?? 0
+            return myCareerMeList?.currentJob.rowsInSection ?? NumberI.empty.rawValue
             
         case 2:
-            return myCareerMeList?.lastJob.rowsInSection ?? 0
+            return myCareerMeList?.lastJob.rowsInSection ?? NumberI.empty.rawValue
             
         default:
-            return 0
+            return NumberI.empty.rawValue
         }
         
     }
@@ -74,14 +74,14 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
             return myCareerMeList?.lastJob.titleSection
         }
         
-        return "Nil"
+        return Default.empty.rawValue
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.cell.rawValue, for: indexPath)
         cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.numberOfLines = NumberI.empty.rawValue
         if indexPath.section == 0{
             cell.textLabel?.text = myCareerMeList?.studies.studie
         }

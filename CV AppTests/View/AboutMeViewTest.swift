@@ -16,9 +16,9 @@ class AboutMeViewTest: XCTestCase{
     
     override func setUp() {
         
-        let storyboard = UIStoryboard(name: "CVAboutMe", bundle: nil)
+        let storyboard = UIStoryboard(name: Storyboard.cvAboutMe.rawValue, bundle: nil)
         mockAboutMeView = MockAboutMeView()
-        view = storyboard.instantiateViewController(withIdentifier: "CVAboutTableViewController") as? CVAboutTableViewController
+        view = storyboard.instantiateViewController(withIdentifier: Controller.cvAboutMe.rawValue) as? CVAboutTableViewController
         
         self.view?.loadView()
         self.view?.viewDidLoad()
@@ -37,8 +37,8 @@ class AboutMeViewTest: XCTestCase{
     }
     
     func testTableviewAboutMeExist(){
-        let storyboard = UIStoryboard(name: "CVAboutMe", bundle: nil)
-        view = storyboard.instantiateViewController(withIdentifier: "CVAboutTableViewController") as? CVAboutTableViewController
+        let storyboard = UIStoryboard(name: Storyboard.cvAboutMe.rawValue, bundle: nil)
+        view = storyboard.instantiateViewController(withIdentifier: Controller.cvAboutMe.rawValue) as? CVAboutTableViewController
         view?.loadView()
         
         XCTAssertNotNil(view?.tableView)
