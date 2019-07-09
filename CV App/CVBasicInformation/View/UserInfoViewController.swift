@@ -32,15 +32,6 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         profileUserImage.layer.cornerRadius = profileUserImage.frame.size.width/2.0
-        
-        //Constraints
-        profileUserImage.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        let ageLabelConstraint = NSLayoutConstraint(item: ageLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
-        let cellphoneLabelContraint = NSLayoutConstraint(item: cellphoneLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
-        let emailLabelConstraint = NSLayoutConstraint(item: emailLabel, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 5)
-
-        //Add constraints
-        self.view.addConstraints([ageLabelConstraint, emailLabelConstraint, cellphoneLabelContraint])
     }
     
     override func viewWillAppear(_ animated: Bool) {
