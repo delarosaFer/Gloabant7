@@ -12,7 +12,7 @@ import WebKit
 class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     //MARK: - Properties
     var presenter: MainPresenterProtocol?
-    var user: UserResult?
+    var user: UserInfo?
     var linkedInUrl: String?
     var pulseLayers = [CAShapeLayer]()
     // MARK: - Outlets
@@ -26,8 +26,6 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     @IBOutlet weak var aboutMeButton: UIButton!
     @IBOutlet weak var achivementsButton: UIButton!
     @IBOutlet weak var stackview: UIStackView!
-    
-    @IBOutlet weak var bottomContainer: UIView!
    
     //MARK: - Methods
     override func viewDidLoad() {
@@ -63,10 +61,9 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     // MARK: Methods for display information
     
     //Method for paint all the user basic information from the requesr
-    func showUserInfo(with user: UserResult) {
-        let userInfo = user.response.userInfo
+    func showUserInfo(with user: UserInfo) {
+        let userInfo = user
         let userName = userInfo.userName
-        _ = userInfo.linkedInURL
         let imageURL = userInfo.imageURL
         let age = userInfo.age
         let email = userInfo.email
@@ -78,6 +75,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             self?.cellphoneLabel.text = cellphone
             self?.emailLabel.text = email
         }
+
     }
     
     //Create the image by a data
@@ -93,7 +91,6 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         let alertTitle = NSLocalizedString("Error", comment: "")
         let alertMessage = NSLocalizedString("There was an error loading the information", comment: "")
         DispatchQueue.main.sync { [weak self] in
-            self?.emptyStateView.isHidden = false
             AlertView.instance.showAlert(title: alertTitle, message: alertMessage)
             self?.view.addSubview(AlertView.instance.parentView)
         }

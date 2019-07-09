@@ -10,7 +10,7 @@ import UIKit
 
 class CVAboutTableViewController: UITableViewController, AboutMeViewControllerProtocol {
     //MARK: - Properties
-    var aboutMeList: AboutMeResult?
+    var aboutMeList: AboutMe?
     var presenter: AboutMePresenterProtocol?
     let titleView = NSLocalizedString("About me", comment: "")
     //MARK: - Methods
@@ -22,7 +22,7 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
         presenter?.viewDidLoad()
     }
     
-    func showAboutMe(with aboutMe: AboutMeResult) {
+    func showAboutMe(with aboutMe: AboutMe) {
         aboutMeList = aboutMe
         DispatchQueue.main.async { [weak self ] in
             self?.tableView.reloadData()
@@ -40,19 +40,19 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return aboutMeList?.response.AboutMe.sections ?? 0
+        return aboutMeList?.sections ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return aboutMeList?.response.AboutMe.about.rowsInSection ?? 0
+            return aboutMeList?.about.rowsInSection ?? 0
             
         case 1:
-            return aboutMeList?.response.AboutMe.hobbies.rowsInSection ?? 0
+            return aboutMeList?.hobbies.rowsInSection ?? 0
             
         case 2:
-            return aboutMeList?.response.AboutMe.Skills.rowsInSection ?? 0
+            return aboutMeList?.skills.rowsInSection ?? 0
             
         default:
             return 0
@@ -61,13 +61,13 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0{
-            return aboutMeList?.response.AboutMe.about.titleSection
+            return aboutMeList?.about.titleSection
         }
         if section == 1{
-            return aboutMeList?.response.AboutMe.hobbies.titleSection
+            return aboutMeList?.hobbies.titleSection
         }
         if section == 2{
-            return aboutMeList?.response.AboutMe.Skills.titleSection
+            return aboutMeList?.skills.titleSection
         }
         return "Nil"
     }
@@ -77,13 +77,13 @@ class CVAboutTableViewController: UITableViewController, AboutMeViewControllerPr
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
         if indexPath.section == 0{
-            cell.textLabel?.text = aboutMeList?.response.AboutMe.about.text
+            cell.textLabel?.text = aboutMeList?.about.text
         }
         if indexPath.section == 1{
-            cell.textLabel?.text = aboutMeList?.response.AboutMe.hobbies.text
+            cell.textLabel?.text = aboutMeList?.hobbies.text
         }
         if indexPath.section == 2{
-            cell.textLabel?.text = aboutMeList?.response.AboutMe.Skills.resume
+            cell.textLabel?.text = aboutMeList?.skills.resume
         }
         return cell 
         

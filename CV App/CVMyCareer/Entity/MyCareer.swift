@@ -7,71 +7,31 @@
 //
 import Foundation
 
-// MARK: - MyCareerResult
-class MyCareerResult: Codable {
-    let myCareerResponse: MyCareerResponse
-    
-    init(myCareerResponse: MyCareerResponse) {
-        self.myCareerResponse = myCareerResponse
-    }
-}
-
-// MARK: - MyCareerResponse
-class MyCareerResponse: Codable {
-    let MyCareer: MyCareer
-    
-    init(MyCareer: MyCareer) {
-        self.MyCareer = MyCareer
-    }
-}
-
 // MARK: - MyCareer
-class MyCareer: Codable {
-    let Studies: Studies
-    let CurrentJob: CurrentJob
-    let LastJob: LastJob
+struct MyCareer: Codable {
+    let studies: Studies
+    let currentJob: CurrentJob
+    let lastJob: LastJob
     let sections: Int
-    
-    init(Studies: Studies, CurrentJob: CurrentJob, LastJob: LastJob, sections: Int) {
-        self.Studies = Studies
-        self.CurrentJob = CurrentJob
-        self.LastJob = LastJob
-        self.sections = sections
-    }
 }
 
 // MARK: - CurrentJob
-class CurrentJob: Codable {
-    let titleSection, text: String
+struct CurrentJob: Codable {
+    let titleSection: String
+    let text: String
     let rowsInSection: Int
-    
-    init(titleSection: String, text: String, rowsInSection: Int) {
-        self.titleSection = titleSection
-        self.text = text
-        self.rowsInSection = rowsInSection
-    }
 }
 
 // MARK: - LastJob
-class LastJob: Codable {
-    let titleSection, resume: String
+struct LastJob: Codable {
+    let titleSection: String
+    let resume: String
     let rowsInSection: Int
-    
-    init(titleSection: String, resume: String, rowsInSection: Int) {
-        self.titleSection = titleSection
-        self.resume = resume
-        self.rowsInSection = rowsInSection
-    }
 }
 
 // MARK: - Studies
-class Studies: Codable {
-    let titleSection, studie: String
+struct Studies: Codable {
+    let titleSection: String
+    let studie: String
     let rowsInSection: Int
-    
-    init(titleSection: String, studie: String, rowsInSection: Int) {
-        self.titleSection = titleSection
-        self.studie = studie
-        self.rowsInSection = rowsInSection
-    }
 }

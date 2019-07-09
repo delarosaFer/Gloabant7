@@ -14,7 +14,7 @@ class MyCareerPresenter: MyCareerPresenterProtocol{
     weak var view: MyCareerViewControllerProtocol?
     var interactor: MyCareerInputIntercatorProtocol?
     var router: MyCareerRouterProtocol?
-    var myCareer: MyCareerResult?
+    var myCareer: MyCareer?
     
     //MARK: - Methods
     func viewDidLoad() {
@@ -28,7 +28,7 @@ class MyCareerPresenter: MyCareerPresenterProtocol{
 
 //MARK: - Extension for MyCareerOutputIntercator
 extension MyCareerPresenter: MyCareerOutputIntercatorProtocol{
-    func myCareerFeteched(myCareer: MyCareerResult) {
+    func myCareerFeteched(myCareer: MyCareer) {
         view?.showMyCareer(with: myCareer)
     }
     

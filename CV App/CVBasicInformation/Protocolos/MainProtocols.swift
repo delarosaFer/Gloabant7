@@ -11,7 +11,7 @@ import UIKit
 //MARK: - Protocols
 protocol MainViewControllerProtocol: class{
     //Presenter -> View
-    func showUserInfo (with user: UserResult)
+    func showUserInfo (with user: UserInfo)
     func showNetworkingError()
     func createPulse()
     func animatePulse(index: Int)
@@ -41,7 +41,7 @@ protocol MainInputIntercatorProtocol{
 
 protocol MainOutputIntercatorProtocol{
     //Interactor -> Presenter
-    func userFeteched(user: UserResult)
+    func userFeteched(user: UserInfo)
     func userFetchFailed()
     func dowloadedImage(_ data: Data)
 }

@@ -11,7 +11,7 @@ import UIKit
 class MyCareerTableViewController: UITableViewController, MyCareerViewControllerProtocol {
     
     //MARK: - Properties
-    var myCareerMeList: MyCareerResult?
+    var myCareerMeList: MyCareer?
     var presenter: MyCareerPresenterProtocol?
     let titleView = NSLocalizedString("My Career", comment: "")
     //MARK: - Methods
@@ -24,7 +24,7 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
         
     }
     
-    func showMyCareer(with myCareer: MyCareerResult) {
+    func showMyCareer(with myCareer: MyCareer) {
         myCareerMeList = myCareer
         DispatchQueue.main.async { [weak self ] in
             self?.tableView.reloadData()
@@ -42,19 +42,19 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return myCareerMeList?.myCareerResponse.MyCareer.sections ?? 0
+        return myCareerMeList?.sections ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return myCareerMeList?.myCareerResponse.MyCareer.Studies.rowsInSection ?? 0
+            return myCareerMeList?.studies.rowsInSection ?? 0
             
         case 1:
-            return myCareerMeList?.myCareerResponse.MyCareer.CurrentJob.rowsInSection ?? 0
+            return myCareerMeList?.currentJob.rowsInSection ?? 0
             
         case 2:
-            return myCareerMeList?.myCareerResponse.MyCareer.LastJob.rowsInSection ?? 0
+            return myCareerMeList?.lastJob.rowsInSection ?? 0
             
         default:
             return 0
@@ -64,14 +64,14 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0{
-            return myCareerMeList?.myCareerResponse.MyCareer.Studies.titleSection
+            return myCareerMeList?.studies.titleSection
         }
         if section == 1{
-            return myCareerMeList?.myCareerResponse.MyCareer.CurrentJob.titleSection
+            return myCareerMeList?.currentJob.titleSection
         }
         
         if section == 2{
-            return myCareerMeList?.myCareerResponse.MyCareer.LastJob.titleSection
+            return myCareerMeList?.lastJob.titleSection
         }
         
         return "Nil"
@@ -83,13 +83,13 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
         if indexPath.section == 0{
-            cell.textLabel?.text = myCareerMeList?.myCareerResponse.MyCareer.Studies.studie
+            cell.textLabel?.text = myCareerMeList?.studies.studie
         }
         if indexPath.section == 1{
-            cell.textLabel?.text = myCareerMeList?.myCareerResponse.MyCareer.CurrentJob.text
+            cell.textLabel?.text = myCareerMeList?.currentJob.text
         }
         if indexPath.section == 2{
-            cell.textLabel?.text = myCareerMeList?.myCareerResponse.MyCareer.LastJob.resume
+            cell.textLabel?.text = myCareerMeList?.lastJob.resume
         }
         
         return cell
