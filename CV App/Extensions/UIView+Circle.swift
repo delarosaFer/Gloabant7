@@ -1,10 +1,3 @@
-//
-//  UIView+Circle.swift
-//  CV App
-//
-//  Created by David Castro Cisneros on 7/9/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
 
 import UIKit
 

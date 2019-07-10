@@ -7,8 +7,6 @@ import UIKit
 protocol MainViewControllerProtocol: class{
     func showUserInfo (with user: UserInfo)
     func showNetworkingError()
-    func createPulse()
-    func animatePulse(index: Int)
     func imageWithData(data: Data)
 }
 
