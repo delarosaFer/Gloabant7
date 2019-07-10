@@ -23,7 +23,6 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     @IBOutlet weak var cellphoneLabel: UILabel?
     @IBOutlet weak var profileUserImage: UIImageView?
     @IBOutlet weak var aboutMeLabel: UILabel!
-    @IBOutlet weak var aboutMeTextView: UITextView!
     
     @IBOutlet weak var emptyStateView: UIView?
     @IBOutlet weak var myCareerButton: UIButton?
@@ -51,18 +50,13 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             return
         }
         
-        aboutMeTextView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(moreInfoButton)
         NSLayoutConstraint.activate([
-        moreInfoButton.heightAnchor.constraint(equalToConstant: 75),
-        moreInfoButton.heightAnchor.constraint(equalTo: moreInfoButton.widthAnchor, multiplier: 1),
-        moreInfoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -37.5),
-        moreInfoButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -37.5)
-            ])
-        
-        NSLayoutConstraint.activate([
-            aboutMeTextView.bottomAnchor.constraint(equalTo: moreInfoButton.topAnchor, constant: -8)
+            moreInfoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
+            moreInfoButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
+            moreInfoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -8.0),
+            moreInfoButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -8.0)
             ])
         
         moreInfoButton.addTarget(self, action: #selector(didTapMoreInfoButton), for: .touchUpInside)
@@ -102,8 +96,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         let age = NSLocalizedString(StringKey.age.rawValue, comment: Default.empty.rawValue) + String(userInfo.age)
         let email = NSLocalizedString(StringKey.email.rawValue, comment: Default.empty.rawValue) + userInfo.email
         let cellphone = NSLocalizedString(StringKey.phone.rawValue, comment: Default.empty.rawValue) + userInfo.cellphone
-        let aboutMeTitle = NSLocalizedString(StringKey.skills.rawValue, comment: Default.empty.rawValue)
-        let aboutMe = userInfo.skills
+        let aboutMeTitle = NSLocalizedString(StringKey.skills.rawValue, comment: Default.empty.rawValue) + "\n" + userInfo.skills
         presenter?.getImage(imageURL: imageURL ?? Default.empty.rawValue)
         DispatchQueue.main.async  { [weak self] in
             self?.userNameLabel?.text = userName
@@ -111,7 +104,6 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             self?.cellphoneLabel?.text = cellphone
             self?.emailLabel?.text = email
             self?.aboutMeLabel.text = aboutMeTitle
-            self?.aboutMeTextView.text = aboutMe
         }
     }
     
