@@ -11,6 +11,13 @@
 		36A8C49622D50E4C00A421AF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C49522D50E4C00A421AF /* Keys.swift */; };
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
 		DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */; };
+		DB01DF9422D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9322D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift */; };
+		DB01DF9822D635060021E1DA /* MaterialHideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9722D635060021E1DA /* MaterialHideAnimator.swift */; };
+		DB01DF9A22D635120021E1DA /* MaterialShowAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9922D635120021E1DA /* MaterialShowAnimator.swift */; };
+		DBFE741522D649310003F7BC /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741422D649310003F7BC /* NavigationDelegate.swift */; };
+		DBFE741722D64F0F0003F7BC /* URL+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741622D64F0F0003F7BC /* URL+Queries.swift */; };
+		DBFE741922D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */; };
+		DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */; };
 		FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1427ED22AAD4D300E180FD /* Constants.swift */; };
 		FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */; };
 		FC25DE8F22AED8620058DE47 /* CVAchivements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */; };
@@ -82,6 +89,13 @@
 		36A8C49522D50E4C00A421AF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
+		DB01DF9322D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfoViewController+MainViewControllerProtocol.swift"; sourceTree = "<group>"; };
+		DB01DF9722D635060021E1DA /* MaterialHideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialHideAnimator.swift; sourceTree = "<group>"; };
+		DB01DF9922D635120021E1DA /* MaterialShowAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialShowAnimator.swift; sourceTree = "<group>"; };
+		DBFE741422D649310003F7BC /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		DBFE741622D64F0F0003F7BC /* URL+Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Queries.swift"; sourceTree = "<group>"; };
+		DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPresenter+MainOutputIntercatorProtocol.swift"; sourceTree = "<group>"; };
+		DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
 		FC1427ED22AAD4D300E180FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVMyCareer.storyboard; sourceTree = "<group>"; };
 		FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVAchivements.storyboard; sourceTree = "<group>"; };
@@ -174,15 +188,34 @@
 			isa = PBXGroup;
 			children = (
 				DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */,
+				DBFE741622D64F0F0003F7BC /* URL+Queries.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB01DF9522D634CA0021E1DA /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				DB01DF9622D634DE0021E1DA /* ViewController Transitions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		DB01DF9622D634DE0021E1DA /* ViewController Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				DB01DF9722D635060021E1DA /* MaterialHideAnimator.swift */,
+				DB01DF9922D635120021E1DA /* MaterialShowAnimator.swift */,
+				DBFE741422D649310003F7BC /* NavigationDelegate.swift */,
+			);
+			path = "ViewController Transitions";
 			sourceTree = "<group>";
 		};
 		FC25DE7E22AED7020058DE47 /* CVMyCareer */ = {
 			isa = PBXGroup;
 			children = (
 				FC25DE8422AED76E0058DE47 /* Protocols */,
-				FC25DE8322AED7660058DE47 /* WireFrame */,
+				FC25DE8322AED7660058DE47 /* Router */,
 				FC25DE8222AED75D0058DE47 /* Entity */,
 				FC25DE8122AED74D0058DE47 /* Presenter */,
 				FC25DE8022AED7460058DE47 /* Interactor */,
@@ -223,12 +256,12 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		FC25DE8322AED7660058DE47 /* WireFrame */ = {
+		FC25DE8322AED7660058DE47 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				FC25DE9622AF07120058DE47 /* MyCareerRouter.swift */,
 			);
-			path = WireFrame;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		FC25DE8422AED76E0058DE47 /* Protocols */ = {
@@ -242,8 +275,8 @@
 		FC263F0B22A566E900E073F4 /* CVBasicInformation */ = {
 			isa = PBXGroup;
 			children = (
-				FC91FCC722A1B54500862929 /* Protocolos */,
-				FC91FCC622A1B53500862929 /* WireFrame */,
+				FC91FCC722A1B54500862929 /* Protocols */,
+				FC91FCC622A1B53500862929 /* Router */,
 				FC91FCC422A1B51F00862929 /* Entity */,
 				FC91FCC322A1B50E00862929 /* Presenter */,
 				FC91FCC222A1B50300862929 /* Interactor */,
@@ -278,6 +311,7 @@
 		FC91FCC022A1B4D600862929 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */,
 				FC1427ED22AAD4D300E180FD /* Constants.swift */,
 				36A8C49522D50E4C00A421AF /* Keys.swift */,
 				36A8C49422D50C6B00A421AF /* Config.xcconfig */,
@@ -290,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				FCECA4BA22A1B2DA00B0C8DC /* UserInfoViewController.swift */,
+				DB01DF9322D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				FC263F2C22A5993600E073F4 /* MainPresenter.swift */,
+				DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -318,20 +354,20 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		FC91FCC622A1B53500862929 /* WireFrame */ = {
+		FC91FCC622A1B53500862929 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				FC263F3022A5DE8900E073F4 /* UserRouter.swift */,
 			);
-			path = WireFrame;
+			path = Router;
 			sourceTree = "<group>";
 		};
-		FC91FCC722A1B54500862929 /* Protocolos */ = {
+		FC91FCC722A1B54500862929 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				FC91FCC922A1E8F900862929 /* MainProtocols.swift */,
 			);
-			path = Protocolos;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FC9B32F222B4024000AB9490 /* Mocks */ = {
@@ -418,6 +454,7 @@
 		FCECA4B722A1B2DA00B0C8DC /* CV App */ = {
 			isa = PBXGroup;
 			children = (
+				DB01DF9522D634CA0021E1DA /* Animations */,
 				DB01DF9022D54F820021E1DA /* Extensions */,
 				FC263F2B22A58B3400E073F4 /* Storyboard */,
 				FC263F1222A57C9100E073F4 /* Networking Layer */,
@@ -598,6 +635,7 @@
 			files = (
 				FC25DE9322AF03C80058DE47 /* MyCareer.swift in Sources */,
 				DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */,
+				DBFE741922D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift in Sources */,
 				FCECA4BB22A1B2DA00B0C8DC /* UserInfoViewController.swift in Sources */,
 				FCECA4B922A1B2DA00B0C8DC /* AppDelegate.swift in Sources */,
 				FC25DE9B22AF08040058DE47 /* MyCareerInteractor.swift in Sources */,
@@ -610,12 +648,18 @@
 				FC263F2D22A5993600E073F4 /* MainPresenter.swift in Sources */,
 				FC25DE9922AF076E0058DE47 /* MyCareerPresenter.swift in Sources */,
 				FC25DE9722AF07120058DE47 /* MyCareerRouter.swift in Sources */,
+				DB01DF9A22D635120021E1DA /* MaterialShowAnimator.swift in Sources */,
 				FC91FCCA22A1E8F900862929 /* MainProtocols.swift in Sources */,
+				DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */,
+				DB01DF9822D635060021E1DA /* MaterialHideAnimator.swift in Sources */,
+				DBFE741722D64F0F0003F7BC /* URL+Queries.swift in Sources */,
 				FC25DE9522AF058F0058DE47 /* MyCareerProtocols.swift in Sources */,
 				FC263F1422A57CB400E073F4 /* Request.swift in Sources */,
 				FC263F0F22A5784300E073F4 /* MainInteractor.swift in Sources */,
 				FC263F3122A5DE8900E073F4 /* UserRouter.swift in Sources */,
 				FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */,
+				DBFE741522D649310003F7BC /* NavigationDelegate.swift in Sources */,
+				DB01DF9422D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

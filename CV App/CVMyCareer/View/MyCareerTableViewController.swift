@@ -1,14 +1,7 @@
-//
-//  MyCareerTableViewController.swift
-//  CV App
-//
-//  Created by Jordy Xavier Pazaran Reyes on 6/10/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
 
 import UIKit
 
-class MyCareerTableViewController: UITableViewController, MyCareerViewControllerProtocol {
+final class MyCareerTableViewController: UITableViewController, MyCareerViewControllerProtocol {
     
     // MARK: - Properties
     var myCareerMeList: MyCareer?
@@ -18,11 +11,16 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         self.title = titleView
         tableView.tableFooterView = UIView()
         presenter?.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
     }
     
     func showMyCareer(with myCareer: MyCareer) {

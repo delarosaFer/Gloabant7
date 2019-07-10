@@ -1,14 +1,7 @@
-//
-//  MainInteractor.swift
-//  CV App
-//
-//  Created by Jordy Xavier Pazaran Reyes on 6/3/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
 
 import Foundation
 
-class MainInteractor: MainInputInteractorProtocol{
+final class MainInteractor: MainInputInteractorProtocol{
     // MARK: - Properties
     var presenter: MainOutputIntercatorProtocol?
     

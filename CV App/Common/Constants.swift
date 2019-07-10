@@ -81,3 +81,10 @@ enum NumberF: Float {
 enum NumberI: Int {
     case empty = 0
 }
+
+// MARK: - NetworkErrors
+enum NetworkingErrors: Error{//Define the errors that we can find when the app fetch the URL
+    case netWorkError
+    case invalidData
+    case invalidRequest
+}
