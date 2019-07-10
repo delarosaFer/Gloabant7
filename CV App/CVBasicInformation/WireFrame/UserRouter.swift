@@ -36,9 +36,9 @@ class UserRouter: MainRouterProtocol {
     }
     //Method for present the About Me section
     func pushAboutMe() {
-        let aboutMeViewcontroller = AboutMeRouter.createModule()
+//        let aboutMeViewcontroller = AboutMeRouter.createModule()
         
-        viewController?.navigationController?.pushViewController(aboutMeViewcontroller, animated: true)
+       // viewController?.navigationController?.pushViewController(aboutMeViewcontroller, animated: true)
     }
     //Method for present the My career section
     func pushMyCareer() {
@@ -47,7 +47,7 @@ class UserRouter: MainRouterProtocol {
     }
     //Method for present the Achivements section
     func pushAchivements() {
-        let achivementsViewController = AchivementsRouter.createModule()
-        viewController?.navigationController?.pushViewController(achivementsViewController, animated: true)
+//        let achivementsViewController = AchivementsRouter.createModule()
+//        viewController?.navigationController?.pushViewController(achivementsViewController, animated: true)
     }
 }

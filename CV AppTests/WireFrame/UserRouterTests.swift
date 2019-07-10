@@ -31,12 +31,6 @@ class UserRouterTests: XCTestCase{
         XCTAssertTrue(nv.topViewController is UserInfoViewController)
     }
     
-    func testAboutMeVCWhenPresented(){
-        let _ = AboutMeRouter.createModule()
-        router.pushAboutMe()
-        
-    }
-    
     func testMyCareerVCWhenPresented(){
         let _ = AboutMeRouter.createModule()
         router.pushAboutMe()
