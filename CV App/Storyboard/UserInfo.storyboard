@@ -91,15 +91,34 @@
                                     <constraint firstItem="2o4-Dz-j7F" firstAttribute="width" secondItem="eSf-rJ-5u4" secondAttribute="width" multiplier="1:2" constant="-12" id="qf2-ex-SHq"/>
                                 </constraints>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0mm-vz-68j">
+                                <rect key="frame" x="16" y="416" width="288" height="62"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-Ma-Dhr">
+                                <rect key="frame" x="16" y="387" width="288" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89006382230000003" green="0.91374516490000002" blue="0.91360384230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eSf-rJ-5u4" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.3" id="4oc-Gt-Odm"/>
                             <constraint firstItem="oIw-yh-Ybp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5gb-jS-irG"/>
+                            <constraint firstItem="0mm-vz-68j" firstAttribute="trailing" secondItem="eSf-rJ-5u4" secondAttribute="trailing" id="8r9-b9-dFq"/>
                             <constraint firstItem="oIw-yh-Ybp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9ec-ZE-wlv"/>
                             <constraint firstItem="cTS-Ph-t3i" firstAttribute="top" secondItem="oIw-yh-Ybp" secondAttribute="bottom" constant="16" id="BXP-UB-XCB"/>
+                            <constraint firstItem="0mm-vz-68j" firstAttribute="leading" secondItem="eSf-rJ-5u4" secondAttribute="leading" id="L4R-KU-GhK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0mm-vz-68j" secondAttribute="bottom" constant="90" placeholder="YES" id="PCV-Ke-lFy"/>
                             <constraint firstItem="oIw-yh-Ybp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QS2-a6-qVj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSf-rJ-5u4" secondAttribute="trailing" constant="16" id="XFT-a7-E5A"/>
+                            <constraint firstItem="1OB-Ma-Dhr" firstAttribute="leading" secondItem="eSf-rJ-5u4" secondAttribute="leading" id="ejV-vR-YNf"/>
+                            <constraint firstItem="1OB-Ma-Dhr" firstAttribute="top" secondItem="eSf-rJ-5u4" secondAttribute="bottom" constant="16" id="hod-JW-lOM"/>
+                            <constraint firstItem="0mm-vz-68j" firstAttribute="top" secondItem="1OB-Ma-Dhr" secondAttribute="bottom" constant="8" id="jeN-m3-jEb"/>
+                            <constraint firstItem="1OB-Ma-Dhr" firstAttribute="trailing" secondItem="eSf-rJ-5u4" secondAttribute="trailing" id="lTE-0T-uB7"/>
                             <constraint firstItem="eSf-rJ-5u4" firstAttribute="top" secondItem="cTS-Ph-t3i" secondAttribute="bottom" constant="16" id="mNd-oS-S4M"/>
                             <constraint firstItem="cTS-Ph-t3i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pFm-pa-b5a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cTS-Ph-t3i" secondAttribute="trailing" constant="16" id="tBh-7B-Qx0"/>
@@ -108,6 +127,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="aboutMeLabel" destination="1OB-Ma-Dhr" id="O5l-1e-r1c"/>
+                        <outlet property="aboutMeTextView" destination="0mm-vz-68j" id="Tyu-7E-d8o"/>
                         <outlet property="ageLabel" destination="FdG-w6-z7D" id="pmp-aY-GDX"/>
                         <outlet property="cellphoneLabel" destination="f3c-VD-zLV" id="HP2-65-Fcn"/>
                         <outlet property="emailLabel" destination="ygT-sR-zjQ" id="Wo0-FD-H97"/>

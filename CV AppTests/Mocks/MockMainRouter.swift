@@ -15,10 +15,6 @@ class MockMainRouter: UserRouter{
     private(set) var pushMyCareerCalled = 0
     private(set) var pushAchivementsCalled = 0
     
-    override func pushAboutMe() {
-        self.pushAboutMeCalled += 1
-    }
-    
     override func pushMyCareer() {
         self.pushMyCareerCalled += 1
     }

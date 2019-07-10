@@ -27,4 +27,5 @@ enum StringKey: String {
     case age = "labelAge"
     case phone = "labelPhone"
     case email = "labelEmail"
+    case skills = "labelAboutMe"
 }
