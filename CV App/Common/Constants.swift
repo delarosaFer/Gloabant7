@@ -12,7 +12,6 @@ enum Storyboard: String {
 // MARK: - Controller name
 enum Controller: String {
     case cvInformation = "UserInfoViewController"
-    case cvAboutMe = "CVAboutTableViewController"
     case cvMyCareer = "MyCareerTableViewController"
     case cvMyAchivements = "AchivementsTableViewController"
     case alert = "AlertView"
@@ -80,4 +79,16 @@ enum NetworkingErrors: Error{//Define the errors that we can find when the app f
     case netWorkError
     case invalidData
     case invalidRequest
+}
+
+enum AccessibilityIdentifiers: String {
+    case topFirstTitle = "topFirstTitle"
+    case topSecondTitle = "topSecondTitle"
+    case userNameLabel = "userNameLabel"
+    case ageLabel = "ageLabel"
+    case cellphoneLabel = "cellphoneLabel"
+    case emailLabel = "emailLabel"
+    case aboutMeLabel = "aboutMeLabel"
+    case moreInfo = "moreInfoButton"
+    case profileUserImage = "profileUserImage"
 }
