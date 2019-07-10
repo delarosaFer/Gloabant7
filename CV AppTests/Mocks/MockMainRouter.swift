@@ -11,15 +11,9 @@ import UIKit
 
 class MockMainRouter: UserRouter{
     private(set) var view: UIViewController?
-    private(set) var pushAboutMeCalled = 0
     private(set) var pushMyCareerCalled = 0
-    private(set) var pushAchivementsCalled = 0
     
     override func pushMyCareer() {
         self.pushMyCareerCalled += 1
-    }
-    
-    override func pushAchivements() {
-        self.pushAchivementsCalled += 1
     }
 }

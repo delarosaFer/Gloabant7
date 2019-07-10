@@ -8,9 +8,12 @@
 
 import Foundation
 import UIKit
-//MARK: - Protocols
+
+// MARK: - Protocols
+/**
+ Presenter -> View Protocol.
+ */
 protocol MainViewControllerProtocol: class{
-    //Presenter -> View
     func showUserInfo (with user: UserInfo)
     func showNetworkingError()
     func createPulse()
@@ -18,38 +21,42 @@ protocol MainViewControllerProtocol: class{
     func imageWithData(data: Data)
 }
 
+/**
+ View -> Presenter Protocol.
+ */
 protocol MainPresenterProtocol{
-    //View -> Presenter
     var view: MainViewControllerProtocol? { get set }
-    var interactor: MainInputIntercatorProtocol? { get set }
+    var interactor: MainInputInteractorProtocol? { get set }
     var router: MainRouterProtocol? { get set }
     
     func viewDidLoad()
-    func aboutMePressed()
     func myCareerPressed()
-    func achivementsPressed()
     func getImage(imageURL: String)
 }
 
-protocol MainInputIntercatorProtocol{
-    //Presenter -> Interactor
+/**
+ Presenter -> Interactor Protocol.
+ */
+protocol MainInputInteractorProtocol{
     var presenter: MainOutputIntercatorProtocol? { get set }
     func fetchUserInfo (endpoint: String)
     func fetchImage(imageURL: String)
     
 }
 
+/**
+ Interactor -> Presenter Protocol.
+ */
 protocol MainOutputIntercatorProtocol{
-    //Interactor -> Presenter
     func userFeteched(user: UserInfo)
     func userFetchFailed()
     func dowloadedImage(_ data: Data)
 }
 
+/**
+ Presenter -> Router Protocol.
+ */
 protocol MainRouterProtocol{
-    //Presenter -> Router
-    func pushAboutMe()
     func pushMyCareer()
-    func pushAchivements()
     static func createModule() -> UINavigationController
 }

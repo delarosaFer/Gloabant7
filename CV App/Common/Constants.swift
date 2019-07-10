@@ -8,7 +8,7 @@
 
 import Foundation
 
-//MARK: - Storyboard name
+// MARK: - Storyboard name
 enum Storyboard: String {
     case userInfo = "UserInfo"
     case cvAboutMe = "CVAboutMe"
@@ -16,7 +16,7 @@ enum Storyboard: String {
     case cvAchivements = "CVAchivements"
 }
 
-//MARK: - Controller name
+// MARK: - Controller name
 enum Controller: String {
     case cvInformation = "UserInfoViewController"
     case cvAboutMe = "CVAboutTableViewController"
@@ -25,52 +25,52 @@ enum Controller: String {
     case alert = "AlertView"
 }
 
-//MARK: - Get URL base from xcconfig
+// MARK: - Get URL base from xcconfig
 enum Configuration {
     static func getUrl(for key: String) -> String? {
         return (Bundle.main.infoDictionary?[key] as? String)
     }
 }
 
-//MARK: - Endpoint URLs
+// MARK: - Endpoint URLs
 enum EndPoint: String {
     case userInfo = "120xcf"
     case myCareer = "e5unb"
 }
 
-//MARK: - Default values
+// MARK: - Default values
 enum Default: String {
     case empty = ""
 }
 
-//MARK: - HTTP Methods
+// MARK: - HTTP Methods
 enum HTTP: String {
     case get = "GET"
 }
 
-//MARK: - Cell identifier
+// MARK: - Cell identifier
 enum Cell: String {
     case cell = "UITableViewCell"
 }
 
-//MARK: - Comments
+// MARK: - Comments
 enum Comment: String {
-    //MARK: - Alert controller comments
+    // MARK: - Alert controller comments
     case titleError = "Title error!"
     case messageError = "Message error!"
     
-    //MARK: - Viewcontroller comments
+    // MARK: - Viewcontroller comments
     case aboutMe = "About me view"
     case myCareer = "My Career view"
     case achivements = "Achivements view"
     
-    //MARK: - Labels UserInfoView comments
+    // MARK: - Labels UserInfoView comments
     case labelAge = "Label Age"
     case labelPhone = "Label Phone"
     case labelEmail = "Label Email"
 }
 
-//MARK: - Values number type
+// MARK: - Values number type
 enum NumberF: Float {
     case zero = 0.0
     case half = 2.0

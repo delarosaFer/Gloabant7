@@ -9,11 +9,17 @@ import Foundation
 
 class MyCareerInteractor: MyCareerInputIntercatorProtocol{
 
-    //MARK: - Properties
+    // MARK: - Properties
     var presenter: MyCareerOutputIntercatorProtocol?
     var positionTable = [[String : AnyObject]]()
     
-    //MARK: - Methods
+    // MARK: - Methods
+    /**
+     Method for create and fetch the request.
+     
+     - Parameters:
+     - endpoint: endpoint to request.
+     */
     func fetchMyCareer(endpoint: String) {
         Request.shared.request(endpoint, entity: MyCareer.self) { [weak self] fetchResult in
             

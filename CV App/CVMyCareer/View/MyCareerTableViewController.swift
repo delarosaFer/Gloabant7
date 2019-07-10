@@ -10,11 +10,12 @@ import UIKit
 
 class MyCareerTableViewController: UITableViewController, MyCareerViewControllerProtocol {
     
-    //MARK: - Properties
+    // MARK: - Properties
     var myCareerMeList: MyCareer?
     var presenter: MyCareerPresenterProtocol?
     let titleView = NSLocalizedString(StringKey.myCareer.rawValue, comment: Comment.myCareer.rawValue)
-    //MARK: - Methods
+    
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: false)
@@ -31,6 +32,9 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
         }
     }
     
+    /**
+     Method that display the alert when occurs an network error.
+     */
     func showNetworkingError() {
         let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
         let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)

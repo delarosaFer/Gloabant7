@@ -45,18 +45,8 @@ class MainPresenterTests: XCTestCase{
         XCTAssert(mockInteractor.fetchUserInfoCalled == 1, failText)
     }
     
-    func testAboutMePressed(){
-        presenter?.aboutMePressed()
-        XCTAssert(mockRouter.pushAboutMeCalled == 1, failText)
-    }
-    
     func testMyCareerPressed(){
         presenter?.myCareerPressed()
         XCTAssert(mockRouter.pushMyCareerCalled == 1, failText)
-    }
-    
-    func testAchivementsPressed(){
-        presenter?.achivementsPressed()
-        XCTAssert(mockRouter.pushAchivementsCalled == 1, failText)
     }
 }

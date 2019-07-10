@@ -36,10 +36,4 @@ class UserRouterTests: XCTestCase{
         router.pushAboutMe()
         
     }
-    
-    func testAchivementsVCWhenPresented(){
-        let _ = AboutMeRouter.createModule()
-        router.pushAboutMe()
-        
-    }
 }

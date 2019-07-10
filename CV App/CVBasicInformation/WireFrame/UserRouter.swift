@@ -11,10 +11,14 @@ import UIKit
 
 class UserRouter: MainRouterProtocol {
     
+    // MARK: - Properties
     weak var viewController: UIViewController?
     
+    // MARK: - Methods
+    /**
+     Method that sets the rootViewController. Creates the layers and connect them.
+     */
     static func createModule() -> UINavigationController {
-        // Create layers
         let router = UserRouter()
         let presenter = MainPresenter()
         let interactor = MainInteractor()
@@ -23,7 +27,6 @@ class UserRouter: MainRouterProtocol {
         
         let navigation = UINavigationController(rootViewController: view)
         
-        //Connect layers
         presenter.interactor = interactor
         presenter.router = router
         presenter.view = view
@@ -34,20 +37,12 @@ class UserRouter: MainRouterProtocol {
         navigation.isNavigationBarHidden = false
         return navigation
     }
-    //Method for present the About Me section
-    func pushAboutMe() {
-//        let aboutMeViewcontroller = AboutMeRouter.createModule()
-        
-       // viewController?.navigationController?.pushViewController(aboutMeViewcontroller, animated: true)
-    }
-    //Method for present the My career section
+    
+    /**
+     Method for present the My career section.
+     */
     func pushMyCareer() {
         let myCareerViewController = MyCareerRouter.createModule()
         viewController?.navigationController?.pushViewController(myCareerViewController, animated: true)
-    }
-    //Method for present the Achivements section
-    func pushAchivements() {
-//        let achivementsViewController = AchivementsRouter.createModule()
-//        viewController?.navigationController?.pushViewController(achivementsViewController, animated: true)
     }
 }

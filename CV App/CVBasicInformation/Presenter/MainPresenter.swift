@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 
 class MainPresenter: MainPresenterProtocol {
-    //MARK: - properties
+    
+    // MARK: - Properties
     var view: MainViewControllerProtocol?
-    var interactor: MainInputIntercatorProtocol?
+    var interactor: MainInputInteractorProtocol?
     var router: MainRouterProtocol?
-    //MARK: - Methods
+    
+    // MARK: - Methods
     func viewDidLoad() {
         self.updateView()
     }
@@ -27,20 +29,12 @@ class MainPresenter: MainPresenterProtocol {
         interactor?.fetchImage(imageURL: imageURL)
     }
     
-    func aboutMePressed() {
-        router?.pushAboutMe()
-    }
-    
     func myCareerPressed() {
         router?.pushMyCareer()
-    }
-    
-    func achivementsPressed() {
-        router?.pushAchivements()
-    }    
+    }  
 }
 
-//MARK: - Extension for MainOutputIntercator
+// MARK: - Extension for MainOutputIntercator
 extension MainPresenter: MainOutputIntercatorProtocol{
     func userFeteched(user: UserInfo) {
         view?.showUserInfo(with: user)
