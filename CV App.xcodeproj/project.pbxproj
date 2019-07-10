@@ -19,7 +19,7 @@
 		FC25DE9522AF058F0058DE47 /* MyCareerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25DE9422AF058F0058DE47 /* MyCareerProtocols.swift */; };
 		FC25DE9722AF07120058DE47 /* MyCareerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25DE9622AF07120058DE47 /* MyCareerRouter.swift */; };
 		FC25DE9922AF076E0058DE47 /* MyCareerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25DE9822AF076E0058DE47 /* MyCareerPresenter.swift */; };
-		FC25DE9B22AF08040058DE47 /* MyCareerIntercator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25DE9A22AF08040058DE47 /* MyCareerIntercator.swift */; };
+		FC25DE9B22AF08040058DE47 /* MyCareerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25DE9A22AF08040058DE47 /* MyCareerInteractor.swift */; };
 		FC263F0F22A5784300E073F4 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F0E22A5784300E073F4 /* MainInteractor.swift */; };
 		FC263F1122A5795400E073F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F1022A5795400E073F4 /* User.swift */; };
 		FC263F1422A57CB400E073F4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F1322A57CB400E073F4 /* Request.swift */; };
@@ -90,7 +90,7 @@
 		FC25DE9422AF058F0058DE47 /* MyCareerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerProtocols.swift; sourceTree = "<group>"; };
 		FC25DE9622AF07120058DE47 /* MyCareerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerRouter.swift; sourceTree = "<group>"; };
 		FC25DE9822AF076E0058DE47 /* MyCareerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerPresenter.swift; sourceTree = "<group>"; };
-		FC25DE9A22AF08040058DE47 /* MyCareerIntercator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerIntercator.swift; sourceTree = "<group>"; };
+		FC25DE9A22AF08040058DE47 /* MyCareerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerInteractor.swift; sourceTree = "<group>"; };
 		FC263F0E22A5784300E073F4 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		FC263F1022A5795400E073F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC263F1322A57CB400E073F4 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		FC25DE8022AED7460058DE47 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				FC25DE9A22AF08040058DE47 /* MyCareerIntercator.swift */,
+				FC25DE9A22AF08040058DE47 /* MyCareerInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -600,7 +600,7 @@
 				DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */,
 				FCECA4BB22A1B2DA00B0C8DC /* UserInfoViewController.swift in Sources */,
 				FCECA4B922A1B2DA00B0C8DC /* AppDelegate.swift in Sources */,
-				FC25DE9B22AF08040058DE47 /* MyCareerIntercator.swift in Sources */,
+				FC25DE9B22AF08040058DE47 /* MyCareerInteractor.swift in Sources */,
 				FC29BE1122A96D5200D1B760 /* RootRouter.swift in Sources */,
 				FC25DE9122AF01410058DE47 /* MyCareerTableViewController.swift in Sources */,
 				36A8C49622D50E4C00A421AF /* Keys.swift in Sources */,

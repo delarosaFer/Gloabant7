@@ -8,13 +8,17 @@
 
 import Foundation
 
-class MainInteractor: MainInputIntercatorProtocol{
-    //MARK: - Properties
+class MainInteractor: MainInputInteractorProtocol{
+    // MARK: - Properties
     var presenter: MainOutputIntercatorProtocol?
     
     // MARK: - Methods
-    
-    //Method for create and fetch the request
+    /**
+    Method for create and fetch the request.
+     
+     - Parameters:
+     - endpoint: endpoint to request.
+     */
     func fetchUserInfo(endpoint: String) {
         Request.shared.request(endpoint, entity: UserInfo.self ) { [weak self] fetchResult in
             switch fetchResult{
@@ -30,6 +34,12 @@ class MainInteractor: MainInputIntercatorProtocol{
         }
     }
     
+    /**
+     Method for create and fetch the image.
+     
+     - Parameters:
+     - imageURL: imageURL to fetch.
+     */
     func fetchImage(imageURL: String){
         Request.shared.downloadImage(urlImage: imageURL) { [weak self] fetchingImage in
             switch fetchingImage{

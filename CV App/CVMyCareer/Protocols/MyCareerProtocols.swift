@@ -9,15 +9,19 @@
 import Foundation
 import UIKit
 
-//MARK: - Protocols
+// MARK: - Protocols
+/**
+ Presenter -> View Protocol.
+ */
 protocol MyCareerViewControllerProtocol: class{
-    //Presenter -> View
     func showMyCareer (with myCareer:  MyCareer)
     func showNetworkingError()
 }
 
+/**
+ View -> Presenter Protocol.
+ */
 protocol MyCareerPresenterProtocol{
-    //View -> Presenter
     var view: MyCareerViewControllerProtocol? { get set }
     var interactor: MyCareerInputIntercatorProtocol? { get set }
     var router: MyCareerRouterProtocol? { get set }
@@ -25,20 +29,26 @@ protocol MyCareerPresenterProtocol{
     func viewDidLoad()
 }
 
+/**
+ Presenter -> Interactor Protocol.
+ */
 protocol MyCareerInputIntercatorProtocol{
-    //Presenter -> Interactor
     var presenter: MyCareerOutputIntercatorProtocol? { get set }
     func fetchMyCareer (endpoint: String)
     
 }
 
+/**
+ Interactor -> Presenter Protocol.
+ */
 protocol MyCareerOutputIntercatorProtocol{
-    //Interactor -> Presenter
     func myCareerFeteched(myCareer: MyCareer)
     func userFetchFailed()
 }
 
+/**
+ Presenter -> Router Protocol.
+ */
 protocol MyCareerRouterProtocol{
-    //Presenter -> Router
     static func createModule() -> UIViewController
 }

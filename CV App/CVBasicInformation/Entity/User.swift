@@ -8,7 +8,7 @@
 
 import Foundation
 
-//MARK: - UserInfo
+// MARK: - UserInfo
 struct UserInfo: Codable {
     let userName: String
     let age: Int

@@ -10,13 +10,14 @@ import UIKit
 import WebKit
 
 class UserInfoViewController: UIViewController, MainViewControllerProtocol {
-    //MARK: - Properties
+    
+    // MARK: - Properties
     var presenter: MainPresenterProtocol?
     var user: UserInfo?
     var linkedInUrl: String?
     var pulseLayers = [CAShapeLayer]()
+    
     // MARK: - Outlets
-
     @IBOutlet weak var userNameLabel: UILabel?
     @IBOutlet weak var ageLabel: UILabel?
     @IBOutlet weak var emailLabel: UILabel?
@@ -26,7 +27,6 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     
     @IBOutlet weak var emptyStateView: UIView?
     @IBOutlet weak var myCareerButton: UIButton?
-    @IBOutlet weak var achivementsButton: UIButton?
     @IBOutlet weak var stackview: UIStackView?
     
     @IBOutlet weak var bottomContainer: UIView?
@@ -34,7 +34,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     var navigationDelegate: NavigationDelegate?
 
    
-    //MARK: - Methods
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
@@ -86,9 +86,14 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         super.viewWillDisappear(animated)
         profileUserImage?.layer.removeAllAnimations()
     }
-    // MARK: Methods for display information
     
-    //Method for paint all the user basic information from the requesr
+    // MARK: - Methods for display information
+    /**
+     Method to set all the user basic information.
+     
+     - Parameters:
+     - user: Entity UserInfo.
+     */
     func showUserInfo(with user: UserInfo) {
         let userInfo = user
         let userName = userInfo.userName
@@ -107,7 +112,12 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         }
     }
     
-    //Create the image by a data
+    /**
+     Method that creates the image given a data.
+     
+     - Parameters:
+     - data: data of the image.
+     */
     func imageWithData(data: Data){
         DispatchQueue.main.async { [weak self] in
             let image = UIImage(data: data)
@@ -116,7 +126,9 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         }
     }
     
-    // Create the aler for a error
+    /**
+     Method that display the alert when occurs an network error.
+     */
     func showNetworkingError() {
         let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
         let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
@@ -126,9 +138,11 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             self?.view.addSubview(AlertView.instance.parentView ?? AlertView())
         }
     }
-    //MARK: - Animation methods
     
-    //Method for animated the pulse
+    // MARK: - Animation methods
+    /**
+     Method for animated the pulse.
+     */
     func animatePulse(index: Int){
         pulseLayers[index].strokeColor = UIColor.white.cgColor
         let scaleAnimation = CABasicAnimation(keyPath: AnimationKey.transform.rawValue)
@@ -148,7 +162,10 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         opacityAnimation.repeatCount = .greatestFiniteMagnitude
         pulseLayers[index].add(scaleAnimation, forKey: AnimationKey.opacity.rawValue)
     }
-    //Method for create a pulse
+    
+    /**
+     Method for create a pulse.
+     */
     func createPulse() {
         for _ in 0...2{
             let circularPath = UIBezierPath(arcCenter: .zero, radius: UIScreen.main.bounds.size.width / CGFloat(NumberF.half.rawValue), startAngle: CGFloat(NumberF.zero.rawValue) , endAngle: CGFloat(NumberF.half.rawValue * .pi) , clockwise: true)
@@ -173,12 +190,9 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         }
     }
 
+    // MARK: - IBActions
     @IBAction func myCareerButton(_ sender: Any) {
         presenter?.myCareerPressed()
-    }
-    
-    @IBAction func achivementsButton(_ sender: Any) {
-        presenter?.achivementsPressed()
     }
     
     @IBAction func refreshButton(_ sender: Any) {
@@ -192,7 +206,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
     }
 }
 
-//MARK: - UIViewController Extension
+// MARK: - UIViewController Extension
 extension UIViewController{
     func reloadViewFromNib(){
         let parent = view.superview
