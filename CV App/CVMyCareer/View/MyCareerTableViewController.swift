@@ -1,14 +1,7 @@
-//
-//  MyCareerTableViewController.swift
-//  CV App
-//
-//  Created by Jordy Xavier Pazaran Reyes on 6/10/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
 
 import UIKit
 
-class MyCareerTableViewController: UITableViewController, MyCareerViewControllerProtocol {
+final class MyCareerTableViewController: UITableViewController {
     
     // MARK: - Properties
     var myCareerMeList: MyCareer?
@@ -18,30 +11,16 @@ class MyCareerTableViewController: UITableViewController, MyCareerViewController
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         self.title = titleView
         tableView.tableFooterView = UIView()
-        presenter?.viewDidLoad()
+        presenter?.updateView()
         
     }
     
-    func showMyCareer(with myCareer: MyCareer) {
-        myCareerMeList = myCareer
-        DispatchQueue.main.async { [weak self ] in
-            self?.tableView.reloadData()
-        }
-    }
-    
-    /**
-     Method that display the alert when occurs an network error.
-     */
-    func showNetworkingError() {
-        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
-        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
-        DispatchQueue.main.sync { [weak self] in
-            AlertView.instance.showAlert(title: alertTitle, message: alertMessage)
-            self?.view.addSubview(AlertView.instance.parentView ?? AlertView())
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
     }
     
     // MARK: - Table view data source

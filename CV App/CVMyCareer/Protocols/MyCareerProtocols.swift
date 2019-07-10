@@ -1,12 +1,4 @@
-//
-//  MyCareerProtocols.swift
-//  CV App
-//
-//  Created by Jordy Xavier Pazaran Reyes on 6/10/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
 
-import Foundation
 import UIKit
 
 // MARK: - Protocols
@@ -26,7 +18,7 @@ protocol MyCareerPresenterProtocol{
     var interactor: MyCareerInputIntercatorProtocol? { get set }
     var router: MyCareerRouterProtocol? { get set }
     
-    func viewDidLoad()
+    func updateView()
 }
 
 /**

@@ -7,46 +7,19 @@
 //
 
 import Foundation
-import UIKit
 
-// MARK: - URL Extension
-extension URL{
-    
-    /// The method
-    ///
-    /// - Parameter queries: recive the queries that de URL needs
-    /// - Returns: returns the URL with the queries
-    func withQueries(_ queries: [String:String]) -> URL?{
-        
-        guard queries.isEmpty == false else { return self }
-        
-        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
-        components?.queryItems = queries.map { URLQueryItem(name: $0.0, value: $0.1) }
-        return components?.url
-    }
-}
-
-class Request {
-    
+final class Request {
     // MARK: - Properties
     private var baseURL: URL?
     
-    public static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue)
+    public static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue) //The base URL for all GET Request
+
+    // MARK: - Initialazers
     
-    // MARK: - Enums
-    enum NetworkingErrors: Error{
-        case netWorkError
-        case invalidData
-        case invalidRequest
-    }
-    
-    // MARK: - Initializers
-    /**
-     The init for the base URL.
-     
-     - Parameters:
-        - baseURL: URL base for the API requests.
-     */
+    /// The init for the base URL
+    ///
+    /// - Parameter baseURL: URL base for the appi's request
+
     private init(baseURL: String) {
         guard let url = URL(string: baseURL) else { return }
         self.baseURL = url

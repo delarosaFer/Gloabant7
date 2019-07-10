@@ -1,13 +1,7 @@
-//
-//  MyCareerIntercator.swift
-//  CV App
-//
-//  Created by Jordy Xavier Pazaran Reyes on 6/10/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
+
 import Foundation
 
-class MyCareerInteractor: MyCareerInputIntercatorProtocol{
+final class MyCareerInteractor: MyCareerInputIntercatorProtocol {
 
     // MARK: - Properties
     var presenter: MyCareerOutputIntercatorProtocol?
@@ -22,7 +16,6 @@ class MyCareerInteractor: MyCareerInputIntercatorProtocol{
      */
     func fetchMyCareer(endpoint: String) {
         Request.shared.request(endpoint, entity: MyCareer.self) { [weak self] fetchResult in
-            
             switch fetchResult{
             case .success(let data):
                 guard let myCareerFetch: MyCareer = Request.shared.jsonDecode(data: data) else { return }

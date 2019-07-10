@@ -1,15 +1,6 @@
-//
-//  MainProtocol.swift
-//  CV App
-//
-//  Created by Jordy Xavier Pazaran Reyes on 5/31/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
 
-import Foundation
 import UIKit
 
-// MARK: - Protocols
 /**
  Presenter -> View Protocol.
  */
@@ -29,7 +20,7 @@ protocol MainPresenterProtocol{
     var interactor: MainInputInteractorProtocol? { get set }
     var router: MainRouterProtocol? { get set }
     
-    func viewDidLoad()
+    func updateView()
     func myCareerPressed()
     func getImage(imageURL: String)
 }
@@ -41,7 +32,6 @@ protocol MainInputInteractorProtocol{
     var presenter: MainOutputIntercatorProtocol? { get set }
     func fetchUserInfo (endpoint: String)
     func fetchImage(imageURL: String)
-    
 }
 
 /**
