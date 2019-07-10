@@ -51,8 +51,18 @@ final class UserInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        createPulse()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        guard let profileImage = self.profileUserImage else {
+            return
+        }
+        
+        let pulse = PulseScaleAnimationFactory(forView: profileImage)
+        
+        DispatchQueue.main.async {
+            pulse.animatePulse()
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
