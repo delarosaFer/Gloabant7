@@ -10,7 +10,6 @@
 		367308FB22D54D620064E596 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 367308FA22D54D620064E596 /* README.md */; };
 		36A8C49622D50E4C00A421AF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C49522D50E4C00A421AF /* Keys.swift */; };
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
-		36A8C4A822D53A4700A421AF /* AboutMeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */; };
 		DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */; };
 		FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1427ED22AAD4D300E180FD /* Constants.swift */; };
 		FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */; };
@@ -29,15 +28,6 @@
 		FC263F2D22A5993600E073F4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F2C22A5993600E073F4 /* MainPresenter.swift */; };
 		FC263F3122A5DE8900E073F4 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F3022A5DE8900E073F4 /* UserRouter.swift */; };
 		FC29BE1122A96D5200D1B760 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29BE1022A96D5200D1B760 /* RootRouter.swift */; };
-		FC29BE1322A9A61400D1B760 /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29BE1222A9A61400D1B760 /* AboutMe.swift */; };
-		FC29BE1522A9A76100D1B760 /* AboutMeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29BE1422A9A76100D1B760 /* AboutMeRouter.swift */; };
-		FC29BE1722A9A8C600D1B760 /* AboutMePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29BE1622A9A8C600D1B760 /* AboutMePresenter.swift */; };
-		FC6490F822AFFDF4008C191F /* Achivements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6490F722AFFDF4008C191F /* Achivements.swift */; };
-		FC6490FA22B00032008C191F /* AchivementsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6490F922B00032008C191F /* AchivementsProtocols.swift */; };
-		FC6490FC22B005F9008C191F /* AchivementsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6490FB22B005F9008C191F /* AchivementsRouter.swift */; };
-		FC6490FE22B006BB008C191F /* AchivementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6490FD22B006BB008C191F /* AchivementsPresenter.swift */; };
-		FC64910022B00793008C191F /* AchivementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6490FF22B00793008C191F /* AchivementsInteractor.swift */; };
-		FC64910222B008D4008C191F /* AchivementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64910122B008D4008C191F /* AchivementsTableViewController.swift */; };
 		FC64911222B16610008C191F /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC64911122B16610008C191F /* AlertView.xib */; };
 		FC64911422B1666E008C191F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64911322B1666E008C191F /* AlertView.swift */; };
 		FC80216922B86C87003800E9 /* AboutMeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80216822B86C87003800E9 /* AboutMeInteractorTests.swift */; };
@@ -47,9 +37,7 @@
 		FC80ABB322B718BF008628C4 /* CV_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80ABB222B718BF008628C4 /* CV_AppUITests.swift */; };
 		FC80ABB622B73AA9008628C4 /* MainInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80ABB522B73AA9008628C4 /* MainInteractorTests.swift */; };
 		FC91FCCA22A1E8F900862929 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91FCC922A1E8F900862929 /* MainProtocols.swift */; };
-		FC9432D722A6E799007D427E /* AboutMeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9432D622A6E799007D427E /* AboutMeProtocols.swift */; };
 		FC9432D922A713A5007D427E /* CVAboutMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9432D822A713A5007D427E /* CVAboutMe.storyboard */; };
-		FC9432DB22A717C3007D427E /* CVAboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9432DA22A717C3007D427E /* CVAboutTableViewController.swift */; };
 		FC9B32F922B405B200AB9490 /* MockMainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B32F822B405B200AB9490 /* MockMainRouter.swift */; };
 		FC9B32FB22B40EE500AB9490 /* MockMainOutputIntercator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B32FA22B40EE500AB9490 /* MockMainOutputIntercator.swift */; };
 		FC9B32FD22B411C700AB9490 /* MockMainInputInputIntercator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B32FC22B411C700AB9490 /* MockMainInputInputIntercator.swift */; };
@@ -93,7 +81,6 @@
 		36A8C49422D50C6B00A421AF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		36A8C49522D50E4C00A421AF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeInteractor.swift; sourceTree = "<group>"; };
 		DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
 		FC1427ED22AAD4D300E180FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVMyCareer.storyboard; sourceTree = "<group>"; };
@@ -112,15 +99,6 @@
 		FC263F2C22A5993600E073F4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		FC263F3022A5DE8900E073F4 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		FC29BE1022A96D5200D1B760 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
-		FC29BE1222A9A61400D1B760 /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
-		FC29BE1422A9A76100D1B760 /* AboutMeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeRouter.swift; sourceTree = "<group>"; };
-		FC29BE1622A9A8C600D1B760 /* AboutMePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMePresenter.swift; sourceTree = "<group>"; };
-		FC6490F722AFFDF4008C191F /* Achivements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achivements.swift; sourceTree = "<group>"; };
-		FC6490F922B00032008C191F /* AchivementsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementsProtocols.swift; sourceTree = "<group>"; };
-		FC6490FB22B005F9008C191F /* AchivementsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementsRouter.swift; sourceTree = "<group>"; };
-		FC6490FD22B006BB008C191F /* AchivementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementsPresenter.swift; sourceTree = "<group>"; };
-		FC6490FF22B00793008C191F /* AchivementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementsInteractor.swift; sourceTree = "<group>"; };
-		FC64910122B008D4008C191F /* AchivementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementsTableViewController.swift; sourceTree = "<group>"; };
 		FC64911122B16610008C191F /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		FC64911322B1666E008C191F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		FC80216822B86C87003800E9 /* AboutMeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeInteractorTests.swift; sourceTree = "<group>"; };
@@ -131,9 +109,7 @@
 		FC80ABB422B71A21008628C4 /* CV AppUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CV AppUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC80ABB522B73AA9008628C4 /* MainInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorTests.swift; sourceTree = "<group>"; };
 		FC91FCC922A1E8F900862929 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
-		FC9432D622A6E799007D427E /* AboutMeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeProtocols.swift; sourceTree = "<group>"; };
 		FC9432D822A713A5007D427E /* CVAboutMe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVAboutMe.storyboard; sourceTree = "<group>"; };
-		FC9432DA22A717C3007D427E /* CVAboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVAboutTableViewController.swift; sourceTree = "<group>"; };
 		FC9B32F822B405B200AB9490 /* MockMainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainRouter.swift; sourceTree = "<group>"; };
 		FC9B32FA22B40EE500AB9490 /* MockMainOutputIntercator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainOutputIntercator.swift; sourceTree = "<group>"; };
 		FC9B32FC22B411C700AB9490 /* MockMainInputInputIntercator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainInputInputIntercator.swift; sourceTree = "<group>"; };
@@ -263,67 +239,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		FC25DE8522AED7960058DE47 /* CVAchivements */ = {
-			isa = PBXGroup;
-			children = (
-				FC25DE8B22AED7D00058DE47 /* Protocols */,
-				FC25DE8A22AED7C60058DE47 /* WireFrame */,
-				FC25DE8922AED7BF0058DE47 /* Entity */,
-				FC25DE8822AED7B80058DE47 /* Presenter */,
-				FC25DE8722AED7B10058DE47 /* Intector */,
-				FC25DE8622AED7AA0058DE47 /* View */,
-			);
-			path = CVAchivements;
-			sourceTree = "<group>";
-		};
-		FC25DE8622AED7AA0058DE47 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FC64910122B008D4008C191F /* AchivementsTableViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FC25DE8722AED7B10058DE47 /* Intector */ = {
-			isa = PBXGroup;
-			children = (
-				FC6490FF22B00793008C191F /* AchivementsInteractor.swift */,
-			);
-			path = Intector;
-			sourceTree = "<group>";
-		};
-		FC25DE8822AED7B80058DE47 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				FC6490FD22B006BB008C191F /* AchivementsPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		FC25DE8922AED7BF0058DE47 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				FC6490F722AFFDF4008C191F /* Achivements.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		FC25DE8A22AED7C60058DE47 /* WireFrame */ = {
-			isa = PBXGroup;
-			children = (
-				FC6490FB22B005F9008C191F /* AchivementsRouter.swift */,
-			);
-			path = WireFrame;
-			sourceTree = "<group>";
-		};
-		FC25DE8B22AED7D00058DE47 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				FC6490F922B00032008C191F /* AchivementsProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		FC263F0B22A566E900E073F4 /* CVBasicInformation */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,59 +334,6 @@
 			path = Protocolos;
 			sourceTree = "<group>";
 		};
-		FC9432CF22A6E704007D427E /* CVAboutMe */ = {
-			isa = PBXGroup;
-			children = (
-				FC9432D522A6E75E007D427E /* Protocols */,
-				FC9432D422A6E749007D427E /* WireFrame */,
-				FC9432D322A6E73B007D427E /* Entity */,
-				FC9432D222A6E735007D427E /* Presenter */,
-				FC9432D022A6E71D007D427E /* View */,
-			);
-			path = CVAboutMe;
-			sourceTree = "<group>";
-		};
-		FC9432D022A6E71D007D427E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FC9432DA22A717C3007D427E /* CVAboutTableViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FC9432D222A6E735007D427E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				FC29BE1622A9A8C600D1B760 /* AboutMePresenter.swift */,
-				36A8C4A722D53A4700A421AF /* AboutMeInteractor.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		FC9432D322A6E73B007D427E /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				FC29BE1222A9A61400D1B760 /* AboutMe.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		FC9432D422A6E749007D427E /* WireFrame */ = {
-			isa = PBXGroup;
-			children = (
-				FC29BE1422A9A76100D1B760 /* AboutMeRouter.swift */,
-			);
-			path = WireFrame;
-			sourceTree = "<group>";
-		};
-		FC9432D522A6E75E007D427E /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				FC9432D622A6E799007D427E /* AboutMeProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		FC9B32F222B4024000AB9490 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,9 +423,7 @@
 				FC263F1222A57C9100E073F4 /* Networking Layer */,
 				FC91FCC022A1B4D600862929 /* Common */,
 				FC263F0B22A566E900E073F4 /* CVBasicInformation */,
-				FC9432CF22A6E704007D427E /* CVAboutMe */,
 				FC25DE7E22AED7020058DE47 /* CVMyCareer */,
-				FC25DE8522AED7960058DE47 /* CVAchivements */,
 				FCECA4B822A1B2DA00B0C8DC /* AppDelegate.swift */,
 				FC29BE1022A96D5200D1B760 /* RootRouter.swift */,
 				FCECA4BF22A1B2DB00B0C8DC /* Assets.xcassets */,
@@ -736,35 +596,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A8C4A822D53A4700A421AF /* AboutMeInteractor.swift in Sources */,
-				FC9432DB22A717C3007D427E /* CVAboutTableViewController.swift in Sources */,
 				FC25DE9322AF03C80058DE47 /* MyCareer.swift in Sources */,
-				FC6490FE22B006BB008C191F /* AchivementsPresenter.swift in Sources */,
 				DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */,
-				FC29BE1322A9A61400D1B760 /* AboutMe.swift in Sources */,
-				FC64910022B00793008C191F /* AchivementsInteractor.swift in Sources */,
 				FCECA4BB22A1B2DA00B0C8DC /* UserInfoViewController.swift in Sources */,
 				FCECA4B922A1B2DA00B0C8DC /* AppDelegate.swift in Sources */,
-				FC6490FC22B005F9008C191F /* AchivementsRouter.swift in Sources */,
 				FC25DE9B22AF08040058DE47 /* MyCareerIntercator.swift in Sources */,
 				FC29BE1122A96D5200D1B760 /* RootRouter.swift in Sources */,
 				FC25DE9122AF01410058DE47 /* MyCareerTableViewController.swift in Sources */,
-				FC6490F822AFFDF4008C191F /* Achivements.swift in Sources */,
 				36A8C49622D50E4C00A421AF /* Keys.swift in Sources */,
 				FC263F1122A5795400E073F4 /* User.swift in Sources */,
 				FCAD5C9922B7F2B2006C1C15 /* Result.swift in Sources */,
 				FC64911422B1666E008C191F /* AlertView.swift in Sources */,
-				FC29BE1722A9A8C600D1B760 /* AboutMePresenter.swift in Sources */,
 				FC263F2D22A5993600E073F4 /* MainPresenter.swift in Sources */,
-				FC64910222B008D4008C191F /* AchivementsTableViewController.swift in Sources */,
-				FC29BE1522A9A76100D1B760 /* AboutMeRouter.swift in Sources */,
-				FC6490FA22B00032008C191F /* AchivementsProtocols.swift in Sources */,
 				FC25DE9922AF076E0058DE47 /* MyCareerPresenter.swift in Sources */,
 				FC25DE9722AF07120058DE47 /* MyCareerRouter.swift in Sources */,
 				FC91FCCA22A1E8F900862929 /* MainProtocols.swift in Sources */,
 				FC25DE9522AF058F0058DE47 /* MyCareerProtocols.swift in Sources */,
 				FC263F1422A57CB400E073F4 /* Request.swift in Sources */,
-				FC9432D722A6E799007D427E /* AboutMeProtocols.swift in Sources */,
 				FC263F0F22A5784300E073F4 /* MainInteractor.swift in Sources */,
 				FC263F3122A5DE8900E073F4 /* UserRouter.swift in Sources */,
 				FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */,
