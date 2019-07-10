@@ -19,6 +19,9 @@
 		DBFE741922D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */; };
 		DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */; };
 		DBFE741D22D669030003F7BC /* MyCareerTableViewController+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741C22D669030003F7BC /* MyCareerTableViewController+Protocol.swift */; };
+		DBFE741F22D690750003F7BC /* UserInfoViewController+CircleTransitionAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741E22D690750003F7BC /* UserInfoViewController+CircleTransitionAnimatable.swift */; };
+		DBFE742222D690F70003F7BC /* CircleTransitionAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE742122D690F70003F7BC /* CircleTransitionAnimatable.swift */; };
+		DBFE742522D699000003F7BC /* VIPERModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE742422D699000003F7BC /* VIPERModule.swift */; };
 		FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1427ED22AAD4D300E180FD /* Constants.swift */; };
 		FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */; };
 		FC25DE8F22AED8620058DE47 /* CVAchivements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */; };
@@ -98,6 +101,9 @@
 		DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPresenter+MainOutputIntercatorProtocol.swift"; sourceTree = "<group>"; };
 		DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
 		DBFE741C22D669030003F7BC /* MyCareerTableViewController+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCareerTableViewController+Protocol.swift"; sourceTree = "<group>"; };
+		DBFE741E22D690750003F7BC /* UserInfoViewController+CircleTransitionAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfoViewController+CircleTransitionAnimatable.swift"; sourceTree = "<group>"; };
+		DBFE742122D690F70003F7BC /* CircleTransitionAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimatable.swift; sourceTree = "<group>"; };
+		DBFE742422D699000003F7BC /* VIPERModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERModule.swift; sourceTree = "<group>"; };
 		FC1427ED22AAD4D300E180FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVMyCareer.storyboard; sourceTree = "<group>"; };
 		FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVAchivements.storyboard; sourceTree = "<group>"; };
@@ -206,11 +212,28 @@
 		DB01DF9622D634DE0021E1DA /* ViewController Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				DB01DF9722D635060021E1DA /* MaterialHideAnimator.swift */,
-				DB01DF9922D635120021E1DA /* MaterialShowAnimator.swift */,
+				DBFE742022D690E20003F7BC /* Protocols */,
 				DBFE741422D649310003F7BC /* NavigationDelegate.swift */,
+				DB01DF9922D635120021E1DA /* MaterialShowAnimator.swift */,
+				DB01DF9722D635060021E1DA /* MaterialHideAnimator.swift */,
 			);
 			path = "ViewController Transitions";
+			sourceTree = "<group>";
+		};
+		DBFE742022D690E20003F7BC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBFE742122D690F70003F7BC /* CircleTransitionAnimatable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBFE742322D698E80003F7BC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DBFE742422D699000003F7BC /* VIPERModule.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		FC25DE7E22AED7020058DE47 /* CVMyCareer */ = {
@@ -314,6 +337,7 @@
 		FC91FCC022A1B4D600862929 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DBFE742322D698E80003F7BC /* Protocol */,
 				DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */,
 				FC1427ED22AAD4D300E180FD /* Constants.swift */,
 				36A8C49522D50E4C00A421AF /* Keys.swift */,
@@ -327,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				FCECA4BA22A1B2DA00B0C8DC /* UserInfoViewController.swift */,
+				DBFE741E22D690750003F7BC /* UserInfoViewController+CircleTransitionAnimatable.swift */,
 				DB01DF9322D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift */,
 			);
 			path = View;
@@ -639,6 +664,7 @@
 				FC25DE9322AF03C80058DE47 /* MyCareer.swift in Sources */,
 				DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */,
 				DBFE741922D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift in Sources */,
+				DBFE741F22D690750003F7BC /* UserInfoViewController+CircleTransitionAnimatable.swift in Sources */,
 				FCECA4BB22A1B2DA00B0C8DC /* UserInfoViewController.swift in Sources */,
 				FCECA4B922A1B2DA00B0C8DC /* AppDelegate.swift in Sources */,
 				FC25DE9B22AF08040058DE47 /* MyCareerInteractor.swift in Sources */,
@@ -658,7 +684,9 @@
 				DB01DF9822D635060021E1DA /* MaterialHideAnimator.swift in Sources */,
 				DBFE741722D64F0F0003F7BC /* URL+Queries.swift in Sources */,
 				FC25DE9522AF058F0058DE47 /* MyCareerProtocols.swift in Sources */,
+				DBFE742522D699000003F7BC /* VIPERModule.swift in Sources */,
 				FC263F1422A57CB400E073F4 /* Request.swift in Sources */,
+				DBFE742222D690F70003F7BC /* CircleTransitionAnimatable.swift in Sources */,
 				FC263F0F22A5784300E073F4 /* MainInteractor.swift in Sources */,
 				FC263F3122A5DE8900E073F4 /* UserRouter.swift in Sources */,
 				FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */,

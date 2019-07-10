@@ -8,19 +8,21 @@
 
 import Foundation
 
-final class Request {
+final class Request: RequestProtocol {
     // MARK: - Properties
+    private let session: URLSessionProtocol
     private var baseURL: URL?
     
-    public static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue) //The base URL for all GET Request
-
+    static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue) //The base URL for all GET Request
+    
     // MARK: - Initialazers
     
     /// The init for the base URL
     ///
     /// - Parameter baseURL: URL base for the appi's request
-
-    private init(baseURL: String) {
+    
+    init(baseURL: String, session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
         guard let url = URL(string: baseURL) else { return }
         self.baseURL = url
     }
@@ -30,15 +32,15 @@ final class Request {
      This method allows to make the request to a especific URL with components sendings by the extension URL on the top.
      
      - Parameters:
-        - endpoint: The URL endpoints for make the request.
-        - entity: The entity need it for test the data fetch.
-        - completionHandler: This completion handler receive a result composed by a data and a case of the Networking Errors enum.
+     - endpoint: The URL endpoints for make the request.
+     - entity: The entity need it for test the data fetch.
+     - completionHandler: This completion handler receive a result composed by a data and a case of the Networking Errors enum.
      */
     func request<T:Codable>(_ endpoint: String, entity: T.Type, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void){
         guard let url = baseURL?.appendingPathComponent(endpoint) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = HTTP.get.rawValue
-        URLSession.shared.dataTask(with: request) { data, reponse, error  in
+        session.dataTask(with: request) { data, reponse, error  in
             guard error == nil else{
                 completionHandler(.failure(.netWorkError))
                 return
@@ -55,8 +57,8 @@ final class Request {
      Method for download de image by a URL an create data.
      
      - Parameters:
-        - urlImage: The URL image.
-        - completionHandler: Completion handler.
+     - urlImage: The URL image.
+     - completionHandler: Completion handler.
      */
     func downloadImage(urlImage: String, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void){
         guard let url = URL(string: urlImage) else {
@@ -64,7 +66,7 @@ final class Request {
             return
         }
         let requestImage = URLRequest(url: url)
-        URLSession.shared.dataTask(with: requestImage){ data, response, error in
+        session.dataTask(with: requestImage){ data, response, error in
             guard error == nil else{
                 completionHandler(.failure(.netWorkError))
                 return
@@ -95,3 +97,14 @@ final class Request {
         return nil
     }
 }
+
+protocol RequestProtocol {
+    func request<T:Codable>(_ endpoint: String, entity: T.Type, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void)
+    func downloadImage(urlImage: String, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void)
+}
+
+protocol URLSessionProtocol{
+    func dataTask(with url: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> ()) -> URLSessionDataTask
+}
+
+extension URLSession: URLSessionProtocol {}
