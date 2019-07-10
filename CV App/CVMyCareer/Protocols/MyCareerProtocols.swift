@@ -18,7 +18,7 @@ protocol MyCareerPresenterProtocol{
     var interactor: MyCareerInputIntercatorProtocol? { get set }
     var router: MyCareerRouterProtocol? { get set }
     
-    func viewDidLoad()
+    func updateView()
 }
 
 /**

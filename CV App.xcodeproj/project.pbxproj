@@ -18,6 +18,7 @@
 		DBFE741722D64F0F0003F7BC /* URL+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741622D64F0F0003F7BC /* URL+Queries.swift */; };
 		DBFE741922D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */; };
 		DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */; };
+		DBFE741D22D669030003F7BC /* MyCareerTableViewController+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741C22D669030003F7BC /* MyCareerTableViewController+Protocol.swift */; };
 		FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1427ED22AAD4D300E180FD /* Constants.swift */; };
 		FC25DE8D22AED84C0058DE47 /* CVMyCareer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */; };
 		FC25DE8F22AED8620058DE47 /* CVAchivements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */; };
@@ -96,6 +97,7 @@
 		DBFE741622D64F0F0003F7BC /* URL+Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Queries.swift"; sourceTree = "<group>"; };
 		DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPresenter+MainOutputIntercatorProtocol.swift"; sourceTree = "<group>"; };
 		DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
+		DBFE741C22D669030003F7BC /* MyCareerTableViewController+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCareerTableViewController+Protocol.swift"; sourceTree = "<group>"; };
 		FC1427ED22AAD4D300E180FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVMyCareer.storyboard; sourceTree = "<group>"; };
 		FC25DE8E22AED8620058DE47 /* CVAchivements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CVAchivements.storyboard; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				FC25DE9022AF01410058DE47 /* MyCareerTableViewController.swift */,
+				DBFE741C22D669030003F7BC /* MyCareerTableViewController+Protocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				FC29BE1122A96D5200D1B760 /* RootRouter.swift in Sources */,
 				FC25DE9122AF01410058DE47 /* MyCareerTableViewController.swift in Sources */,
 				36A8C49622D50E4C00A421AF /* Keys.swift in Sources */,
+				DBFE741D22D669030003F7BC /* MyCareerTableViewController+Protocol.swift in Sources */,
 				FC263F1122A5795400E073F4 /* User.swift in Sources */,
 				FCAD5C9922B7F2B2006C1C15 /* Result.swift in Sources */,
 				FC64911422B1666E008C191F /* AlertView.swift in Sources */,

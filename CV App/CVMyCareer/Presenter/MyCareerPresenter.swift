@@ -2,18 +2,12 @@
 import UIKit
 
 final class MyCareerPresenter: MyCareerPresenterProtocol {
-    
     // MARK: - Properties
     weak var view: MyCareerViewControllerProtocol?
     var interactor: MyCareerInputIntercatorProtocol?
     var router: MyCareerRouterProtocol?
     var myCareer: MyCareer?
-    
-    // MARK: - Methods
-    func viewDidLoad() {
-        self.updateView()
-    }
-    
+
     func updateView() {
         interactor?.fetchMyCareer(endpoint: EndPoint.myCareer.rawValue)
     }

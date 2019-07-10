@@ -1,7 +1,7 @@
 
 import UIKit
 
-class CircleButtonFactory {
+final class CircleButtonFactory {
     private init() {}
     
     static func createCircleButton() -> UIButton {

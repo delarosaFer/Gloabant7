@@ -27,25 +27,30 @@ final class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         
         presenter?.updateView()
-        moreInfoButton = CircleButtonFactory.createCircleButton()
-
-        guard let moreInfoButton = moreInfoButton else {
-            return
-        }
         
-        self.view.addSubview(moreInfoButton)
-        NSLayoutConstraint.activate([
-            moreInfoButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
-            moreInfoButton.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
-            moreInfoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -8.0),
-            moreInfoButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -8.0)
-            ])
+        configureMoreInfoButton(CircleButtonFactory.createCircleButton())
         
-        moreInfoButton.addTarget(self, action: #selector(didTapMoreInfoButton), for: .touchUpInside)
         if let navigationController = self.navigationController {
             navigationDelegate = NavigationDelegate()
             navigationController.delegate = navigationDelegate
         }
+    }
+
+    func configureMoreInfoButton(_ button: UIButton?) {
+        moreInfoButton = button
+        guard let button = button else {
+            return
+        }
+        
+        self.view.addSubview(button)
+        NSLayoutConstraint.activate([
+            button.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
+            button.heightAnchor.constraint(equalTo: button.widthAnchor),
+            button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -8.0),
+            button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -8.0)
+            ])
+        
+        button.addTarget(self, action: #selector(didTapMoreInfoButton), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,10 +72,6 @@ final class UserInfoViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         profileUserImage?.layer.removeAllAnimations()
-    }
-
-    @IBAction func refreshButton(_ sender: Any) {
-        reloadViewFromNib()
     }
 
     @objc func didTapMoreInfoButton() {
