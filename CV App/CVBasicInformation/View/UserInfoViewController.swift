@@ -111,7 +111,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             self?.cellphoneLabel?.text = cellphone
             self?.emailLabel?.text = email
             self?.aboutMeLabel.text = aboutMeTitle
-//            self?.aboutMeTextView.text = aboutMe
+            self?.aboutMeTextView.text = aboutMe
         }
     }
     
