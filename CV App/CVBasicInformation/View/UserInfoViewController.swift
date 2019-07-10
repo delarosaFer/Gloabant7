@@ -51,6 +51,8 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             return
         }
         
+        aboutMeTextView.translatesAutoresizingMaskIntoConstraints = false
+        
         self.view.addSubview(moreInfoButton)
         NSLayoutConstraint.activate([
         moreInfoButton.heightAnchor.constraint(equalToConstant: 75),
@@ -59,6 +61,9 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
         moreInfoButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -37.5)
             ])
         
+        NSLayoutConstraint.activate([
+            aboutMeTextView.bottomAnchor.constraint(equalTo: moreInfoButton.topAnchor, constant: -8)
+            ])
         
         moreInfoButton.addTarget(self, action: #selector(didTapMoreInfoButton), for: .touchUpInside)
         if let navigationController = self.navigationController {
@@ -106,7 +111,7 @@ class UserInfoViewController: UIViewController, MainViewControllerProtocol {
             self?.cellphoneLabel?.text = cellphone
             self?.emailLabel?.text = email
             self?.aboutMeLabel.text = aboutMeTitle
-            self?.aboutMeTextView.text = aboutMe
+//            self?.aboutMeTextView.text = aboutMe
         }
     }
     
