@@ -1,6 +1,7 @@
 // MARK: - Alert controller strings
 "titleError" = "Error!";
 "messageError" = "There was an error loading the information";
+"refreshAction" = "Refresh";
 
 // MARK: - Title view strings
 "aboutMe" = "About me";

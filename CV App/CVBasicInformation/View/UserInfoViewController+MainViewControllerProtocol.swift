@@ -46,14 +46,16 @@ extension UserInfoViewController: MainViewControllerProtocol  {
      Method that display the alert when occurs an network error.
      */
     func showNetworkingError() {
-        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
-        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
-        DispatchQueue.main.sync { [weak self] in
-            AlertView.instance.showAlert(title: alertTitle, message: alertMessage)
-            self?.view.addSubview(AlertView.instance.parentView ?? AlertView())
+        DispatchQueue.main.async { [weak self] in
+            let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
+            let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
+            let alertView = UIAlertController()
+            alertView.title = alertTitle
+            alertView.message = alertMessage
+            alertView.addAction(UIAlertAction(title: NSLocalizedString(StringKey.refreshAction.rawValue, comment: Comment.refreshAction.rawValue), style: .default, handler: { (action) in
+                self?.presenter?.updateView()
+            }))
+            self?.present(alertView, animated: true)
         }
     }
-    
-    // MARK: - Animation methods
-
 }

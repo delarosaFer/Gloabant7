@@ -49,6 +49,7 @@ enum Comment: String {
     // MARK: - Alert controller comments
     case titleError = "Title error!"
     case messageError = "Message error!"
+    case refreshAction = "Refresh action!"
     
     // MARK: - Viewcontroller comments
     case aboutMe = "About me view"

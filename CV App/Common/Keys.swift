@@ -18,6 +18,7 @@ enum StringKey: String {
     // MARK: - Alert controller strings
     case titleError = "titleError"
     case messageError = "messageError"
+    case refreshAction = "refreshAction"
     
     // MARK: - Title view strings
     case aboutMe = "aboutMe"
