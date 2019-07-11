@@ -95,6 +95,7 @@ enum AccessibilityIdentifiers: String {
     case moreInfo = "moreInfoButton"
     case profileUserImage = "profileUserImage"
     case myCareerNavBar = "myCareerNavigationBar"
+}
   
 // MARK: - Transition Animation Duration
 enum TransitionAnimationDuration {
