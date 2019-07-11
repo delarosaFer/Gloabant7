@@ -47,8 +47,6 @@
 		FC263F2D22A5993600E073F4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F2C22A5993600E073F4 /* MainPresenter.swift */; };
 		FC263F3122A5DE8900E073F4 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F3022A5DE8900E073F4 /* UserRouter.swift */; };
 		FC29BE1122A96D5200D1B760 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29BE1022A96D5200D1B760 /* RootRouter.swift */; };
-		FC64911222B16610008C191F /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC64911122B16610008C191F /* AlertView.xib */; };
-		FC64911422B1666E008C191F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64911322B1666E008C191F /* AlertView.swift */; };
 		FC80216922B86C87003800E9 /* AboutMeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80216822B86C87003800E9 /* AboutMeInteractorTests.swift */; };
 		FC80216B22B871EB003800E9 /* AboutMePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80216A22B871EB003800E9 /* AboutMePresenterTests.swift */; };
 		FC80216D22B87700003800E9 /* AboutMeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80216C22B87700003800E9 /* AboutMeRouterTests.swift */; };
@@ -131,8 +129,6 @@
 		FC263F2C22A5993600E073F4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		FC263F3022A5DE8900E073F4 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		FC29BE1022A96D5200D1B760 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
-		FC64911122B16610008C191F /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
-		FC64911322B1666E008C191F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		FC80216822B86C87003800E9 /* AboutMeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeInteractorTests.swift; sourceTree = "<group>"; };
 		FC80216A22B871EB003800E9 /* AboutMePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMePresenterTests.swift; sourceTree = "<group>"; };
 		FC80216C22B87700003800E9 /* AboutMeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeRouterTests.swift; sourceTree = "<group>"; };
@@ -354,8 +350,6 @@
 				FC263F2922A58A7800E073F4 /* LaunchScreen.storyboard */,
 				FC263F2722A58A5400E073F4 /* UserInfo.storyboard */,
 				FC25DE8C22AED84C0058DE47 /* CVMyCareer.storyboard */,
-				FC64911122B16610008C191F /* AlertView.xib */,
-				FC64911322B1666E008C191F /* AlertView.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -650,7 +644,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC64911222B16610008C191F /* AlertView.xib in Resources */,
 				FC263F2A22A58A7800E073F4 /* LaunchScreen.storyboard in Resources */,
 				FCECA4C022A1B2DB00B0C8DC /* Assets.xcassets in Resources */,
 				36A8C4A222D5248300A421AF /* Localizable.strings in Resources */,
@@ -694,7 +687,6 @@
 				DBFE741D22D669030003F7BC /* MyCareerTableViewController+Protocol.swift in Sources */,
 				FC263F1122A5795400E073F4 /* User.swift in Sources */,
 				FCAD5C9922B7F2B2006C1C15 /* Result.swift in Sources */,
-				FC64911422B1666E008C191F /* AlertView.swift in Sources */,
 				FC263F2D22A5993600E073F4 /* MainPresenter.swift in Sources */,
 				FC25DE9922AF076E0058DE47 /* MyCareerPresenter.swift in Sources */,
 				FC25DE9722AF07120058DE47 /* MyCareerRouter.swift in Sources */,
