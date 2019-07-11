@@ -1,7 +1,7 @@
 
 import Foundation
 
-final class MainInteractor: MainInputInteractorProtocol{
+class MainInteractor: MainInputInteractorProtocol{
     // MARK: - Properties
 
     var presenter: MainOutputIntercatorProtocol?

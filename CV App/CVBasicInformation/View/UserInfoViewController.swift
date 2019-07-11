@@ -1,7 +1,7 @@
 
 import UIKit
 
-final class UserInfoViewController: UIViewController {
+class UserInfoViewController: UIViewController {
     // MARK: - Properties
     var presenter: MainPresenterProtocol?
     var user: UserInfo?
