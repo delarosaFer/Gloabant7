@@ -6,16 +6,13 @@ import CoreGraphics
 // MARK: - Storyboard name
 enum Storyboard: String {
     case userInfo = "UserInfo"
-    case cvAboutMe = "CVAboutMe"
     case cvMyCareer = "CVMyCareer"
-    case cvAchivements = "CVAchivements"
 }
 
 // MARK: - Controller name
 enum Controller: String {
     case cvInformation = "UserInfoViewController"
     case cvMyCareer = "MyCareerTableViewController"
-    case cvMyAchivements = "AchivementsTableViewController"
     case alert = "AlertView"
 }
 
