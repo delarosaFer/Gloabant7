@@ -2,7 +2,6 @@
 import UIKit
 
 final class UserInfoViewController: UIViewController {
-    
     // MARK: - Properties
     var presenter: MainPresenterProtocol?
     var user: UserInfo?
@@ -18,9 +17,6 @@ final class UserInfoViewController: UIViewController {
     @IBOutlet weak var cellphoneLabel: UILabel?
     @IBOutlet weak var profileUserImage: UIImageView?
     @IBOutlet weak var aboutMeLabel: UILabel?
-    @IBOutlet weak var emptyStateView: UIView?
-    @IBOutlet weak var myCareerButton: UIButton?
-    @IBOutlet weak var stackview: UIStackView?
     
     //MARK: - Properties
     override func viewDidLoad() {
@@ -45,10 +41,10 @@ final class UserInfoViewController: UIViewController {
         
         self.view.addSubview(button)
         NSLayoutConstraint.activate([
-            button.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
+            button.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: Metrics.circleMultiplier),
             button.heightAnchor.constraint(equalTo: button.widthAnchor),
-            button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -8.0),
-            button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -8.0)
+            button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -Metrics.defaultSpace),
+            button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -Metrics.defaultSpace)
             ])
         
         button.addTarget(self, action: #selector(didTapMoreInfoButton), for: .touchUpInside)
@@ -56,8 +52,18 @@ final class UserInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        createPulse()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        guard let profileImage = self.profileUserImage else {
+            return
+        }
+        
+        let pulse = PulseScaleAnimationFactory(forView: profileImage)
+        
+        DispatchQueue.main.async {
+            pulse.animatePulse()
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

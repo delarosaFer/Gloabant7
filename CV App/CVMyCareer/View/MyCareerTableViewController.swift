@@ -14,14 +14,7 @@ final class MyCareerTableViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.accessibilityIdentifier = AccessibilityIdentifiers.myCareerNavBar.rawValue
         self.title = titleView
-        tableView.tableFooterView = UIView()
         presenter?.updateView()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
     }
     
     // MARK: - Table view data source
@@ -30,6 +23,7 @@ final class MyCareerTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         switch section {
         case 0:
             return myCareerMeList?.studies.rowsInSection ?? NumberI.empty.rawValue
@@ -47,6 +41,7 @@ final class MyCareerTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
         if section == 0{
             return myCareerMeList?.studies.titleSection
         }

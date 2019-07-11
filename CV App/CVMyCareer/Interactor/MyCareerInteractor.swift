@@ -2,7 +2,6 @@
 import Foundation
 
 final class MyCareerInteractor: MyCareerInputIntercatorProtocol {
-
     // MARK: - Properties
     var presenter: MyCareerOutputIntercatorProtocol?
     var positionTable = [[String : AnyObject]]()

@@ -1,6 +1,8 @@
 
 import Foundation
 
+import CoreGraphics
+
 // MARK: - Storyboard name
 enum Storyboard: String {
     case userInfo = "UserInfo"
@@ -81,6 +83,7 @@ enum NetworkingErrors: Error{//Define the errors that we can find when the app f
     case invalidRequest
 }
 
+// MARK: - Accessibilit yIdentifiers
 enum AccessibilityIdentifiers: String {
     case topFirstTitle = "topFirstTitle"
     case topSecondTitle = "topSecondTitle"
@@ -92,4 +95,14 @@ enum AccessibilityIdentifiers: String {
     case moreInfo = "moreInfoButton"
     case profileUserImage = "profileUserImage"
     case myCareerNavBar = "myCareerNavigationBar"
+  
+// MARK: - Transition Animation Duration
+enum TransitionAnimationDuration {
+    static let hideDuration = 0.5
+    static let showDuration = 0.6
+}
+  
+enum Metrics {
+    static let defaultSpace: CGFloat = 8.0
+    static let circleMultiplier: CGFloat = 0.1
 }

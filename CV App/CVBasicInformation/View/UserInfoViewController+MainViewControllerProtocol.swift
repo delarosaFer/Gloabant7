@@ -55,54 +55,5 @@ extension UserInfoViewController: MainViewControllerProtocol  {
     }
     
     // MARK: - Animation methods
-    /**
-     Method for animated the pulse.
-     */
-    func animatePulse(index: Int){
-        pulseLayers[index].strokeColor = UIColor.white.cgColor
-        let scaleAnimation = CABasicAnimation(keyPath: AnimationKey.transform.rawValue)
-        
-        scaleAnimation.duration = CFTimeInterval(NumberF.duration.rawValue)
-        scaleAnimation.fromValue = NumberF.zero.rawValue
-        scaleAnimation.toValue = NumberF.toValue.rawValue
-        scaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        scaleAnimation.repeatCount = .greatestFiniteMagnitude
-        pulseLayers[index].add(scaleAnimation, forKey: AnimationKey.scale.rawValue)
-        
-        let opacityAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-        opacityAnimation.duration = CFTimeInterval(NumberF.duration.rawValue)
-        opacityAnimation.fromValue = NumberF.toValue.rawValue
-        opacityAnimation.toValue = NumberF.zero.rawValue
-        opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
-        opacityAnimation.repeatCount = .greatestFiniteMagnitude
-        pulseLayers[index].add(scaleAnimation, forKey: AnimationKey.opacity.rawValue)
-    }
-    
-    
-    /**
-     Method for create a pulse.
-     */
-    func createPulse() {
-        for _ in 0...2{
-            let circularPath = UIBezierPath(arcCenter: .zero, radius: UIScreen.main.bounds.size.width / CGFloat(NumberF.half.rawValue), startAngle: CGFloat(NumberF.zero.rawValue) , endAngle: CGFloat(NumberF.half.rawValue * .pi) , clockwise: true)
-            let pulseLayer = CAShapeLayer()
-            pulseLayer.path = circularPath.cgPath
-            pulseLayer.lineWidth = CGFloat(NumberF.half.rawValue)
-            pulseLayer.fillColor = UIColor.clear.cgColor
-            pulseLayer.lineCap = CAShapeLayerLineCap.round
-            pulseLayer.position = CGPoint(x: profileUserImage?.bounds.width ?? CGFloat(NumberF.zero.rawValue), y: CGFloat(NumberF.zero.rawValue))
-            profileUserImage?.layer.addSublayer(pulseLayer)
-            pulseLayers.append(pulseLayer)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.animatePulse(index: 0)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4){
-                self.animatePulse(index: 1)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6){
-                    self.animatePulse(index: 2)
-                }
-            }
-        }
-    }
+
 }
