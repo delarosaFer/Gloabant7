@@ -30,10 +30,4 @@ class UserRouterTests: XCTestCase{
         wait(for: [expectation], timeout: 1)
         XCTAssertTrue(nv.topViewController is UserInfoViewController)
     }
-    
-    func testMyCareerVCWhenPresented(){
-        let _ = AboutMeRouter.createModule()
-        router.pushAboutMe()
-        
-    }
 }

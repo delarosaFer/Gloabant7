@@ -10,9 +10,7 @@ import XCTest
 @testable import CV_App
 
 class CV_NetworkLayer: XCTestCase {
-    var interactor: AboutMeInteractor?
     override func setUp() {
-        interactor = AboutMeInteractor()
     }
     
     func testUserNetworkRequestSuccess(){
@@ -20,7 +18,7 @@ class CV_NetworkLayer: XCTestCase {
         let expectation = XCTestExpectation(description: NSLocalizedString("Request success", comment: "nil"))
         
         // when
-        Request.shared.request(EndPoint.userInfo.rawValue, entity: UserResult.self, completionHandler: { fetchResult in
+        Request.shared.request(EndPoint.userInfo.rawValue, entity: UserInfo.self, completionHandler: { fetchResult in
             switch fetchResult {
             // then
             case .success:

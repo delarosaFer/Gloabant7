@@ -12,12 +12,12 @@ import XCTest
 class UserInfoTests: XCTestCase{
     
     func testUsrInfoSetGet(){
-        let user = UserResult(response: UserResponse(userInfo: UserInfo(userName: "Test", age: "22", cellphone: "0000000", email: "test@globant.com", imageURL: "test.com", linkedInURL: "test.com")))
-        XCTAssertEqual(user.response.userInfo.age, "22")
-        XCTAssertEqual(user.response.userInfo.cellphone, "0000000")
-        XCTAssertEqual(user.response.userInfo.imageURL, "test.com")
-        XCTAssertEqual(user.response.userInfo.userName, "Test")
-        XCTAssertEqual(user.response.userInfo.email, "test@globant.com")
-        XCTAssertEqual(user.response.userInfo.linkedInURL, "test.com")
+        let user = UserInfo(userName: "Test", age: 22, cellphone: "0000000", email: "test@globant.com", imageURL: "test.com", skills: "test.com")
+        XCTAssertEqual(user.age, 22)
+        XCTAssertEqual(user.cellphone, "0000000")
+        XCTAssertEqual(user.imageURL, "test.com")
+        XCTAssertEqual(user.userName, "Test")
+        XCTAssertEqual(user.email, "test@globant.com")
+        XCTAssertEqual(user.skills, "test.com")
     }
 }

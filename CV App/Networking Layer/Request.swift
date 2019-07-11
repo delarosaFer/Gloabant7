@@ -1,11 +1,3 @@
-//
-//  MainInteractor.swift
-//  CV App
-//
-//  Created by Jordy Xavier Pazaran Reyes on 6/3/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
-
 import Foundation
 
 final class Request: RequestProtocol {
@@ -101,6 +93,7 @@ final class Request: RequestProtocol {
 protocol RequestProtocol {
     func request<T:Codable>(_ endpoint: String, entity: T.Type, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void)
     func downloadImage(urlImage: String, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void)
+    func jsonDecode<T: Decodable>(data: Data) -> T?
 }
 
 protocol URLSessionProtocol{
