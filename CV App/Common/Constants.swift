@@ -6,16 +6,13 @@ import CoreGraphics
 // MARK: - Storyboard name
 enum Storyboard: String {
     case userInfo = "UserInfo"
-    case cvAboutMe = "CVAboutMe"
     case cvMyCareer = "CVMyCareer"
-    case cvAchivements = "CVAchivements"
 }
 
 // MARK: - Controller name
 enum Controller: String {
     case cvInformation = "UserInfoViewController"
     case cvMyCareer = "MyCareerTableViewController"
-    case cvMyAchivements = "AchivementsTableViewController"
     case alert = "AlertView"
 }
 
@@ -52,6 +49,7 @@ enum Comment: String {
     // MARK: - Alert controller comments
     case titleError = "Title error!"
     case messageError = "Message error!"
+    case refreshAction = "Refresh action!"
     
     // MARK: - Viewcontroller comments
     case aboutMe = "About me view"
@@ -77,7 +75,8 @@ enum NumberI: Int {
 }
 
 // MARK: - NetworkErrors
-enum NetworkingErrors: Error{//Define the errors that we can find when the app fetch the URL
+//Define the errors that we can find when the app fetch
+enum NetworkingErrors: Error{
     case netWorkError
     case invalidData
     case invalidRequest
@@ -102,8 +101,15 @@ enum TransitionAnimationDuration {
     static let hideDuration = 0.5
     static let showDuration = 0.6
 }
-  
+
+// MARK: - Define metrics
 enum Metrics {
     static let defaultSpace: CGFloat = 8.0
     static let circleMultiplier: CGFloat = 0.1
+}
+
+// MARK: - Size fonts
+enum FontSize: Float {
+    case alertTile = 22.0
+    case alertMessage = 16.0
 }

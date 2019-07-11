@@ -9,7 +9,7 @@ final class CircleButtonFactory {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("+", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .bold)
-        button.backgroundColor = .red
+        button.backgroundColor = .customRed
         
         return button
     }

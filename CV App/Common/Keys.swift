@@ -18,6 +18,7 @@ enum StringKey: String {
     // MARK: - Alert controller strings
     case titleError = "titleError"
     case messageError = "messageError"
+    case refreshAction = "refreshAction"
     
     // MARK: - Title view strings
     case aboutMe = "aboutMe"
@@ -29,4 +30,8 @@ enum StringKey: String {
     case phone = "labelPhone"
     case email = "labelEmail"
     case skills = "labelAboutMe"
+    
+    // MARK: - Alert atributes
+    case attributedTitle = "attributedTitle"
+    case attributedMessage = "attributedMessage"
 }

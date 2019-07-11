@@ -15,6 +15,11 @@ final class MyCareerTableViewController: UITableViewController {
         navigationController?.navigationBar.accessibilityIdentifier = AccessibilityIdentifiers.myCareerNavBar.rawValue
         self.title = titleView
         presenter?.updateView()
+        
+        navigationController?.navigationBar.barTintColor = .customRed
+        navigationController?.navigationBar.tintColor = .white
+        let titleAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes
     }
     
     // MARK: - Table view data source
