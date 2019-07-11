@@ -107,3 +107,9 @@ enum Metrics {
     static let defaultSpace: CGFloat = 8.0
     static let circleMultiplier: CGFloat = 0.1
 }
+
+// MARK: - Size fonts
+enum FontSize: Float {
+    case alertTile = 22.0
+    case alertMessage = 16.0
+}

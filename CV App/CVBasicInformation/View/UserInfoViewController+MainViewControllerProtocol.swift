@@ -47,11 +47,15 @@ extension UserInfoViewController: MainViewControllerProtocol  {
      */
     func showNetworkingError() {
         DispatchQueue.main.async { [weak self] in
+            self?.userNameLabel?.isHidden = true
+            self?.ageLabel?.isHidden = true
+            self?.cellphoneLabel?.isHidden = true
+            self?.emailLabel?.isHidden = true
+            self?.aboutMeLabel?.isHidden = true
+            self?.view.layer.removeAllAnimations()
             let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
             let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
-            let alertView = UIAlertController()
-            alertView.title = alertTitle
-            alertView.message = alertMessage
+            let alertView = AlertView(title: alertTitle, message: alertMessage, preferredStyle: .actionSheet)
             alertView.addAction(UIAlertAction(title: NSLocalizedString(StringKey.refreshAction.rawValue, comment: Comment.refreshAction.rawValue), style: .default, handler: { (action) in
                 self?.presenter?.updateView()
             }))

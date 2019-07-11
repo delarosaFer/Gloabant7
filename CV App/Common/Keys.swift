@@ -30,4 +30,8 @@ enum StringKey: String {
     case phone = "labelPhone"
     case email = "labelEmail"
     case skills = "labelAboutMe"
+    
+    // MARK: - Alert atributes
+    case attributedTitle = "attributedTitle"
+    case attributedMessage = "attributedMessage"
 }

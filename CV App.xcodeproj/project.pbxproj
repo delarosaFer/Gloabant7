@@ -358,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */,
+				36B6BBB422D7D9B1006627CD /* AlertView.swift */,
 				FC1427ED22AAD4D300E180FD /* Constants.swift */,
 				36A8C49522D50E4C00A421AF /* Keys.swift */,
 				36A8C49422D50C6B00A421AF /* Config.xcconfig */,
@@ -703,6 +704,7 @@
 				FC263F3122A5DE8900E073F4 /* UserRouter.swift in Sources */,
 				FC1427EE22AAD4D300E180FD /* Constants.swift in Sources */,
 				DBFE741522D649310003F7BC /* NavigationDelegate.swift in Sources */,
+				36B6BBB622D7D9B1006627CD /* AlertView.swift in Sources */,
 				DBFE742822D6A28D0003F7BC /* PulseScaleAnimation.swift in Sources */,
 				DB01DF9422D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift in Sources */,
 			);
