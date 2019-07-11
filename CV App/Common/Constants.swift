@@ -14,7 +14,6 @@ enum Storyboard: String {
 // MARK: - Controller name
 enum Controller: String {
     case cvInformation = "UserInfoViewController"
-    case cvAboutMe = "CVAboutTableViewController"
     case cvMyCareer = "MyCareerTableViewController"
     case cvMyAchivements = "AchivementsTableViewController"
     case alert = "AlertView"
@@ -84,12 +83,25 @@ enum NetworkingErrors: Error{//Define the errors that we can find when the app f
     case invalidRequest
 }
 
+// MARK: - Accessibilit yIdentifiers
+enum AccessibilityIdentifiers: String {
+    case topFirstTitle = "topFirstTitle"
+    case topSecondTitle = "topSecondTitle"
+    case userNameLabel = "userNameLabel"
+    case ageLabel = "ageLabel"
+    case cellphoneLabel = "cellphoneLabel"
+    case emailLabel = "emailLabel"
+    case aboutMeLabel = "aboutMeLabel"
+    case moreInfo = "moreInfoButton"
+    case profileUserImage = "profileUserImage"
+    case myCareerNavBar = "myCareerNavigationBar"
+  
 // MARK: - Transition Animation Duration
 enum TransitionAnimationDuration {
     static let hideDuration = 0.5
     static let showDuration = 0.6
 }
-
+  
 enum Metrics {
     static let defaultSpace: CGFloat = 8.0
     static let circleMultiplier: CGFloat = 0.1

@@ -34,6 +34,7 @@ final class UserInfoViewController: UIViewController {
 
     func configureMoreInfoButton(_ button: UIButton?) {
         moreInfoButton = button
+        moreInfoButton?.accessibilityIdentifier = AccessibilityIdentifiers.moreInfo.rawValue
         guard let button = button else {
             return
         }

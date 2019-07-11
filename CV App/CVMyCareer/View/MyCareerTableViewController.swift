@@ -12,6 +12,7 @@ final class MyCareerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.accessibilityIdentifier = AccessibilityIdentifiers.myCareerNavBar.rawValue
         self.title = titleView
         presenter?.updateView()
     }
