@@ -4,4 +4,4 @@ AppVersion = 1.0
 AppBundleID = globant7.CV
 
 // MARK: - Base URL
-BaseURL = https:/api.myj9son.com/bins/
+BaseURL = https:/api.myjson.com/bins/
