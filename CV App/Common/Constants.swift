@@ -77,7 +77,8 @@ enum NumberI: Int {
 }
 
 // MARK: - NetworkErrors
-enum NetworkingErrors: Error{//Define the errors that we can find when the app fetch the URL
+//Define the errors that we can find when the app fetch
+enum NetworkingErrors: Error{
     case netWorkError
     case invalidData
     case invalidRequest
@@ -102,7 +103,8 @@ enum TransitionAnimationDuration {
     static let hideDuration = 0.5
     static let showDuration = 0.6
 }
-  
+
+// MARK: - Define metrics
 enum Metrics {
     static let defaultSpace: CGFloat = 8.0
     static let circleMultiplier: CGFloat = 0.1

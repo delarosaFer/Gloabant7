@@ -225,6 +225,7 @@
 			children = (
 				DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */,
 				DBFE741622D64F0F0003F7BC /* URL+Queries.swift */,
+				36B6BB9D22D79B36006627CD /* UIColor+Custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -705,6 +706,7 @@
 				FC25DE9922AF076E0058DE47 /* MyCareerPresenter.swift in Sources */,
 				FC25DE9722AF07120058DE47 /* MyCareerRouter.swift in Sources */,
 				DB01DF9A22D635120021E1DA /* MaterialShowAnimator.swift in Sources */,
+				36B6BB9E22D79B36006627CD /* UIColor+Custom.swift in Sources */,
 				FC91FCCA22A1E8F900862929 /* MainProtocols.swift in Sources */,
 				DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */,
 				DB01DF9822D635060021E1DA /* MaterialHideAnimator.swift in Sources */,
