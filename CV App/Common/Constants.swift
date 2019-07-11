@@ -91,4 +91,5 @@ enum AccessibilityIdentifiers: String {
     case aboutMeLabel = "aboutMeLabel"
     case moreInfo = "moreInfoButton"
     case profileUserImage = "profileUserImage"
+    case myCareerNavBar = "myCareerNavigationBar"
 }
