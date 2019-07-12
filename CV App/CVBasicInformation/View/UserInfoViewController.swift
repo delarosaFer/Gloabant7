@@ -73,13 +73,3 @@ class UserInfoViewController: UIViewController {
         presenter?.myCareerPressed()
     }
 }
-
-// MARK: - UIViewController Extension
-extension UIViewController{
-    func reloadViewFromNib(){
-        let parent = view.superview
-        view.removeFromSuperview()
-        view = nil
-        parent?.addSubview(view)
-    }
-}
