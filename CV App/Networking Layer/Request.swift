@@ -76,7 +76,7 @@ final class Request: RequestProtocol {
      This method decodes the DATA received by the completion Hander of the function request, using CODABLE and also the method expect to receive a generic type.
      
      - Parameters:
-     - data: The data received by the completion handler.
+        - data: The data received by the completion handler.
      - Returns: Returns the json decode in an array.
      */
     func jsonDecode<T: Decodable>(data: Data) -> T? {
@@ -84,8 +84,7 @@ final class Request: RequestProtocol {
         do {
             return try jsonDecoder.decode(T.self, from: data)
         } catch {
-            // MARK: - ToDo
+            return nil
         }
-        return nil
     }
 }
