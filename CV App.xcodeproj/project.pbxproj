@@ -14,6 +14,7 @@
 		367705FE22D9019700271043 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367705FD22D9019700271043 /* NetworkLayer.swift */; };
 		3677060022D91E1300271043 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367705FF22D91E1300271043 /* Constants.swift */; };
 		3677060222D9213500271043 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677060122D9213500271043 /* Protocols.swift */; };
+		3677060522D9319500271043 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677060422D9319500271043 /* JsonDecoder.swift */; };
 		36A8C49622D50E4C00A421AF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C49522D50E4C00A421AF /* Keys.swift */; };
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
 		36B6BBBE22D7EA65006627CD /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6BBBD22D7EA65006627CD /* UIColor+Custom.swift */; };
@@ -93,6 +94,7 @@
 		367705FD22D9019700271043 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		367705FF22D91E1300271043 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3677060122D9213500271043 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		3677060422D9319500271043 /* JsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
 		36A8C49422D50C6B00A421AF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		36A8C49522D50E4C00A421AF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				367705FD22D9019700271043 /* NetworkLayer.swift */,
+				3677060422D9319500271043 /* JsonDecoder.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				C08A39C922D7DC4200D279B2 /* MockUserInfoView.swift in Sources */,
 				C08A39CF22D7E01200D279B2 /* MockMyCareerInteractor.swift in Sources */,
 				C08A39CB22D7DEB300D279B2 /* MockMyCareerRouter.swift in Sources */,
+				3677060522D9319500271043 /* JsonDecoder.swift in Sources */,
 				C08A39CD22D7DF9D00D279B2 /* MockMyCareerPresenter.swift in Sources */,
 				C08A39C222D79D6500D279B2 /* MockDataTask.swift in Sources */,
 				FC9B32F922B405B200AB9490 /* MockUserRouter.swift in Sources */,
