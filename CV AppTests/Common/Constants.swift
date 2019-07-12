@@ -15,4 +15,6 @@ enum ExtensionFile: String {
 enum Asset: String {
     case basicInformation = "basicInformation"
     case careerInformation = "careerInformation"
+    case failBasicInformation = "failBasicInformation"
+    case failCareerInformation = "failCareerInformation"
 }

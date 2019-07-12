@@ -10,11 +10,14 @@
 		367308FB22D54D620064E596 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 367308FA22D54D620064E596 /* README.md */; };
 		367705F322D8FDA200271043 /* PulseScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367705F222D8FDA200271043 /* PulseScaleAnimation.swift */; };
 		367705F522D8FDCA00271043 /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367705F422D8FDCA00271043 /* NetworkLayerProtocol.swift */; };
-		367705FA22D8FF7100271043 /* careerInformation.json in Sources */ = {isa = PBXBuildFile; fileRef = 367705F922D8FF7100271043 /* careerInformation.json */; };
 		367705FE22D9019700271043 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367705FD22D9019700271043 /* NetworkLayer.swift */; };
 		3677060022D91E1300271043 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367705FF22D91E1300271043 /* Constants.swift */; };
 		3677060222D9213500271043 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677060122D9213500271043 /* Protocols.swift */; };
 		3677060522D9319500271043 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677060422D9319500271043 /* JsonDecoder.swift */; };
+		3677061622D93BBE00271043 /* basicInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 367705F722D8FF2F00271043 /* basicInformation.json */; };
+		3677061722D93BE200271043 /* failBasicInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 367705F822D8FF5400271043 /* failBasicInformation.json */; };
+		3677061822D93BE700271043 /* careerInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 367705F922D8FF7100271043 /* careerInformation.json */; };
+		3677061922D93BEA00271043 /* failCareerInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 367705FB22D8FF8D00271043 /* failCareerInformation.json */; };
 		36A8C49622D50E4C00A421AF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8C49522D50E4C00A421AF /* Keys.swift */; };
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
 		36B6BBBE22D7EA65006627CD /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6BBBD22D7EA65006627CD /* UIColor+Custom.swift */; };
@@ -641,6 +644,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3677061622D93BBE00271043 /* basicInformation.json in Resources */,
+				3677061722D93BE200271043 /* failBasicInformation.json in Resources */,
+				3677061922D93BEA00271043 /* failCareerInformation.json in Resources */,
+				3677061822D93BE700271043 /* careerInformation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +708,6 @@
 				367705FE22D9019700271043 /* NetworkLayer.swift in Sources */,
 				FC9B32FD22B411C700AB9490 /* MockMainIntercator.swift in Sources */,
 				C08A39BC22D78E3900D279B2 /* MockRequest.swift in Sources */,
-				367705FA22D8FF7100271043 /* careerInformation.json in Sources */,
 				C08A39D122D7E0B800D279B2 /* MockMyCareerTavleView.swift in Sources */,
 				C08A39C722D7ACD400D279B2 /* MockMainPresenter.swift in Sources */,
 				C08A39BE22D79AFC00D279B2 /* MockURLSession.swift in Sources */,

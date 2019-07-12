@@ -12,7 +12,7 @@ class JsonDecoder: XCTestCase, CommonMethods {
     
     func testUserInformationDecodeWithInvalidData() {
         var model: UserInfo?
-        let data = getDataFrom(file: Asset.basicInformation.rawValue)
+        let data = getDataFrom(file: Asset.failBasicInformation.rawValue)
         model = try? JSONDecoder().decode(UserInfo.self, from: data)
         XCTAssertNil(model)
     }
@@ -33,7 +33,7 @@ class JsonDecoder: XCTestCase, CommonMethods {
     
     func testCareerInformationDecodeWithInvalidData() {
         var model: MyCareer?
-        let data = getDataFrom(file: Asset.careerInformation.rawValue)
+        let data = getDataFrom(file: Asset.failCareerInformation.rawValue)
         model = try? JSONDecoder().decode(MyCareer.self, from: data)
         XCTAssertNil(model)
     }
