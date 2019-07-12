@@ -38,6 +38,13 @@ extension UserInfoViewController: MainViewControllerProtocol  {
             let image = UIImage(data: data)
             self?.profileUserImage?.image = image
             self?.profileUserImage?.circled()
+            
+            guard let profileImage = self?.profileUserImage else {
+                return
+            }
+            
+            profileImage.layer.sublayers?.removeAll()
+            PulseScaleAnimation(forView: profileImage).animatePulse()
         }
     }
 

@@ -1,8 +1,8 @@
 
 import UIKit
 
-class PulseScaleAnimationFactory {
-    let view: UIView
+final class PulseScaleAnimation {
+    private let view: UIView
     
     init(forView view: UIView) {
         self.view = view
@@ -16,12 +16,11 @@ class PulseScaleAnimationFactory {
             
             self.view.layer.addSublayer(layer)
             layer.add(opacityPulse, forKey: AnimationKey.opacity.rawValue)
-            layer.add(scalePulse, forKey: AnimationKey.scale.rawValue)
+            layer.add(scalePulse, forKey: AnimationKey.scale.rawValue) 
         }
     }
     
-    
-    func createCircle() -> CAShapeLayer {
+    private func createCircle() -> CAShapeLayer {
         let circularPath = UIBezierPath(arcCenter: .zero, radius: UIScreen.main.bounds.size.width / CGFloat(NumberF.half.rawValue), startAngle: CGFloat(NumberF.zero.rawValue) , endAngle: CGFloat(NumberF.half.rawValue * .pi) , clockwise: true)
         let pulseLayer = CAShapeLayer()
         pulseLayer.path = circularPath.cgPath
@@ -34,8 +33,7 @@ class PulseScaleAnimationFactory {
         return pulseLayer
     }
     
-    
-    func scalePulse(withDelay delay: CGFloat = 0) -> CABasicAnimation {
+    private func scalePulse(withDelay delay: CGFloat = 0) -> CABasicAnimation {
         let scaleAnimation = CABasicAnimation(keyPath: AnimationKey.transform.rawValue)
         scaleAnimation.beginTime = CFTimeInterval(delay)
         scaleAnimation.duration = CFTimeInterval(NumberF.duration.rawValue)
@@ -47,7 +45,7 @@ class PulseScaleAnimationFactory {
         return scaleAnimation
     }
     
-    func opacityPulse(withDelay delay: CGFloat = 0) -> CABasicAnimation {
+    private func opacityPulse(withDelay delay: CGFloat = 0) -> CABasicAnimation {
         let opacityAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
         opacityAnimation.beginTime = CFTimeInterval(delay)
         opacityAnimation.duration = CFTimeInterval(NumberF.duration.rawValue)
@@ -59,9 +57,3 @@ class PulseScaleAnimationFactory {
         return opacityAnimation
     }
 }
-
-
-
-
-
-

@@ -17,7 +17,7 @@ extension MaterialHideAnimator: UIViewControllerAnimatedTransitioning {
         
         let blackView = UIView(frame: fromViewController.view.frame)
         blackView.backgroundColor = UIColor.black
-        fromViewController.view.addSubview(blackView)
+        toViewController.view.addSubview(blackView)
         
         let transitionContainer = transitionContext.containerView
         transitionContainer.addSubview(toViewController.view)

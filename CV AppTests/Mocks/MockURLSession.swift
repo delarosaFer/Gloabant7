@@ -2,7 +2,6 @@ import Foundation
 @testable import CV_App
 
 final class MockURLSession: URLSessionProtocol {
-    
     var data: Data?
     var response: URLResponse?
     var error: Error?
