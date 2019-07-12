@@ -5,14 +5,17 @@ final class Request: RequestProtocol {
     private let session: URLSessionProtocol
     private var baseURL: URL?
     
-    static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue) //The base URL for all GET Request
+    static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue)
     
-    // MARK: - Initialazers
+    // MARK: - Initiaizers
     
-    /// The init for the base URL
-    ///
-    /// - Parameter baseURL: URL base for the appi's request
-    
+    /**
+     The init for the base URL.
+     
+     - Parameters:
+        - baseURL:  URL base for the appi's request.
+        - session:  URLSessionProtocol object.
+     */
     init(baseURL: String, session: URLSessionProtocol = URLSession.shared) {
         self.session = session
         guard let url = URL(string: baseURL) else { return }
@@ -24,9 +27,9 @@ final class Request: RequestProtocol {
      This method allows to make the request to a especific URL with components sendings by the extension URL on the top.
      
      - Parameters:
-     - endpoint: The URL endpoints for make the request.
-     - entity: The entity need it for test the data fetch.
-     - completionHandler: This completion handler receive a result composed by a data and a case of the Networking Errors enum.
+        - endpoint: The URL endpoints for make the request.
+        - entity: The entity need it for test the data fetch.
+        - completionHandler: This completion handler receive a result composed by a data and a case of the Networking Errors enum.
      */
     func request<T:Codable>(_ endpoint: String, entity: T.Type, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void){
         guard let url = baseURL?.appendingPathComponent(endpoint) else { return }
@@ -49,8 +52,8 @@ final class Request: RequestProtocol {
      Method for download de image by a URL an create data.
      
      - Parameters:
-     - urlImage: The URL image.
-     - completionHandler: Completion handler.
+        - urlImage: The URL image.
+        - completionHandler: Completion handler.
      */
     func downloadImage(urlImage: String, completionHandler: @escaping (Result<Data, NetworkingErrors>) -> Void){
         guard let url = URL(string: urlImage) else {
@@ -70,7 +73,6 @@ final class Request: RequestProtocol {
             completionHandler(.success(fetchedData))
             }.resume()
     }
-    
     
     /**
      This method decodes the DATA received by the completion Hander of the function request, using CODABLE and also the method expect to receive a generic type.

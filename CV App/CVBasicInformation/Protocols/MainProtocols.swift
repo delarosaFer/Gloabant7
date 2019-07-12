@@ -1,4 +1,3 @@
-
 import UIKit
 
 /**
@@ -27,7 +26,7 @@ protocol MainPresenterProtocol{
  Presenter -> Interactor Protocol.
  */
 protocol MainInputInteractorProtocol{
-    var presenter: MainOutputIntercatorProtocol? { get set }
+    var presenter: MainOutputInteractorProtocol? { get set }
     func fetchUserInfo (endpoint: String)
     func fetchImage(imageURL: String)
 }
@@ -35,8 +34,8 @@ protocol MainInputInteractorProtocol{
 /**
  Interactor -> Presenter Protocol.
  */
-protocol MainOutputIntercatorProtocol{
-    func userFeteched(user: UserInfo)
+protocol MainOutputInteractorProtocol{
+    func userFetched(user: UserInfo)
     func userFetchFailed()
     func dowloadedImage(_ data: Data)
 }

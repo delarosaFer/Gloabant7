@@ -3,7 +3,7 @@ import UIKit
 final class MyCareerPresenter: MyCareerPresenterProtocol {
     // MARK: - Properties
     weak var view: MyCareerViewControllerProtocol?
-    var interactor: MyCareerInputIntercatorProtocol?
+    var interactor: MyCareerInputInteractorProtocol?
     var router: MyCareerRouterProtocol?
     var myCareer: MyCareer?
 
@@ -12,8 +12,8 @@ final class MyCareerPresenter: MyCareerPresenterProtocol {
     }
 }
 
-// MARK: - Extension for MyCareerOutputIntercator
-extension MyCareerPresenter: MyCareerOutputIntercatorProtocol{
+// MARK: - Extension for MyCareerOutputInteractor
+extension MyCareerPresenter: MyCareerOutputInteractorProtocol{
     func myCareerFeteched(myCareer: MyCareer) {
         view?.showMyCareer(with: myCareer)
     }

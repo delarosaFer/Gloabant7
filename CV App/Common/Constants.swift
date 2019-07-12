@@ -74,7 +74,6 @@ enum NumberI: Int {
 }
 
 // MARK: - NetworkErrors
-//Define the errors that we can find when the app fetch
 enum NetworkingErrors: Error{
     case netWorkError
     case invalidData

@@ -14,7 +14,7 @@ protocol MyCareerViewControllerProtocol: class{
  */
 protocol MyCareerPresenterProtocol{
     var view: MyCareerViewControllerProtocol? { get set }
-    var interactor: MyCareerInputIntercatorProtocol? { get set }
+    var interactor: MyCareerInputInteractorProtocol? { get set }
     var router: MyCareerRouterProtocol? { get set }
     
     func updateView()
@@ -23,8 +23,8 @@ protocol MyCareerPresenterProtocol{
 /**
  Presenter -> Interactor Protocol.
  */
-protocol MyCareerInputIntercatorProtocol{
-    var presenter: MyCareerOutputIntercatorProtocol? { get set }
+protocol MyCareerInputInteractorProtocol{
+    var presenter: MyCareerOutputInteractorProtocol? { get set }
     func fetchMyCareer (endpoint: String)
     
 }
@@ -32,7 +32,7 @@ protocol MyCareerInputIntercatorProtocol{
 /**
  Interactor -> Presenter Protocol.
  */
-protocol MyCareerOutputIntercatorProtocol{
+protocol MyCareerOutputInteractorProtocol{
     func myCareerFeteched(myCareer: MyCareer)
     func userFetchFailed()
 }
