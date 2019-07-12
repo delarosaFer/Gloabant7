@@ -1,4 +1,3 @@
-
 import UIKit
 
 extension UserInfoViewController: CircleTransitionAnimatable {

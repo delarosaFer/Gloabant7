@@ -7,7 +7,7 @@ extension UserInfoViewController: MainViewControllerProtocol  {
      Method to set all the user basic information.
      
      - Parameters:
-     - user: Entity UserInfo.
+        - user: Entity UserInfo.
      */
     func showUserInfo(with user: UserInfo) {
         let userInfo = user

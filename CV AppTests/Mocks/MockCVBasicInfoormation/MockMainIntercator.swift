@@ -3,7 +3,7 @@ import UIKit
 
 final class MockMainInputInteractor: MainInputInteractorProtocol {
     
-    var presenter: MainOutputIntercatorProtocol?
+    var presenter: MainOutputInteractorProtocol?
     var fetchImageCalled = 0
     var fetchUserInfoCalled = 0
     

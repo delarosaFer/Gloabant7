@@ -1,9 +1,8 @@
-
 import Foundation
 
-//MARK: - Extension for MainOutputIntercator
-extension MainPresenter: MainOutputIntercatorProtocol {
-    func userFeteched(user: UserInfo) {
+//MARK: - Extension for MainOutputInteractor
+extension MainPresenter: MainOutputInteractorProtocol {
+    func userFetched(user: UserInfo) {
         view?.showUserInfo(with: user)
     }
     

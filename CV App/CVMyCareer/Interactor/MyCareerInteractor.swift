@@ -1,8 +1,8 @@
 import Foundation
 
-final class MyCareerInteractor: MyCareerInputIntercatorProtocol {
+final class MyCareerInteractor: MyCareerInputInteractorProtocol {
     // MARK: - Properties
-    var presenter: MyCareerOutputIntercatorProtocol?
+    var presenter: MyCareerOutputInteractorProtocol?
     var positionTable = [[String : AnyObject]]()
     
     // MARK: - Methods
@@ -10,7 +10,7 @@ final class MyCareerInteractor: MyCareerInputIntercatorProtocol {
      Method for create and fetch the request.
      
      - Parameters:
-     - endpoint: endpoint to request.
+        - endpoint: endpoint to request.
      */
     func fetchMyCareer(endpoint: String) {
         Request.shared.request(endpoint, entity: MyCareer.self) { [weak self] fetchResult in

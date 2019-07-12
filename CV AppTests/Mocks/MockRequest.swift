@@ -53,8 +53,7 @@ final class MockRequest: RequestProtocol {
         do {
             return try jsonDecoder.decode(T.self, from: data)
         } catch {
-            // MARK: - ToDo
+            return nil
         }
-        return nil
     }
 }

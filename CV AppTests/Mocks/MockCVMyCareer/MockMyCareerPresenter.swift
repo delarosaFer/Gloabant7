@@ -4,7 +4,7 @@ import Foundation
 final class MockMyCareerPresenter: MyCareerPresenterProtocol {
     
     var view: MyCareerViewControllerProtocol?
-    var interactor: MyCareerInputIntercatorProtocol?
+    var interactor: MyCareerInputInteractorProtocol?
     var router: MyCareerRouterProtocol?
     var updateViewCalled = 0
     
