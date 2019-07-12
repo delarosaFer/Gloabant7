@@ -100,9 +100,10 @@ enum Metrics {
 }
 
 // MARK: - Size fonts
-enum FontSize: Float {
-    case alertTile = 22.0
-    case alertMessage = 16.0
+enum FontSize {
+    static let alertTile: CGFloat = 22.0
+    static let alertMessage: CGFloat = 16.0
+    static let circleButton: CGFloat = 32.0
 }
 
 // MARK: - More information button

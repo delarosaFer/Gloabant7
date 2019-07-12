@@ -30,6 +30,26 @@ class UserInfoViewController: UIViewController {
             navigationController.delegate = navigationDelegate
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        moreInfoButton?.circled()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        profileUserImage?.layer.removeAllAnimations()
+    }
 
     func configureMoreInfoButton(_ button: UIButton?) {
         moreInfoButton = button
@@ -49,37 +69,6 @@ class UserInfoViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapMoreInfoButton), for: .touchUpInside)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        
-        guard let profileImage = self.profileUserImage else {
-            return
-        }
-        
-        let pulse = PulseScaleAnimationFactory(forView: profileImage)
-        
-        DispatchQueue.main.async {
-            pulse.animatePulse()
-        }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        moreInfoButton?.circled()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        profileUserImage?.layer.removeAllAnimations()
-    }
-
     @objc func didTapMoreInfoButton() {
         presenter?.myCareerPressed()
     }
