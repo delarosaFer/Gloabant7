@@ -13,10 +13,11 @@ class MainInteractor: MainInputInteractorProtocol{
         - endpoint: endpoint to request.
      */
     func fetchUserInfo(endpoint: String) {
-        Request.shared.request(endpoint, entity: UserInfo.self ) { [weak self] fetchResult in
+        let client = Request()
+        client.request(endpoint, entity: UserInfo.self ) { [weak self] fetchResult in
             switch fetchResult{
             case .success(let data):
-                let userFetch: UserInfo? = Request.shared.jsonDecode(data: data)
+                let userFetch: UserInfo? = client.jsonDecode(data: data)
                 guard  let user = userFetch, let _ = self?.presenter?.userFetched(user: user) else{
                     self?.presenter?.userFetchFailed()
                     return
@@ -34,7 +35,8 @@ class MainInteractor: MainInputInteractorProtocol{
      - imageURL: imageURL to fetch.
      */
     func fetchImage(imageURL: String){
-        Request.shared.downloadImage(urlImage: imageURL) { [weak self] fetchingImage in
+        let client = Request()
+        client.downloadImage(urlImage: imageURL) { [weak self] fetchingImage in
             switch fetchingImage{
             case .success(let data):
                 self?.presenter?.dowloadedImage(data)

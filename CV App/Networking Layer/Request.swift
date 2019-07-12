@@ -4,11 +4,7 @@ final class Request: RequestProtocol {
     // MARK: - Properties
     private let session: URLSessionProtocol
     private var baseURL: URL?
-    
-    static let shared = Request(baseURL: Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue)
-    
-    // MARK: - Initiaizers
-    
+
     /**
      The init for the base URL.
      
@@ -16,7 +12,11 @@ final class Request: RequestProtocol {
         - baseURL:  URL base for the appi's request.
         - session:  URLSessionProtocol object.
      */
-    init(baseURL: String, session: URLSessionProtocol = URLSession.shared) {
+
+    /// The init for the base URL
+    ///
+    /// - Parameter baseURL: URL base for the appi's request
+    init(baseURL: String = Configuration.getUrl(for: URLKey.request.rawValue) ?? Default.empty.rawValue, session: URLSessionProtocol = URLSession.shared) {
         self.session = session
         guard let url = URL(string: baseURL) else { return }
         self.baseURL = url
@@ -40,10 +40,14 @@ final class Request: RequestProtocol {
                 completionHandler(.failure(.netWorkError))
                 return
             }
-            guard let dataFetched = data, let _ : T = self.jsonDecode(data: dataFetched) else{
-                completionHandler(.failure(.invalidData))
-                return
+            guard let dataFetched = data else {
+            completionHandler(.failure(.invalidData))
+              return
             }
+//            guard let model: T = self.jsonDecode(data: dataFetched) else{
+//                completionHandler(.failure(.invalidData))
+//                return
+//            }
             completionHandler(.success(dataFetched))
             }.resume()
     }
