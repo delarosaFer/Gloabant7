@@ -1,6 +1,4 @@
-
 import Foundation
-
 import CoreGraphics
 
 // MARK: - Storyboard name
@@ -32,6 +30,7 @@ enum EndPoint: String {
 // MARK: - Default values
 enum Default: String {
     case empty = ""
+    case breakLine = "\n"
 }
 
 // MARK: - HTTP Methods
@@ -84,15 +83,7 @@ enum NetworkingErrors: Error{
 
 // MARK: - Accessibilit yIdentifiers
 enum AccessibilityIdentifiers: String {
-    case topFirstTitle = "topFirstTitle"
-    case topSecondTitle = "topSecondTitle"
-    case userNameLabel = "userNameLabel"
-    case ageLabel = "ageLabel"
-    case cellphoneLabel = "cellphoneLabel"
-    case emailLabel = "emailLabel"
-    case aboutMeLabel = "aboutMeLabel"
     case moreInfo = "moreInfoButton"
-    case profileUserImage = "profileUserImage"
     case myCareerNavBar = "myCareerNavigationBar"
 }
   
@@ -112,4 +103,9 @@ enum Metrics {
 enum FontSize: Float {
     case alertTile = 22.0
     case alertMessage = 16.0
+}
+
+// MARK: - More information button
+enum Button: String {
+    case plus = "+"
 }

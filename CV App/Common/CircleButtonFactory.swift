@@ -7,7 +7,7 @@ final class CircleButtonFactory {
     static func createCircleButton() -> UIButton {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("+", for: .normal)
+        button.setTitle(Button.plus.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         button.backgroundColor = .customRed
         

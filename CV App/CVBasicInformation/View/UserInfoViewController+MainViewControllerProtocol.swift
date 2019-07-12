@@ -1,4 +1,3 @@
-
 import UIKit
 
 extension UserInfoViewController: MainViewControllerProtocol  {
@@ -17,7 +16,7 @@ extension UserInfoViewController: MainViewControllerProtocol  {
         let age = NSLocalizedString(StringKey.age.rawValue, comment: Comment.labelAge.rawValue) + String(userInfo.age)
         let email = NSLocalizedString(StringKey.email.rawValue, comment: Comment.labelEmail.rawValue) + userInfo.email
         let cellphone = NSLocalizedString(StringKey.phone.rawValue, comment: Comment.labelPhone.rawValue) + userInfo.cellphone
-        let aboutMySkills = NSLocalizedString(StringKey.skills.rawValue, comment: Default.empty.rawValue) + "\n" + userInfo.skills
+        let aboutMySkills = NSLocalizedString(StringKey.skills.rawValue, comment: Default.empty.rawValue) + Default.breakLine.rawValue + userInfo.skills
         presenter?.getImage(imageURL: imageURL ?? Default.empty.rawValue)
         DispatchQueue.main.async  { [weak self] in
             self?.userNameLabel?.text = userName
