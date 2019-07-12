@@ -13,3 +13,8 @@ enum AccessibilityIdentifiers: String {
     case profileUserImage = "profileUserImage"
     case myCareerNavBar = "myCareerNavigationBar"
 }
+
+// MARK: - Fails message
+enum Fail: String {
+    case notView = "The initial views aren't on the view"
+}

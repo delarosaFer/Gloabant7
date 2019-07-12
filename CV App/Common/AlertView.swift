@@ -1,11 +1,3 @@
-//
-//  AlertView.swift
-//  CV App
-//
-//  Created by Fernando De La Rosa Salas on 7/11/19.
-//  Copyright © 2019 Jordy Xavier Pazaran Reyes. All rights reserved.
-//
-
 import UIKit
 
 class AlertView: UIAlertController {

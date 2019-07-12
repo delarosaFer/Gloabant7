@@ -30,6 +30,7 @@ enum EndPoint: String {
 // MARK: - Default values
 enum Default: String {
     case empty = ""
+    case breakLine = "\n"
 }
 
 // MARK: - HTTP Methods
@@ -102,4 +103,9 @@ enum Metrics {
 enum FontSize: Float {
     case alertTile = 22.0
     case alertMessage = 16.0
+}
+
+// MARK: - More information button
+enum Button: String {
+    case plus = "+"
 }

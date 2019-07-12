@@ -1,4 +1,3 @@
-
 import Foundation
 
 // MARK: - Keys to get a URL from xcconfig
