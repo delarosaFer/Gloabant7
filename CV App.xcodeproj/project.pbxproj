@@ -123,7 +123,6 @@
 		FC263F3022A5DE8900E073F4 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		FC29BE1022A96D5200D1B760 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		FC80ABB222B718BF008628C4 /* UserInfoViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewControllerUITests.swift; sourceTree = "<group>"; };
-		FC80ABB422B71A21008628C4 /* CV AppUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CV AppUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC91FCC922A1E8F900862929 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
 		FC9B32F822B405B200AB9490 /* MockUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRouter.swift; sourceTree = "<group>"; };
 		FC9B32FC22B411C700AB9490 /* MockMainIntercator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainIntercator.swift; sourceTree = "<group>"; };
@@ -512,7 +511,6 @@
 				C08A39D222D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift */,
 				FC80ABB222B718BF008628C4 /* UserInfoViewControllerUITests.swift */,
 				FCECA4DA22A1B2DB00B0C8DC /* Info.plist */,
-				FC80ABB422B71A21008628C4 /* CV AppUITests-Bridging-Header.h */,
 			);
 			path = "CV AppUITests";
 			sourceTree = "<group>";
@@ -876,6 +874,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -894,6 +895,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -914,6 +918,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CV App.app/CV App";
@@ -935,6 +940,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CV App.app/CV App";
@@ -956,7 +962,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CV AppUITests/CV AppUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -979,7 +986,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jordy.CV-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CV AppUITests/CV AppUITests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "CV App";
