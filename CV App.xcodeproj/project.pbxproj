@@ -23,13 +23,11 @@
 		C08A39D122D7E0B800D279B2 /* MockMyCareerTavleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D022D7E0B800D279B2 /* MockMyCareerTavleView.swift */; };
 		C08A39D322D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D222D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift */; };
 		C08A39D722D7F05000D279B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D622D7F05000D279B2 /* Constants.swift */; };
-		C08A39D922D7F08400D279B2 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D822D7F08400D279B2 /* Keys.swift */; };
 		DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */; };
 		DB01DF9422D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9322D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift */; };
 		DB01DF9822D635060021E1DA /* MaterialHideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9722D635060021E1DA /* MaterialHideAnimator.swift */; };
 		DB01DF9A22D635120021E1DA /* MaterialShowAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9922D635120021E1DA /* MaterialShowAnimator.swift */; };
 		DBFE741522D649310003F7BC /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741422D649310003F7BC /* NavigationDelegate.swift */; };
-		DBFE741722D64F0F0003F7BC /* URL+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741622D64F0F0003F7BC /* URL+Queries.swift */; };
 		DBFE741922D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */; };
 		DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */; };
 		DBFE741D22D669030003F7BC /* MyCareerTableViewController+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741C22D669030003F7BC /* MyCareerTableViewController+Protocol.swift */; };
@@ -52,25 +50,14 @@
 		FC263F2D22A5993600E073F4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F2C22A5993600E073F4 /* MainPresenter.swift */; };
 		FC263F3122A5DE8900E073F4 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC263F3022A5DE8900E073F4 /* UserRouter.swift */; };
 		FC29BE1122A96D5200D1B760 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29BE1022A96D5200D1B760 /* RootRouter.swift */; };
-		FC80216922B86C87003800E9 /* AboutMeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80216822B86C87003800E9 /* AboutMeInteractorTests.swift */; };
-		FC80216B22B871EB003800E9 /* AboutMePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80216A22B871EB003800E9 /* AboutMePresenterTests.swift */; };
-		FC80216D22B87700003800E9 /* AboutMeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80216C22B87700003800E9 /* AboutMeRouterTests.swift */; };
-		FC80ABB022B6FAA2008628C4 /* UserInfoViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80ABAF22B6FAA2008628C4 /* UserInfoViewTests.swift */; };
 		FC80ABB322B718BF008628C4 /* UserInfoViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80ABB222B718BF008628C4 /* UserInfoViewControllerUITests.swift */; };
-		FC80ABB622B73AA9008628C4 /* MainInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80ABB522B73AA9008628C4 /* MainInteractorTests.swift */; };
 		FC91FCCA22A1E8F900862929 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91FCC922A1E8F900862929 /* MainProtocols.swift */; };
 		FC9B32F922B405B200AB9490 /* MockUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B32F822B405B200AB9490 /* MockUserRouter.swift */; };
 		FC9B32FD22B411C700AB9490 /* MockMainIntercator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B32FC22B411C700AB9490 /* MockMainIntercator.swift */; };
 		FCAD5C9922B7F2B2006C1C15 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD5C9822B7F2B2006C1C15 /* Result.swift */; };
-		FCAD5C9B22B7F453006C1C15 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD5C9A22B7F453006C1C15 /* MainPresenterTests.swift */; };
-		FCAD5C9D22B80458006C1C15 /* UserRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD5C9C22B80458006C1C15 /* UserRouterTests.swift */; };
-		FCAD5C9F22B8224B006C1C15 /* AlertViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD5C9E22B8224B006C1C15 /* AlertViewTests.swift */; };
-		FCAD5CA222B82AC1006C1C15 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD5CA122B82AC1006C1C15 /* UserInfoTests.swift */; };
-		FCAD5CAF22B83E05006C1C15 /* AboutMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD5CAE22B83E05006C1C15 /* AboutMeTests.swift */; };
 		FCECA4B922A1B2DA00B0C8DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCECA4B822A1B2DA00B0C8DC /* AppDelegate.swift */; };
 		FCECA4BB22A1B2DA00B0C8DC /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCECA4BA22A1B2DA00B0C8DC /* UserInfoViewController.swift */; };
 		FCECA4C022A1B2DB00B0C8DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCECA4BF22A1B2DB00B0C8DC /* Assets.xcassets */; };
-		FCECA4CE22A1B2DB00B0C8DC /* CV_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCECA4CD22A1B2DB00B0C8DC /* CV_AppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,13 +95,11 @@
 		C08A39D022D7E0B800D279B2 /* MockMyCareerTavleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyCareerTavleView.swift; sourceTree = "<group>"; };
 		C08A39D222D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCareerTableViewControllerUITests.swift; sourceTree = "<group>"; };
 		C08A39D622D7F05000D279B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C08A39D822D7F08400D279B2 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
 		DB01DF9322D633850021E1DA /* UserInfoViewController+MainViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfoViewController+MainViewControllerProtocol.swift"; sourceTree = "<group>"; };
 		DB01DF9722D635060021E1DA /* MaterialHideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialHideAnimator.swift; sourceTree = "<group>"; };
 		DB01DF9922D635120021E1DA /* MaterialShowAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialShowAnimator.swift; sourceTree = "<group>"; };
 		DBFE741422D649310003F7BC /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
-		DBFE741622D64F0F0003F7BC /* URL+Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Queries.swift"; sourceTree = "<group>"; };
 		DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPresenter+MainOutputIntercatorProtocol.swift"; sourceTree = "<group>"; };
 		DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
 		DBFE741C22D669030003F7BC /* MyCareerTableViewController+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyCareerTableViewController+Protocol.swift"; sourceTree = "<group>"; };
@@ -137,29 +122,18 @@
 		FC263F2C22A5993600E073F4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		FC263F3022A5DE8900E073F4 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		FC29BE1022A96D5200D1B760 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
-		FC80216822B86C87003800E9 /* AboutMeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeInteractorTests.swift; sourceTree = "<group>"; };
-		FC80216A22B871EB003800E9 /* AboutMePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMePresenterTests.swift; sourceTree = "<group>"; };
-		FC80216C22B87700003800E9 /* AboutMeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeRouterTests.swift; sourceTree = "<group>"; };
-		FC80ABAF22B6FAA2008628C4 /* UserInfoViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewTests.swift; sourceTree = "<group>"; };
 		FC80ABB222B718BF008628C4 /* UserInfoViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewControllerUITests.swift; sourceTree = "<group>"; };
 		FC80ABB422B71A21008628C4 /* CV AppUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CV AppUITests-Bridging-Header.h"; sourceTree = "<group>"; };
-		FC80ABB522B73AA9008628C4 /* MainInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorTests.swift; sourceTree = "<group>"; };
 		FC91FCC922A1E8F900862929 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
 		FC9B32F822B405B200AB9490 /* MockUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRouter.swift; sourceTree = "<group>"; };
 		FC9B32FC22B411C700AB9490 /* MockMainIntercator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainIntercator.swift; sourceTree = "<group>"; };
 		FCAD5C9822B7F2B2006C1C15 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		FCAD5C9A22B7F453006C1C15 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
-		FCAD5C9C22B80458006C1C15 /* UserRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouterTests.swift; sourceTree = "<group>"; };
-		FCAD5C9E22B8224B006C1C15 /* AlertViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewTests.swift; sourceTree = "<group>"; };
-		FCAD5CA122B82AC1006C1C15 /* UserInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTests.swift; sourceTree = "<group>"; };
-		FCAD5CAE22B83E05006C1C15 /* AboutMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeTests.swift; sourceTree = "<group>"; };
 		FCECA4B522A1B2DA00B0C8DC /* CV App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CV App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCECA4B822A1B2DA00B0C8DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCECA4BA22A1B2DA00B0C8DC /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		FCECA4BF22A1B2DB00B0C8DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCECA4C422A1B2DB00B0C8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCECA4C922A1B2DB00B0C8DC /* CV AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CV AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCECA4CD22A1B2DB00B0C8DC /* CV_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV_AppTests.swift; sourceTree = "<group>"; };
 		FCECA4CF22A1B2DB00B0C8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCECA4D422A1B2DB00B0C8DC /* CV AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CV AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCECA4DA22A1B2DB00B0C8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -232,7 +206,6 @@
 			children = (
 				36B6BBBD22D7EA65006627CD /* UIColor+Custom.swift */,
 				DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */,
-				DBFE741622D64F0F0003F7BC /* URL+Queries.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,7 +419,6 @@
 		FC9B32F322B4025400AB9490 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC80ABAF22B6FAA2008628C4 /* UserInfoViewTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -454,8 +426,6 @@
 		FC9B32F422B4025D00AB9490 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				FC80ABB522B73AA9008628C4 /* MainInteractorTests.swift */,
-				FC80216822B86C87003800E9 /* AboutMeInteractorTests.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -463,8 +433,6 @@
 		FC9B32F522B4026D00AB9490 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				FCAD5C9A22B7F453006C1C15 /* MainPresenterTests.swift */,
-				FC80216A22B871EB003800E9 /* AboutMePresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -472,8 +440,6 @@
 		FC9B32F722B4028500AB9490 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
-				FCAD5C9C22B80458006C1C15 /* UserRouterTests.swift */,
-				FC80216C22B87700003800E9 /* AboutMeRouterTests.swift */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -481,8 +447,6 @@
 		FCAD5CA022B82AB2006C1C15 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				FCAD5CA122B82AC1006C1C15 /* UserInfoTests.swift */,
-				FCAD5CAE22B83E05006C1C15 /* AboutMeTests.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -536,8 +500,6 @@
 				FC9B32F422B4025D00AB9490 /* Interactor */,
 				FC9B32F522B4026D00AB9490 /* Presenter */,
 				FC9B32F722B4028500AB9490 /* WireFrame */,
-				FCECA4CD22A1B2DB00B0C8DC /* CV_AppTests.swift */,
-				FCAD5C9E22B8224B006C1C15 /* AlertViewTests.swift */,
 				FCECA4CF22A1B2DB00B0C8DC /* Info.plist */,
 			);
 			path = "CV AppTests";
@@ -546,12 +508,11 @@
 		FCECA4D722A1B2DB00B0C8DC /* CV AppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C08A39D222D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift */,
-				FC80ABB422B71A21008628C4 /* CV AppUITests-Bridging-Header.h */,
-				FCECA4DA22A1B2DB00B0C8DC /* Info.plist */,
-				FC80ABB222B718BF008628C4 /* UserInfoViewControllerUITests.swift */,
 				C08A39D622D7F05000D279B2 /* Constants.swift */,
-				C08A39D822D7F08400D279B2 /* Keys.swift */,
+				C08A39D222D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift */,
+				FC80ABB222B718BF008628C4 /* UserInfoViewControllerUITests.swift */,
+				FCECA4DA22A1B2DB00B0C8DC /* Info.plist */,
+				FC80ABB422B71A21008628C4 /* CV AppUITests-Bridging-Header.h */,
 			);
 			path = "CV AppUITests";
 			sourceTree = "<group>";
@@ -712,7 +673,6 @@
 				FC91FCCA22A1E8F900862929 /* MainProtocols.swift in Sources */,
 				DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */,
 				DB01DF9822D635060021E1DA /* MaterialHideAnimator.swift in Sources */,
-				DBFE741722D64F0F0003F7BC /* URL+Queries.swift in Sources */,
 				FC25DE9522AF058F0058DE47 /* MyCareerProtocols.swift in Sources */,
 				FC263F1422A57CB400E073F4 /* Request.swift in Sources */,
 				DBFE742222D690F70003F7BC /* CircleTransitionAnimatable.swift in Sources */,
@@ -730,27 +690,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC80216D22B87700003800E9 /* AboutMeRouterTests.swift in Sources */,
-				FC80216922B86C87003800E9 /* AboutMeInteractorTests.swift in Sources */,
 				FC9B32FD22B411C700AB9490 /* MockMainIntercator.swift in Sources */,
-				FCAD5CA222B82AC1006C1C15 /* UserInfoTests.swift in Sources */,
 				C08A39BC22D78E3900D279B2 /* MockRequest.swift in Sources */,
 				C08A39D122D7E0B800D279B2 /* MockMyCareerTavleView.swift in Sources */,
 				C08A39C722D7ACD400D279B2 /* MockMainPresenter.swift in Sources */,
-				FCAD5C9F22B8224B006C1C15 /* AlertViewTests.swift in Sources */,
 				C08A39BE22D79AFC00D279B2 /* MockURLSession.swift in Sources */,
-				FCECA4CE22A1B2DB00B0C8DC /* CV_AppTests.swift in Sources */,
 				C08A39C922D7DC4200D279B2 /* MockUserInfoView.swift in Sources */,
-				FC80ABB622B73AA9008628C4 /* MainInteractorTests.swift in Sources */,
-				FCAD5C9B22B7F453006C1C15 /* MainPresenterTests.swift in Sources */,
-				FCAD5C9D22B80458006C1C15 /* UserRouterTests.swift in Sources */,
 				C08A39CF22D7E01200D279B2 /* MockMyCareerInteractor.swift in Sources */,
 				C08A39CB22D7DEB300D279B2 /* MockMyCareerRouter.swift in Sources */,
 				C08A39CD22D7DF9D00D279B2 /* MockMyCareerPresenter.swift in Sources */,
-				FC80216B22B871EB003800E9 /* AboutMePresenterTests.swift in Sources */,
-				FCAD5CAF22B83E05006C1C15 /* AboutMeTests.swift in Sources */,
 				C08A39C222D79D6500D279B2 /* MockDataTask.swift in Sources */,
-				FC80ABB022B6FAA2008628C4 /* UserInfoViewTests.swift in Sources */,
 				FC9B32F922B405B200AB9490 /* MockUserRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +709,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC80ABB322B718BF008628C4 /* UserInfoViewControllerUITests.swift in Sources */,
-				C08A39D922D7F08400D279B2 /* Keys.swift in Sources */,
 				C08A39D322D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift in Sources */,
 				C08A39D722D7F05000D279B2 /* Constants.swift in Sources */,
 			);
