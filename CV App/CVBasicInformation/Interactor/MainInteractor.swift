@@ -18,7 +18,7 @@ class MainInteractor: MainInputInteractorProtocol{
             switch fetchResult{
             case .success(let data):
                 let userFetch: UserInfo? = client.jsonDecode(data: data)
-                guard  let user = userFetch, let _ = self?.presenter?.userFeteched(user: user) else{
+                guard  let user = userFetch, let _ = self?.presenter?.userFetched(user: user) else{
                     self?.presenter?.userFetchFailed()
                     return
                 }
