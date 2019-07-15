@@ -29,7 +29,7 @@ class UserInformationView: XCTestCase, CommonMethods {
     }
     
     func testViewDisplayCorrectInformation() {
-        let userData = getDataFrom(file: Asset.careerInformation.rawValue)
+        let userData = getDataFrom(file: Asset.basicInformation.rawValue)
         guard let model = MockData().getUserInformation(data: userData) else {
             XCTFail(Fail.loadData.rawValue)
             return
