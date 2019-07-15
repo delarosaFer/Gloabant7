@@ -23,7 +23,7 @@ enum Configuration {
 
 // MARK: - Endpoint URLs
 enum EndPoint: String {
-    case userInfo = "120xcf"
+    case userInfo = "rhgb7"
     case myCareer = "e5unb"
 }
 
