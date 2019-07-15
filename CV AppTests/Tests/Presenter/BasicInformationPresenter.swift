@@ -27,7 +27,7 @@ class BasicInformationPresenter: XCTestCase, CommonMethods {
         let mockInteractor = MockMainInputInteractor()
         
         sut?.interactor = mockInteractor
-        sut?.getImage(imageURL: "https://www.dummy.com")
+        sut?.getImage(imageURL: URLString.dummy.rawValue)
         
         XCTAssert(mockInteractor.fetchImageCalled > 0)
     }
