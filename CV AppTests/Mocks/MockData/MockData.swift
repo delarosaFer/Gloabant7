@@ -26,4 +26,14 @@ class MockData {
         
         return data
     }
+    
+    func getUserInformation(data: Data) -> UserInfo? {
+        let model = try? JSONDecoder().decode(UserInfo.self, from: data)
+        return model
+    }
+    
+    func getCareerInformation(data: Data) -> MyCareer? {
+        let model = try? JSONDecoder().decode(MyCareer.self, from: data)
+        return model
+    }
 }

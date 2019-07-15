@@ -10,6 +10,7 @@ extension UserInfoViewController: MainViewControllerProtocol  {
         - user: Entity UserInfo.
      */
     func showUserInfo(with user: UserInfo) {
+        self.user = user
         let userInfo = user
         let userName = userInfo.userName
         let imageURL = userInfo.imageURL

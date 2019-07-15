@@ -22,6 +22,8 @@
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
 		36B6BBBE22D7EA65006627CD /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6BBBD22D7EA65006627CD /* UIColor+Custom.swift */; };
 		36B6BBC022D7EA82006627CD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6BBBF22D7EA82006627CD /* AlertView.swift */; };
+		36C5CD0522DCEB3E00BFF1C7 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */; };
+		36C5CD0822DCFC1700BFF1C7 /* CareerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */; };
 		C08A39BC22D78E3900D279B2 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39BB22D78E3900D279B2 /* MockRequest.swift */; };
 		C08A39BE22D79AFC00D279B2 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39BD22D79AFC00D279B2 /* MockURLSession.swift */; };
 		C08A39C222D79D6500D279B2 /* MockDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39C122D79D6500D279B2 /* MockDataTask.swift */; };
@@ -107,6 +109,8 @@
 		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36B6BBBD22D7EA65006627CD /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		36B6BBBF22D7EA82006627CD /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
+		36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerInformationView.swift; sourceTree = "<group>"; };
 		C08A39BB22D78E3900D279B2 /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
 		C08A39BD22D79AFC00D279B2 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		C08A39C122D79D6500D279B2 /* MockDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTask.swift; sourceTree = "<group>"; };
@@ -211,8 +215,8 @@
 		367705FC22D9017900271043 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				367705FD22D9019700271043 /* NetworkLayer.swift */,
-				3677060422D9319500271043 /* JsonDecoder.swift */,
+				36C5CD0622DCF35500BFF1C7 /* Network */,
+				36C5CD0322DCEAD400BFF1C7 /* View */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -239,6 +243,24 @@
 			children = (
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		36C5CD0322DCEAD400BFF1C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */,
+				36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36C5CD0622DCF35500BFF1C7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				367705FD22D9019700271043 /* NetworkLayer.swift */,
+				3677060422D9319500271043 /* JsonDecoder.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		C08A39C322D7AB6A00D279B2 /* MockCVBasicInfoormation */ = {
@@ -733,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3677060222D9213500271043 /* Protocols.swift in Sources */,
+				36C5CD0822DCFC1700BFF1C7 /* CareerInformationView.swift in Sources */,
 				367705FE22D9019700271043 /* NetworkLayer.swift in Sources */,
 				FC9B32FD22B411C700AB9490 /* MockMainIntercator.swift in Sources */,
 				C08A39BC22D78E3900D279B2 /* MockRequest.swift in Sources */,
@@ -740,6 +763,7 @@
 				C08A39C722D7ACD400D279B2 /* MockMainPresenter.swift in Sources */,
 				C08A39BE22D79AFC00D279B2 /* MockURLSession.swift in Sources */,
 				3677060022D91E1300271043 /* Constants.swift in Sources */,
+				36C5CD0522DCEB3E00BFF1C7 /* UserInformationView.swift in Sources */,
 				DB5AF46C22D954490098C4D5 /* MockData.swift in Sources */,
 				C08A39C922D7DC4200D279B2 /* MockUserInfoView.swift in Sources */,
 				C08A39CF22D7E01200D279B2 /* MockMyCareerInteractor.swift in Sources */,
