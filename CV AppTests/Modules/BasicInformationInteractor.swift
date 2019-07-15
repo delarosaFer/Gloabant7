@@ -57,7 +57,7 @@ class BasicInformationInteractor: XCTestCase {
         let mockPresenter = MockMainPresenter()
         
         sut.presenter = mockPresenter
-        sut.fetchImage(imageURL: "https://www.dummy.com")
+        sut.fetchUserInfo(endpoint: "https://www.dummy.com")
         
         XCTAssert(mockPresenter.userFetchFailedCalled > 0)
     }
