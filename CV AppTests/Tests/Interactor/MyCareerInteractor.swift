@@ -17,7 +17,7 @@ class MyCareerInteractorTest: XCTestCase {
     func testFetchMyCareer() {
         guard let data = MockData().getCareerInformationData(),
             let session = self.session else {
-            XCTFail("Failed at getting mock info")
+            XCTFail(Fail.mocking.rawValue)
             return
         }
         
@@ -30,7 +30,7 @@ class MyCareerInteractorTest: XCTestCase {
         let mockPresenter = MockMyCareerPresenter()
         sut.presenter = mockPresenter
         
-        sut.fetchMyCareer(endpoint: "https://www.dummy.com")
+        sut.fetchMyCareer(endpoint: URLString.dummy.rawValue)
         
         XCTAssert(mockPresenter.careerFetchedCalled > 0)
     }
@@ -50,7 +50,7 @@ class MyCareerInteractorTest: XCTestCase {
         let mockPresenter = MockMyCareerPresenter()
         sut.presenter = mockPresenter
         
-        sut.fetchMyCareer(endpoint: "https://www.dummy.com")
+        sut.fetchMyCareer(endpoint: URLString.dummy.rawValue)
         
         XCTAssert(mockPresenter.careerFetchFailedCalled > 0)
     }
@@ -70,7 +70,7 @@ class MyCareerInteractorTest: XCTestCase {
         let mockPresenter = MockMyCareerPresenter()
         sut.presenter = mockPresenter
         
-        sut.fetchMyCareer(endpoint: "https://www.dummy.com")
+        sut.fetchMyCareer(endpoint: URLString.dummy.rawValue)
         
         XCTAssert(mockPresenter.careerFetchFailedCalled > 0)
     }

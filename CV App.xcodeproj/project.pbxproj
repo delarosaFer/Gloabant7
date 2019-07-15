@@ -30,7 +30,7 @@
 		C08A39CB22D7DEB300D279B2 /* MockMyCareerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39CA22D7DEB300D279B2 /* MockMyCareerRouter.swift */; };
 		C08A39CD22D7DF9D00D279B2 /* MockMyCareerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39CC22D7DF9D00D279B2 /* MockMyCareerPresenter.swift */; };
 		C08A39CF22D7E01200D279B2 /* MockMyCareerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39CE22D7E01200D279B2 /* MockMyCareerInteractor.swift */; };
-		C08A39D122D7E0B800D279B2 /* MockMyCareerTavleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D022D7E0B800D279B2 /* MockMyCareerTavleView.swift */; };
+		C08A39D122D7E0B800D279B2 /* MockMyCareerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D022D7E0B800D279B2 /* MockMyCareerTableView.swift */; };
 		C08A39D322D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D222D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift */; };
 		C08A39D722D7F05000D279B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39D622D7F05000D279B2 /* Constants.swift */; };
 		DB01DF9222D54FD50021E1DA /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */; };
@@ -122,7 +122,7 @@
 		C08A39CA22D7DEB300D279B2 /* MockMyCareerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyCareerRouter.swift; sourceTree = "<group>"; };
 		C08A39CC22D7DF9D00D279B2 /* MockMyCareerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyCareerPresenter.swift; sourceTree = "<group>"; };
 		C08A39CE22D7E01200D279B2 /* MockMyCareerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyCareerInteractor.swift; sourceTree = "<group>"; };
-		C08A39D022D7E0B800D279B2 /* MockMyCareerTavleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyCareerTavleView.swift; sourceTree = "<group>"; };
+		C08A39D022D7E0B800D279B2 /* MockMyCareerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyCareerTableView.swift; sourceTree = "<group>"; };
 		C08A39D222D7EF2400D279B2 /* MyCareerTableViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCareerTableViewControllerUITests.swift; sourceTree = "<group>"; };
 		C08A39D622D7F05000D279B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB01DF9122D54FD50021E1DA /* UIView+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 				C08A39CA22D7DEB300D279B2 /* MockMyCareerRouter.swift */,
 				C08A39CC22D7DF9D00D279B2 /* MockMyCareerPresenter.swift */,
 				C08A39CE22D7E01200D279B2 /* MockMyCareerInteractor.swift */,
-				C08A39D022D7E0B800D279B2 /* MockMyCareerTavleView.swift */,
+				C08A39D022D7E0B800D279B2 /* MockMyCareerTableView.swift */,
 			);
 			path = MockCVMyCareer;
 			sourceTree = "<group>";
@@ -788,7 +788,7 @@
 				FC9B32FD22B411C700AB9490 /* MockMainIntercator.swift in Sources */,
 				C08A39BC22D78E3900D279B2 /* MockRequest.swift in Sources */,
 				DBBF9F3122DD2D2200741FF8 /* MyCareerPresenter.swift in Sources */,
-				C08A39D122D7E0B800D279B2 /* MockMyCareerTavleView.swift in Sources */,
+				C08A39D122D7E0B800D279B2 /* MockMyCareerTableView.swift in Sources */,
 				DBBF9F3922DD34B600741FF8 /* CareerInformationView.swift in Sources */,
 				C08A39C722D7ACD400D279B2 /* MockMainPresenter.swift in Sources */,
 				DBBF9F2F22DD2CD000741FF8 /* MyCareerInformationRouterTests.swift in Sources */,

@@ -12,6 +12,8 @@ enum AccessibilityIdentifiers: String {
     case moreInfo = "moreInfoButton"
     case profileUserImage = "profileUserImage"
     case myCareerNavBar = "myCareerNavigationBar"
+    case studies = "Studies"
+    case userInfoViewController = "UserInfoViewController"
 }
 
 // MARK: - Fails message

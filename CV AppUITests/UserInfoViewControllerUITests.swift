@@ -44,10 +44,11 @@ class UserInfoViewControllerUITests: XCTestCase {
         XCTAssertNotNil(userNameLabel)
     }
     
+    // MARK: - Test go back animation from career table view
     func testReturnAnimation() {
-        app/*@START_MENU_TOKEN@*/.buttons["moreInfoButton"]/*[[".buttons[\"+\"]",".buttons[\"moreInfoButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.tables.containing(.other, identifier:"Studies").element/*[[".tables.containing(.other, identifier:\"NetCS\").element",".tables.containing(.other, identifier:\"Globant\").element",".tables.containing(.other, identifier:\"Studies\").element"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeDown()
-    app.navigationBars["myCareerNavigationBar"].buttons["UserInfoViewController"].tap()
+        app.buttons[AccessibilityIdentifiers.moreInfo.rawValue].tap()
+        app.tables.containing(.other, identifier: AccessibilityIdentifiers.studies.rawValue).element.swipeDown()
+    app.navigationBars[AccessibilityIdentifiers.myCareerNavBar.rawValue].buttons[AccessibilityIdentifiers.userInfoViewController.rawValue].tap()
         
     }
 }
