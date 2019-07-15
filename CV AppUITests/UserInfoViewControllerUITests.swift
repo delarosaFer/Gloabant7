@@ -43,4 +43,11 @@ class UserInfoViewControllerUITests: XCTestCase {
         let userNameLabel = app.staticTexts[AccessibilityIdentifiers.userNameLabel.rawValue]
         XCTAssertNotNil(userNameLabel)
     }
+    
+    func testReturnAnimation() {
+        app/*@START_MENU_TOKEN@*/.buttons["moreInfoButton"]/*[[".buttons[\"+\"]",".buttons[\"moreInfoButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.tables.containing(.other, identifier:"Studies").element/*[[".tables.containing(.other, identifier:\"NetCS\").element",".tables.containing(.other, identifier:\"Globant\").element",".tables.containing(.other, identifier:\"Studies\").element"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeDown()
+    app.navigationBars["myCareerNavigationBar"].buttons["UserInfoViewController"].tap()
+        
+    }
 }

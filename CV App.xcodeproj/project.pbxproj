@@ -22,8 +22,6 @@
 		36A8C4A222D5248300A421AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A8C4A422D5248300A421AF /* Localizable.strings */; };
 		36B6BBBE22D7EA65006627CD /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6BBBD22D7EA65006627CD /* UIColor+Custom.swift */; };
 		36B6BBC022D7EA82006627CD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6BBBF22D7EA82006627CD /* AlertView.swift */; };
-		36C5CD0522DCEB3E00BFF1C7 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */; };
-		36C5CD0822DCFC1700BFF1C7 /* CareerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */; };
 		C08A39BC22D78E3900D279B2 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39BB22D78E3900D279B2 /* MockRequest.swift */; };
 		C08A39BE22D79AFC00D279B2 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39BD22D79AFC00D279B2 /* MockURLSession.swift */; };
 		C08A39C222D79D6500D279B2 /* MockDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A39C122D79D6500D279B2 /* MockDataTask.swift */; };
@@ -43,6 +41,11 @@
 		DB5AF46722D953E10098C4D5 /* BasicInformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AF46622D953E10098C4D5 /* BasicInformationInteractor.swift */; };
 		DB5AF46922D954040098C4D5 /* MyCareerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AF46822D954040098C4D5 /* MyCareerInteractor.swift */; };
 		DB5AF46C22D954490098C4D5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AF46B22D954490098C4D5 /* MockData.swift */; };
+		DBBF9F2D22DD2CAF00741FF8 /* BasicInteractorRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9F2C22DD2CAF00741FF8 /* BasicInteractorRouterTests.swift */; };
+		DBBF9F2F22DD2CD000741FF8 /* MyCareerInformationRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9F2E22DD2CD000741FF8 /* MyCareerInformationRouterTests.swift */; };
+		DBBF9F3122DD2D2200741FF8 /* MyCareerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9F3022DD2D2200741FF8 /* MyCareerPresenter.swift */; };
+		DBBF9F3822DD34B600741FF8 /* UserInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9F3622DD34B500741FF8 /* UserInformationView.swift */; };
+		DBBF9F3922DD34B600741FF8 /* CareerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9F3722DD34B500741FF8 /* CareerInformationView.swift */; };
 		DBFE741522D649310003F7BC /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741422D649310003F7BC /* NavigationDelegate.swift */; };
 		DBFE741922D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */; };
 		DBFE741B22D661310003F7BC /* CircleButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */; };
@@ -100,7 +103,7 @@
 		367705F822D8FF5400271043 /* failBasicInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = failBasicInformation.json; sourceTree = "<group>"; };
 		367705F922D8FF7100271043 /* careerInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = careerInformation.json; sourceTree = "<group>"; };
 		367705FB22D8FF8D00271043 /* failCareerInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = failCareerInformation.json; sourceTree = "<group>"; };
-		367705FD22D9019700271043 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		367705FD22D9019700271043 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkLayer.swift; path = Network/NetworkLayer.swift; sourceTree = "<group>"; };
 		367705FF22D91E1300271043 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3677060122D9213500271043 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		3677060422D9319500271043 /* JsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
@@ -130,6 +133,11 @@
 		DB5AF46622D953E10098C4D5 /* BasicInformationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationInteractor.swift; sourceTree = "<group>"; };
 		DB5AF46822D954040098C4D5 /* MyCareerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerInteractor.swift; sourceTree = "<group>"; };
 		DB5AF46B22D954490098C4D5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		DBBF9F2C22DD2CAF00741FF8 /* BasicInteractorRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInteractorRouterTests.swift; sourceTree = "<group>"; };
+		DBBF9F2E22DD2CD000741FF8 /* MyCareerInformationRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerInformationRouterTests.swift; sourceTree = "<group>"; };
+		DBBF9F3022DD2D2200741FF8 /* MyCareerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCareerPresenter.swift; sourceTree = "<group>"; };
+		DBBF9F3622DD34B500741FF8 /* UserInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
+		DBBF9F3722DD34B500741FF8 /* CareerInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerInformationView.swift; sourceTree = "<group>"; };
 		DBFE741422D649310003F7BC /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		DBFE741822D65E240003F7BC /* MainPresenter+MainOutputIntercatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainPresenter+MainOutputIntercatorProtocol.swift"; sourceTree = "<group>"; };
 		DBFE741A22D661310003F7BC /* CircleButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonFactory.swift; sourceTree = "<group>"; };
@@ -212,15 +220,6 @@
 			path = MockJSON;
 			sourceTree = "<group>";
 		};
-		367705FC22D9017900271043 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				36C5CD0622DCF35500BFF1C7 /* Network */,
-				36C5CD0322DCEAD400BFF1C7 /* View */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		3677060322D9214400271043 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,26 +240,10 @@
 		36B6BBBC22D7E9CD006627CD /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */,
+				36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		36C5CD0322DCEAD400BFF1C7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */,
-				36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		36C5CD0622DCF35500BFF1C7 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				367705FD22D9019700271043 /* NetworkLayer.swift */,
-				3677060422D9319500271043 /* JsonDecoder.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		C08A39C322D7AB6A00D279B2 /* MockCVBasicInfoormation */ = {
@@ -314,14 +297,17 @@
 			path = "ViewController Transitions";
 			sourceTree = "<group>";
 		};
-		DB5AF46322D953A30098C4D5 /* Modules */ = {
+		DB5AF46322D953A30098C4D5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DB5AF46422D953C10098C4D5 /* BasicInformationPresenter.swift */,
-				DB5AF46622D953E10098C4D5 /* BasicInformationInteractor.swift */,
-				DB5AF46822D954040098C4D5 /* MyCareerInteractor.swift */,
+				367705FD22D9019700271043 /* NetworkLayer.swift */,
+				DBBF9F3522DD34B500741FF8 /* View */,
+				DBBF9F2A22DD2BB000741FF8 /* Interactor */,
+				DBBF9F2822DD2B9D00741FF8 /* Presenter */,
+				DBBF9F2B22DD2BCD00741FF8 /* Entity */,
+				DBBF9F2922DD2BAC00741FF8 /* Router */,
 			);
-			path = Modules;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		DB5AF46A22D954380098C4D5 /* MockData */ = {
@@ -330,6 +316,50 @@
 				DB5AF46B22D954490098C4D5 /* MockData.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		DBBF9F2822DD2B9D00741FF8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DB5AF46422D953C10098C4D5 /* BasicInformationPresenter.swift */,
+				DBBF9F3022DD2D2200741FF8 /* MyCareerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DBBF9F2922DD2BAC00741FF8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF9F2C22DD2CAF00741FF8 /* BasicInteractorRouterTests.swift */,
+				DBBF9F2E22DD2CD000741FF8 /* MyCareerInformationRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DBBF9F2A22DD2BB000741FF8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DB5AF46622D953E10098C4D5 /* BasicInformationInteractor.swift */,
+				DB5AF46822D954040098C4D5 /* MyCareerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DBBF9F2B22DD2BCD00741FF8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3677060422D9319500271043 /* JsonDecoder.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DBBF9F3522DD34B500741FF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF9F3622DD34B500741FF8 /* UserInformationView.swift */,
+				DBBF9F3722DD34B500741FF8 /* CareerInformationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DBFE742022D690E20003F7BC /* Protocols */ = {
@@ -556,10 +586,9 @@
 		FCECA4CC22A1B2DB00B0C8DC /* CV AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB5AF46322D953A30098C4D5 /* Modules */,
+				DB5AF46322D953A30098C4D5 /* Tests */,
 				3677060322D9214400271043 /* Common */,
 				FC9B32F222B4024000AB9490 /* Mocks */,
-				367705FC22D9017900271043 /* Tests */,
 				FCECA4CF22A1B2DB00B0C8DC /* Info.plist */,
 			);
 			path = "CV AppTests";
@@ -755,19 +784,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3677060222D9213500271043 /* Protocols.swift in Sources */,
-				36C5CD0822DCFC1700BFF1C7 /* CareerInformationView.swift in Sources */,
 				367705FE22D9019700271043 /* NetworkLayer.swift in Sources */,
 				FC9B32FD22B411C700AB9490 /* MockMainIntercator.swift in Sources */,
 				C08A39BC22D78E3900D279B2 /* MockRequest.swift in Sources */,
+				DBBF9F3122DD2D2200741FF8 /* MyCareerPresenter.swift in Sources */,
 				C08A39D122D7E0B800D279B2 /* MockMyCareerTavleView.swift in Sources */,
+				DBBF9F3922DD34B600741FF8 /* CareerInformationView.swift in Sources */,
 				C08A39C722D7ACD400D279B2 /* MockMainPresenter.swift in Sources */,
+				DBBF9F2F22DD2CD000741FF8 /* MyCareerInformationRouterTests.swift in Sources */,
 				C08A39BE22D79AFC00D279B2 /* MockURLSession.swift in Sources */,
 				3677060022D91E1300271043 /* Constants.swift in Sources */,
-				36C5CD0522DCEB3E00BFF1C7 /* UserInformationView.swift in Sources */,
 				DB5AF46C22D954490098C4D5 /* MockData.swift in Sources */,
+				DBBF9F3822DD34B600741FF8 /* UserInformationView.swift in Sources */,
 				C08A39C922D7DC4200D279B2 /* MockUserInfoView.swift in Sources */,
 				C08A39CF22D7E01200D279B2 /* MockMyCareerInteractor.swift in Sources */,
 				DB5AF46722D953E10098C4D5 /* BasicInformationInteractor.swift in Sources */,
+				DBBF9F2D22DD2CAF00741FF8 /* BasicInteractorRouterTests.swift in Sources */,
 				DB5AF46522D953C10098C4D5 /* BasicInformationPresenter.swift in Sources */,
 				C08A39CB22D7DEB300D279B2 /* MockMyCareerRouter.swift in Sources */,
 				3677060522D9319500271043 /* JsonDecoder.swift in Sources */,
