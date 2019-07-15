@@ -1,14 +1,7 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
-    // MARK: - Properties
-    var presenter: MainPresenterProtocol?
-    var user: UserInfo?
-    var linkedInUrl: String?
-    var pulseLayers = [CAShapeLayer]()
-    var moreInfoButton: UIButton?
-    var navigationDelegate: NavigationDelegate?
-
+    
     // MARK: - Outlets
     @IBOutlet weak var userNameLabel: UILabel?
     @IBOutlet weak var ageLabel: UILabel?
@@ -16,6 +9,18 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var cellphoneLabel: UILabel?
     @IBOutlet weak var profileUserImage: UIImageView?
     @IBOutlet weak var aboutMeLabel: UILabel?
+    
+    // MARK: - Properties
+    var presenter: MainPresenterProtocol?
+    var user: UserInfo?
+    var linkedInUrl: String?
+    var pulseLayers = [CAShapeLayer]()
+    var moreInfoButton: UIButton?
+    var navigationDelegate: NavigationDelegate?
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
     
     //MARK: - Properties
     override func viewDidLoad() {
@@ -29,11 +34,15 @@ class UserInfoViewController: UIViewController {
             navigationDelegate = NavigationDelegate()
             navigationController.delegate = navigationDelegate
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        animatePulse()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,11 +55,6 @@ class UserInfoViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        profileUserImage?.layer.removeAllAnimations()
-    }
-
     func configureMoreInfoButton(_ button: UIButton?) {
         moreInfoButton = button
         moreInfoButton?.accessibilityIdentifier = AccessibilityIdentifiers.moreInfo.rawValue
@@ -71,5 +75,17 @@ class UserInfoViewController: UIViewController {
     
     @objc func didTapMoreInfoButton() {
         presenter?.myCareerPressed()
+    }
+    
+    @objc func willEnterForeground() {
+        animatePulse()
+    }
+    
+    func animatePulse() {
+        guard let profileImage = profileUserImage else {
+            return
+        }
+        
+        PulseScaleAnimation(forView: profileImage).animatePulse()
     }
 }

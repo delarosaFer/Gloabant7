@@ -1,6 +1,6 @@
 import UIKit
 
-class AlertView: UIAlertController {
+final class AlertView: UIAlertController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

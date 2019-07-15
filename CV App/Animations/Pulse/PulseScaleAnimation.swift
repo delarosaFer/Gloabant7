@@ -9,6 +9,9 @@ final class PulseScaleAnimation {
     }
     
     func animatePulse() {
+        self.view.layer.removeAllAnimations()
+        self.view.layer.sublayers?.removeAll()
+        
         for index in 0...2 {
             let layer = self.createCircle()
             let opacityPulse = self.opacityPulse(withDelay: CGFloat(index+1) * 0.2)
