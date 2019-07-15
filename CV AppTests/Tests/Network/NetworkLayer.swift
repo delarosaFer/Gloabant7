@@ -8,7 +8,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
         let baseStr = URLString.base.rawValue
         let endPoint = EndPoint.userInfo.rawValue
         guard let baseURL = URL(string: baseStr) else {
-            XCTFail("Couldn't create an URL")
+            XCTFail(Fail.createURL.rawValue)
             return
         }
         
@@ -16,7 +16,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
         sessionURL.data = getDataFrom(file: Asset.basicInformation.rawValue)
         sessionURL.response = HTTPURLResponse(url: baseURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         
-        let expectation = XCTestExpectation(description: "Test a request with a valid url base, and valid URLSession")
+        let expectation = XCTestExpectation(description: Expectation.request.rawValue)
         client = Request(baseURL: baseStr, session: sessionURL)
         
         client.request(endPoint, entity: UserInfo.self) { fetchResult in
@@ -24,7 +24,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
             case .success(data: _):
                 expectation.fulfill()
             case .failure( _):
-                XCTFail("The data could not be loaded")
+                XCTFail(Fail.loadData.rawValue)
             }
         }
         
@@ -36,7 +36,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
         let baseStr = URLString.failBase.rawValue
         let endPoint = EndPoint.userInfo.rawValue
         guard let baseURL = URL(string: baseStr) else {
-            XCTFail("Couldn't create an URL")
+            XCTFail(Fail.createURL.rawValue)
             return
         }
         
@@ -44,13 +44,13 @@ class NetworkLayer: XCTestCase, CommonMethods {
         sessionURL.data = nil
         sessionURL.response = HTTPURLResponse(url: baseURL, statusCode: 400, httpVersion: nil, headerFields: nil)
         
-        let expectation = XCTestExpectation(description: "Test a request with an invalid url base, and valid URLSession")
+        let expectation = XCTestExpectation(description: Expectation.invalidRequest.rawValue)
         client = Request(baseURL: baseStr, session: sessionURL)
         
         client.request(endPoint, entity: UserInfo.self) { fetchResult in
             switch fetchResult {
             case .success(data: _):
-                XCTFail("This data must be nill")
+                XCTFail(Fail.dataNil.rawValue)
             case .failure( _):
                 expectation.fulfill()
             }
@@ -63,20 +63,20 @@ class NetworkLayer: XCTestCase, CommonMethods {
         let client: Request
         let baseStr = URLString.base.rawValue
         guard let baseURL = URL(string: baseStr) else {
-            XCTFail("Couldn't create an URL")
+            XCTFail(Fail.createURL.rawValue)
             return
         }
         
         let session = MockURLSession()
         session.response = HTTPURLResponse(url: baseURL, statusCode: 0, httpVersion: nil, headerFields: nil)
         
-        let expectation = XCTestExpectation(description: "Test request with a valid url base, and a URLSession whit 0 at code response")
+        let expectation = XCTestExpectation(description: Expectation.noConnectionRequest.rawValue)
         client = Request(baseURL: baseStr, session: session)
         
         client.request(EndPoint.userInfo.rawValue, entity: UserInfo.self) { (fetchResult) in
             switch fetchResult {
             case .success(data: _):
-                XCTFail("The data must be nill")
+                XCTFail(Fail.dataNil.rawValue)
             case .failure( _):
                 expectation.fulfill()
             }
@@ -90,7 +90,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
         let baseStr = URLString.base.rawValue
         let endPoint = EndPoint.myCareer.rawValue
         guard let baseURL = URL(string: baseStr) else {
-            XCTFail("Couldn't create an URL")
+            XCTFail(Fail.createURL.rawValue)
             return
         }
         
@@ -98,7 +98,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
         sessionURL.data = getDataFrom(file: Asset.careerInformation.rawValue)
         sessionURL.response = HTTPURLResponse(url: baseURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         
-        let expectation = XCTestExpectation(description: "Test a request with a valid url base, and valid URLSession")
+        let expectation = XCTestExpectation(description: Expectation.request.rawValue)
         client = Request(baseURL: baseStr, session: sessionURL)
         
         client.request(endPoint, entity: MyCareer.self) { fetchResult in
@@ -106,7 +106,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
             case .success(data: _):
                 expectation.fulfill()
             case .failure( _):
-                XCTFail("The data could not be loaded")
+                XCTFail(Fail.loadData.rawValue)
             }
         }
         
@@ -118,7 +118,7 @@ class NetworkLayer: XCTestCase, CommonMethods {
         let baseStr = URLString.failBase.rawValue
         let endPoint = EndPoint.userInfo.rawValue
         guard let baseURL = URL(string: baseStr) else {
-            XCTFail("Couldn't create an URL")
+            XCTFail(Fail.createURL.rawValue)
             return
         }
         
@@ -126,13 +126,13 @@ class NetworkLayer: XCTestCase, CommonMethods {
         sessionURL.data = nil
         sessionURL.response = HTTPURLResponse(url: baseURL, statusCode: 400, httpVersion: nil, headerFields: nil)
         
-        let expectation = XCTestExpectation(description: "Test a request with an invalid url base, and valid URLSession")
+        let expectation = XCTestExpectation(description: Expectation.invalidRequest.rawValue)
         client = Request(baseURL: baseStr, session: sessionURL)
         
         client.request(endPoint, entity: MyCareer.self) { fetchResult in
             switch fetchResult {
             case .success(data: _):
-                XCTFail("This data must be nill")
+                XCTFail(Fail.dataNil.rawValue)
             case .failure( _):
                 expectation.fulfill()
             }

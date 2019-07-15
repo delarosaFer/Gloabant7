@@ -8,6 +8,6 @@ class MyCareerInteractor: XCTestCase {
         let presenter = MockMyCareerPresenter()
         
         sut.presenter = presenter
-        sut.fetchMyCareer(endpoint: "https")
+        sut.fetchMyCareer(endpoint: URLString.httpsProtocol.rawValue)
     }
 }

@@ -16,7 +16,7 @@ class BasicInformationPresenter: XCTestCase, CommonMethods {
     
     func testFetchBasicInfoCalled() {
         let mockInteractor = MockMainInputInteractor()
-        
+    
         sut?.interactor = mockInteractor
         sut?.updateView()
         

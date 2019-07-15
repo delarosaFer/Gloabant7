@@ -44,10 +44,6 @@ final class Request: RequestProtocol {
             completionHandler(.failure(.invalidData))
               return
             }
-//            guard let model: T = self.jsonDecode(data: dataFetched) else{
-//                completionHandler(.failure(.invalidData))
-//                return
-//            }
             completionHandler(.success(dataFetched))
             }.resume()
     }

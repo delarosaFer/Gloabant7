@@ -6,7 +6,7 @@ class BasicInformationInteractor: XCTestCase {
     
     func testFetchBasicInfoCalled() {
         guard let data = MockData().getBasicInformationData() else {
-                XCTFail("Failed at getting mock info")
+                XCTFail(Fail.mocking.rawValue)
                 return
         }
         
@@ -20,14 +20,14 @@ class BasicInformationInteractor: XCTestCase {
         let mockPresenter = MockMainPresenter()
         
         sut.presenter = mockPresenter
-        sut.fetchUserInfo(endpoint: "https://www.dummy.com")
+        sut.fetchUserInfo(endpoint: URLString.dummy.rawValue)
         
         XCTAssert(mockPresenter.userFetchedCalled > 0)
     }
     
     func testFetchGetImageCalled() {
         guard let data = MockData().getBasicInformationData() else {
-            XCTFail("Failed at getting mock info")
+            XCTFail(Fail.mocking.rawValue)
             return
         }
         
@@ -41,7 +41,7 @@ class BasicInformationInteractor: XCTestCase {
         let mockPresenter = MockMainPresenter()
         
         sut.presenter = mockPresenter
-        sut.fetchImage(imageURL: "https://www.dummy.com")
+        sut.fetchImage(imageURL: URLString.dummy.rawValue)
         
         XCTAssert(mockPresenter.downloadedImageCalled > 0)
     }
@@ -57,7 +57,7 @@ class BasicInformationInteractor: XCTestCase {
         let mockPresenter = MockMainPresenter()
         
         sut.presenter = mockPresenter
-        sut.fetchUserInfo(endpoint: "https://www.dummy.com")
+        sut.fetchUserInfo(endpoint: URLString.dummy.rawValue)
         
         XCTAssert(mockPresenter.userFetchFailedCalled > 0)
     }

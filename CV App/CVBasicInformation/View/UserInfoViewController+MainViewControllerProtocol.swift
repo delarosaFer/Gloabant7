@@ -10,6 +10,7 @@ extension UserInfoViewController: MainViewControllerProtocol  {
         - user: Entity UserInfo.
      */
     func showUserInfo(with user: UserInfo) {
+        self.user = user
         let userInfo = user
         let userName = userInfo.userName
         let imageURL = userInfo.imageURL
@@ -52,15 +53,15 @@ extension UserInfoViewController: MainViewControllerProtocol  {
      Method that display the alert when occurs an network error.
      */
     func showNetworkingError() {
+        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
+        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
+        self.alertView = AlertView(title: alertTitle, message: alertMessage, preferredStyle: .actionSheet)
+        self.alertView?.addAction(UIAlertAction(title: NSLocalizedString(StringKey.refreshAction.rawValue, comment: Comment.refreshAction.rawValue), style: .default, handler: { (action) in
+            self.presenter?.updateView()
+        }))
         DispatchQueue.main.async { [weak self] in
             self?.view.layer.removeAllAnimations()
-            let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
-            let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
-            let alertView = AlertView(title: alertTitle, message: alertMessage, preferredStyle: .actionSheet)
-            alertView.addAction(UIAlertAction(title: NSLocalizedString(StringKey.refreshAction.rawValue, comment: Comment.refreshAction.rawValue), style: .default, handler: { (action) in
-                self?.presenter?.updateView()
-            }))
-            self?.present(alertView, animated: true)
+            self?.present(self?.alertView ?? UIAlertController(), animated: true)
         }
     }
 }

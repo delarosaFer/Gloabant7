@@ -17,6 +17,7 @@ class UserInfoViewController: UIViewController {
     var pulseLayers = [CAShapeLayer]()
     var moreInfoButton: UIButton?
     var navigationDelegate: NavigationDelegate?
+    var alertView: AlertView?
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
