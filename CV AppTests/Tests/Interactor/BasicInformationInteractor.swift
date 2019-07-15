@@ -3,14 +3,27 @@ import XCTest
 @testable import CV_App
 
 class BasicInformationInteractor: XCTestCase {
+    var session: MockURLSession?
+    
+    override func setUp() {
+        super.setUp()
+        
+        session = MockURLSession()
+    }
+    
+    override func tearDown() {
+        session = nil
+        
+        super.tearDown()
+    }
     
     func testFetchBasicInfoCalled() {
-        guard let data = MockData().getBasicInformationData() else {
+        guard let data = MockData().getBasicInformationData(),
+            let session = session else {
                 XCTFail(Fail.mocking.rawValue)
                 return
         }
         
-        let session = MockURLSession()
         session.data = data
         session.error = nil
         
@@ -26,12 +39,13 @@ class BasicInformationInteractor: XCTestCase {
     }
     
     func testFetchGetImageCalled() {
-        guard let data = MockData().getBasicInformationData() else {
+        guard let data = MockData().getBasicInformationData(),
+            let session = session else {
             XCTFail(Fail.mocking.rawValue)
+
             return
         }
         
-        let session = MockURLSession()
         session.data = data
         session.error = nil
         
@@ -47,7 +61,11 @@ class BasicInformationInteractor: XCTestCase {
     }
     
     func testFetchBasicInfoFailed() {
-        let session = MockURLSession()
+        guard let session = session else {
+            XCTFail()
+            return
+        }
+        
         session.data = MockData().getInvalidInformationData()
         session.error = nil
         

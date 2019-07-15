@@ -2,7 +2,7 @@
     studies": {
         "titleSection": "Studies",
         studie": "I studied Computer engineering at the UNAM and been an active member of PROTECO (a students program oriented to  TICs)",
-        rowsInSection": 1
+        rowsInSection": "1"
     }
     currentJob": {
         "titleSection": "Globant"
