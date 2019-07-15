@@ -112,8 +112,6 @@
 		36A8C4A322D5248300A421AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36B6BBBD22D7EA65006627CD /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		36B6BBBF22D7EA82006627CD /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationView.swift; sourceTree = "<group>"; };
-		36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerInformationView.swift; sourceTree = "<group>"; };
 		C08A39BB22D78E3900D279B2 /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
 		C08A39BD22D79AFC00D279B2 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		C08A39C122D79D6500D279B2 /* MockDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTask.swift; sourceTree = "<group>"; };
@@ -240,8 +238,6 @@
 		36B6BBBC22D7E9CD006627CD /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				36C5CD0722DCFC1700BFF1C7 /* CareerInformationView.swift */,
-				36C5CD0422DCEB3E00BFF1C7 /* UserInformationView.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
