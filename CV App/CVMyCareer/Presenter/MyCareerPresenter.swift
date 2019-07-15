@@ -13,7 +13,7 @@ final class MyCareerPresenter: MyCareerPresenterProtocol {
 }
 
 // MARK: - Extension for MyCareerOutputInteractor
-extension MyCareerPresenter: MyCareerOutputInteractorProtocol{
+extension MyCareerPresenter: MyCareerOutputInteractorProtocol {
     func myCareerFeteched(myCareer: MyCareer) {
         view?.showMyCareer(with: myCareer)
     }

@@ -3,7 +3,7 @@ import UIKit
 extension MyCareerTableViewController: MyCareerViewControllerProtocol  {
     func showMyCareer(with myCareer: MyCareer) {
         myCareerMeList = myCareer
-        DispatchQueue.main.async { [weak self ] in
+        DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
     }

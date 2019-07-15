@@ -10,10 +10,6 @@ class UserInfoViewControllerUITests: XCTestCase {
         app.launch()
     }
     
-    override func tearDown() {
-        
-    }
-    
     // MARK: - Test existence
     func neededViewsExists() -> Bool {
         let topFirstTitle = app.staticTexts[AccessibilityIdentifiers.topFirstTitle.rawValue]
