@@ -40,7 +40,7 @@ class MockData {
     func getCareerInformationData() -> Data? {
         let bundle = Bundle(for: type(of: self))
         
-        guard let path = bundle.path(forResource: "careerInformation", ofType: "json") else {
+        guard let path = bundle.path(forResource: Asset.careerInformation.rawValue, ofType: ExtensionFile.json.rawValue) else {
             return nil
         }
         
@@ -52,7 +52,7 @@ class MockData {
     func getCareerInvalidInformationData() -> Data? {
         let bundle = Bundle(for: type(of: self))
         
-        guard let path = bundle.path(forResource: "failCareerInformation", ofType: "json") else {
+        guard let path = bundle.path(forResource: Asset.failCareerInformation.rawValue, ofType: ExtensionFile.json.rawValue) else {
             return nil
         }
         

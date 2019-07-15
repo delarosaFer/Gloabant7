@@ -6,6 +6,7 @@ final class MyCareerTableViewController: UITableViewController {
     var myCareerMeList: MyCareer?
     var presenter: MyCareerPresenterProtocol?
     let titleView = NSLocalizedString(StringKey.myCareer.rawValue, comment: Comment.myCareer.rawValue)
+    var alertView: AlertView?
     
     // MARK: - Methods
     override func viewDidLoad() {

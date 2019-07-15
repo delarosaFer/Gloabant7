@@ -58,4 +58,21 @@ class CareerInformationView: XCTestCase, CommonMethods {
             XCTAssertEqual(tableView.numberOfRows(inSection: section), 1)
         }
     }
+    
+    func testAlertView() {
+        careerInformationViewController?.loadViewIfNeeded()
+        careerInformationViewController?.showNetworkingError()
+        guard let alertView = careerInformationViewController?.alertView else {
+            XCTFail(Fail.notDisplayInformation.rawValue)
+            return
+        }
+        
+        let alertTitle = NSLocalizedString(StringKey.titleError.rawValue, comment: Comment.titleError.rawValue)
+        let alertMessage = NSLocalizedString(StringKey.messageError.rawValue, comment: Comment.messageError.rawValue)
+        let alertAction = NSLocalizedString(StringKey.refreshAction.rawValue, comment: Comment.refreshAction.rawValue)
+        
+        XCTAssertEqual(alertView.title , alertTitle)
+        XCTAssertEqual(alertView.message , alertMessage)
+        XCTAssertEqual(alertView.actions.first?.title , alertAction)
+    }
 }
