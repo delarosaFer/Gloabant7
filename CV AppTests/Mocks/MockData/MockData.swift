@@ -6,7 +6,7 @@ class MockData {
     func getBasicInformationData() -> Data? {
         let bundle = Bundle(for: type(of: self))
         
-        guard let path = bundle.path(forResource: "basicInformation", ofType: "json") else {
+        guard let path = bundle.path(forResource: Asset.basicInformation.rawValue, ofType: ExtensionFile.json.rawValue) else {
             return nil
         }
         
@@ -18,7 +18,7 @@ class MockData {
     func getInvalidInformationData() -> Data? {
         let bundle = Bundle(for: type(of: self))
         
-        guard let path = bundle.path(forResource: "failBasicInformation", ofType: "json") else {
+        guard let path = bundle.path(forResource: Asset.failBasicInformation.rawValue, ofType: ExtensionFile.json.rawValue) else {
             return nil
         }
         

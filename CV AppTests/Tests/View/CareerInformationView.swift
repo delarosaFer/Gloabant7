@@ -24,13 +24,13 @@ class CareerInformationView: XCTestCase, CommonMethods {
     func testCareerTableViewDisplayCorrectNumberOfSections() {
         let careerData = getDataFrom(file: Asset.careerInformation.rawValue)
         guard let model = MockData().getCareerInformation(data: careerData) else {
-            XCTFail("Career data could not be loaded")
+            XCTFail(Fail.loadData.rawValue)
             return
         }
         careerInformationViewController?.loadViewIfNeeded()
         careerInformationViewController?.showMyCareer(with: model)
         guard let tableView = careerInformationViewController?.tableView else {
-            XCTFail("Career table view is not available")
+            XCTFail(Fail.careerNotTableView.rawValue)
             return
         }
         let numberOfSections = tableView.numberOfSections
@@ -41,7 +41,7 @@ class CareerInformationView: XCTestCase, CommonMethods {
     func testTableViewDisplayCorrectNumberOfRows() {
         let careerData = getDataFrom(file: Asset.careerInformation.rawValue)
         guard let model = MockData().getCareerInformation(data: careerData) else {
-            XCTFail("Career data could not be loaded")
+            XCTFail(Fail.loadData.rawValue)
             return
         }
         
@@ -49,7 +49,7 @@ class CareerInformationView: XCTestCase, CommonMethods {
         careerInformationViewController?.showMyCareer(with: model)
         
         guard let tableView = careerInformationViewController?.tableView else {
-            XCTFail("Career table view is not available")
+            XCTFail(Fail.careerNotTableView.rawValue)
             return
         }
         let numberOfSections = tableView.numberOfSections
